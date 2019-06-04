@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gulp clean && gulp dev-run --dev
+gulp clean && gulp dev-run --test
