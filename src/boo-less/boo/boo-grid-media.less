@@ -1,0 +1,76 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - MEDIAGRID 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.mediagrid {
+  	margin-left: -30px;
+  	list-style: none;
+  	*zoom: 1;
+	.clearfix();
+	
+	> li {
+	  	display: inline-block;
+	  	margin-bottom: @baseLineHeight;
+	  	//margin-right: 2.2820%;
+        margin-right: 1.820%;
+	  	vertical-align: top;
+	  	.ie7-inline-block();
+
+        > .well {
+            margin: 0;
+        }
+	}
+
+	[class^="media-item-"] > .media-item,
+    [class*=" media-item-"] > .media-item {
+	  	display: block;
+	  	line-height: 1;
+	}
+
+	&.media-item-940 > li { width: 940px; }
+	&.media-item-860 > li { width: 860px; }
+	&.media-item-780 > li { width: 780px; }
+	&.media-item-700 > li { width: 700px; }
+	&.media-item-620 > li { width: 620px; }
+	&.media-item-540 > li { width: 540px; }
+	&.media-item-460 > li { width: 460px; }
+	&.media-item-380 > li { width: 380px; }
+	&.media-item-300 > li { width: 300px; }
+    &.media-item-280 > li { width: 280px; }
+	&.media-item-260 > li { width: 260px; }
+	&.media-item-240 > li { width: 240px; }
+	&.media-item-220 > li { width: 220px; }
+	&.media-item-200 > li { width: 200px; }
+	&.media-item-190 > li { width: 190px; }
+	&.media-item-180 > li { width: 180px; }
+	&.media-item-170 > li { width: 170px; }
+	&.media-item-160 > li { width: 160px; }
+	&.media-item-150 > li { width: 150px; }
+	&.media-item-140 > li { width: 140px; }
+	&.media-item-130 > li { width: 130px; }
+	&.media-item-125 > li { width: 125px; }
+	&.media-item-120 > li { width: 120px; }
+	&.media-item-110 > li { width: 110px; }
+	&.media-item-100 > li { width: 100px; }
+	&.media-item-75 > li  { width:  75px; }
+	&.media-item-60 > li  { width:  60px; }
+	
+    &.mediagrid-center {
+	  	text-align: center;
+	}
+}
+
+.row-fluid {
+	.mediagrid {
+	  	margin-left: 0;
+	}	
+}

@@ -1,0 +1,123 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - PERCENTAGE GRID 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.row-fluid [class*="stacx"] {
+	display: block;
+	float: left;
+	width: 100%;
+	min-height: 30px;
+	margin-left: 0;
+	.box-sizing(border-box);
+}
+
+/*.row-fluid .stacx1 		{ width: 8.333333333333333%; }
+.row-fluid .stacx2 		{ width: 16.66666666666667%; }
+.row-fluid .stacx3 		{ width: 25%; }
+.row-fluid .stacx4 		{ width: 33.33333333333333%; }
+.row-fluid .stacx5 		{ width: 41.66666666666667%; }
+.row-fluid .stacx6 		{ width: 50%; }
+.row-fluid .stacx7 		{ width: 58.33333333333333%; }
+.row-fluid .stacx8 		{ width: 66.66666666666666%; }
+.row-fluid .stacx9 		{ width: 75%; }
+.row-fluid .stacx10 	{ width: 83.33333333333333%; }
+.row-fluid .stacx11 	{ width: 91.66666666666666%; }
+.row-fluid .stacx12 	{ width: 100%; }*/
+
+/*.row-fluid .offset-stacx1 	{ margin-left: 8.333333333333333%; }
+.row-fluid .offset-stacx2 	{ margin-left: 16.66666666666667%; }
+.row-fluid .offset-stacx3 	{ margin-left: 25%; }
+.row-fluid .offset-stacx4 	{ margin-left: 33.33333333333333%; }
+.row-fluid .offset-stacx5 	{ margin-left: 41.66666666666667%; }
+.row-fluid .offset-stacx6 	{ margin-left: 50%; }
+.row-fluid .offset-stacx7 	{ margin-left: 58.33333333333333%; }
+.row-fluid .offset-stacx8 	{ margin-left: 66.66666666666666%; }
+.row-fluid .offset-stacx9 	{ margin-left: 75%; }
+.row-fluid .offset-stacx10 	{ margin-left: 83.33333333333333%; }
+.row-fluid .offset-stacx11 	{ margin-left: 91.66666666666666%; }*/
+	
+/*.row-fluid .centered { float: none; margin: 0 auto; }*/
+	
+/* Source Ordering */
+/*.push-stacx2 	{ left: 16.66666666666667%; }
+.push-stacx3 	{ left: 25%; }
+.push-stacx4 	{ left: 33.33333333333333%; }
+.push-stacx5 	{ left: 41.66666666666667%; }
+.push-stacx6 	{ left: 50%; }
+.push-stacx7 	{ left: 58.33333333333333%; }
+.push-stacx8 	{ left: 66.66666666666666%; }
+.push-stacx9 	{ left: 75%; }
+.push-stacx10 	{ left: 83.33333333333333%; }
+	
+.pull-stacx2 	{ right: 16.66666666666667%; }
+.pull-stacx3 	{ right: 25%; }
+.pull-stacx4 	{ right: 33.33333333333333%; }
+.pull-stacx5 	{ right: 41.66666666666667%; }
+.pull-stacx6 	{ right: 50%; }
+.pull-stacx7 	{ right: 58.33333333333333%; }
+.pull-stacx8 	{ right: 66.66666666666666%; }
+.pull-stacx9 	{ right: 75%; }
+.pull-stacx10 	{ right: 83.33333333333333%; }*/
+
+
+// Super simple grid
+//.row { .make-row(); }
+
+.row-fluid {
+	.stacx1 		{ .make-column(1); }
+	.stacx2 		{ .make-column(2); }
+	.stacx3 		{ .make-column(3); }
+	.stacx4 		{ .make-column(4); }
+	.stacx5 		{ .make-column(5); }
+	.stacx6 		{ .make-column(6); }
+	.stacx7 		{ .make-column(7); }
+	.stacx8 		{ .make-column(8); }
+	.stacx9 		{ .make-column(9); }
+	.stacx10 		{ .make-column(10); }
+	.stacx11 		{ .make-column(11); }
+	.stacx12 		{ .make-column(12); }
+
+	.offset-stacx1 	{ .make-column-offset(1); }
+	.offset-stacx2 	{ .make-column-offset(2); }
+	.offset-stacx3 	{ .make-column-offset(3); }
+	.offset-stacx4 	{ .make-column-offset(4); }
+	.offset-stacx5 	{ .make-column-offset(5); }
+	.offset-stacx6 	{ .make-column-offset(6); }
+	.offset-stacx7 	{ .make-column-offset(7); }
+	.offset-stacx8 	{ .make-column-offset(8); }
+	.offset-stacx9 	{ .make-column-offset(9); }
+	.offset-stacx10 { .make-column-offset(10); }
+	.offset-stacx11 { .make-column-offset(11); }
+
+	.centered { float: none; margin: 0 auto; }
+}
+
+// Source Ordering
+.push-stacx2 	{ .make-column-push(2); }
+.push-stacx3 	{ .make-column-push(3); }
+.push-stacx4 	{ .make-column-push(4); }
+.push-stacx5 	{ .make-column-push(5); }
+.push-stacx6 	{ .make-column-push(6); }
+.push-stacx7 	{ .make-column-push(7); }
+.push-stacx8 	{ .make-column-push(8); }
+.push-stacx9 	{ .make-column-push(9); }
+.push-stacx10 	{ .make-column-push(10); }
+	
+.pull-stacx2 	{ .make-column-pull(2); }
+.pull-stacx3 	{ .make-column-pull(3); }
+.pull-stacx4 	{ .make-column-pull(4); }
+.pull-stacx5 	{ .make-column-pull(5); }
+.pull-stacx6 	{ .make-column-pull(6); }
+.pull-stacx7 	{ .make-column-pull(7); }
+.pull-stacx8 	{ .make-column-pull(8); }
+.pull-stacx9 	{ .make-column-pull(9); }
+.pull-stacx10 	{ .make-column-pull(10); }	

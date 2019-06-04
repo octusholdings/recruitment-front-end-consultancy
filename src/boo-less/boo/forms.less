@@ -1,0 +1,588 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - FORMS 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+legend {
+    border-color: @headingBorder;
+    &.section-form {
+       padding: 9px 0 0;
+    }
+}
+
+label,
+.label-field {
+    display: block;
+    min-height: @baseLineHeight; 
+    font-weight: bold;
+    font-size: @fontSizeSmall;
+    .required {
+        color: lighten(@red, 10%);
+    }
+    &.label-inline {
+        display: inline-block;
+        .ie7-inline-block()
+    }
+
+    &.left {
+        float: left;
+    }
+    &.right {
+        float: right;
+    }
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    border: 1px solid;
+    border-color: @inputBorder;
+	.border-radius(@inputBorderRadius);
+	.box-shadow(0 1px 0 rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.2) inset);
+}
+
+// Style for Well Black
+.well-black {
+    legend {
+        color: #f1f1f1;
+        border-color: @wellBlackBorderDarkColor;
+        .box-shadow(0 1px 0 rgba(255,255,255,.1));
+    }
+
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    .uneditable-input {
+        color: @inputWellBlackColor;
+        background-color: @inputWellBlackBackground;
+        border-color: @inputWellBlackBorder;
+    } 
+}
+
+input[type="text"].bulky-input,
+input[type="password"].bulky-input,
+input[type="datetime"].bulky-input,
+input[type="datetime-local"].bulky-input,
+input[type="date"].bulky-input,
+input[type="month"].bulky-input,
+input[type="time"].bulky-input,
+input[type="week"].bulky-input,
+input[type="number"].bulky-input,
+input[type="email"].bulky-input,
+input[type="url"].bulky-input,
+input[type="search"].bulky-input,
+input[type="tel"].bulky-input,
+input[type="color"].bulky-input,
+.uneditable-input.bulky-input {
+    height: @baseLineHeight * 2;
+    font-size: @fontSizeBaseLarge;
+    line-height: normal;
+    padding: 9px 10px;
+    .border-radius(@inputBorderRadius);
+}
+
+// Placeholder
+// -------------------------
+
+input,
+textarea {
+    .placeholder(@placeholderText);
+}
+
+.form-dark input,
+.form-dark textarea {
+    .placeholder(@placeholderDarkText);
+}
+ .well-black input,
+ .well-black textarea {
+    .placeholder(@placeholderWellBlackText);
+}
+
+// CHECKBOXES & RADIOS
+// -------------------
+
+.radio,
+.checkbox {
+    padding-left: 0px;
+}
+
+// INPUT SIZES
+// -----------
+
+// General classes for quick sizes
+.input-mini       { width: 60px; }
+.input-small      { width: 90px; }
+.input-medium     { width: 150px; }
+.input-large      { width: 210px; }
+.input-xlarge     { width: 270px; }
+.input-xxlarge    { width: 530px; }
+
+.ie7 input[class*="span"],
+.ie7 select[class*="span"],
+.ie7 textarea[class*="span"],
+.ie7 .uneditable-input[class*="span"],
+.ie7 .row-fluid input[class*="span"],
+.ie7 .row-fluid select[class*="span"],
+.ie7 .row-fluid textarea[class*="span"],
+.ie7 .row-fluid .uneditable-input[class*="span"],
+.ie7 .input-block-level,
+.ie8 input[class*="span"],
+.ie8 select[class*="span"],
+.ie8 textarea[class*="span"],
+.ie8 .uneditable-input[class*="span"],
+.ie8 .row-fluid input[class*="span"],
+.ie8 .row-fluid select[class*="span"],
+.ie8 .row-fluid textarea[class*="span"],
+.ie8 .row-fluid .uneditable-input[class*="span"],
+.ie8 .input-block-level {
+    min-height: @baseLineHeight;
+}
+
+// DISABLED STATE
+// --------------
+
+// Disabled and read-only inputs
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+    border: 1px solid #c5c7d2;
+    background-color: @grayLighter;
+    cursor: not-allowed;
+    .box-shadow(0 1px 1px rgba(0,0,0,.075) inset);
+}
+
+// FORM FIELD FEEDBACK STATES
+// --------------------------
+
+.control-group.warning label {
+  color: #c09853;
+}
+.control-group.error label {
+  color: #b94a48;
+}
+.control-group.success label {
+  color: #468847;
+}
+.control-group.info label {
+  color: #3a87ad;
+}
+
+.controls {
+    .label-inline {
+        margin-top: 5px;
+    }
+}
+
+.controls-row + .controls-row {
+    margin-top: 5px;
+}
+
+// HELP TEXT
+// --------------------------
+
+.help-block,
+.help-inline,
+.info-block,
+.info-inline {
+    color: @inputHelpColor;
+    text-shadow: 0 1px 0 rgba(255,255,255, 1);
+    font-weight: normal;
+    font-size: @fontSizeSmall;
+}
+.help-block,
+.info-block {
+    margin-bottom: 5px;
+}
+.help-block i,
+.help-inline i {
+    font-size: @baseFontSize;
+}
+a.help-block,
+a.help-inline {
+    text-decoration: none
+}
+.help-icon {
+    padding: 5px;
+    cursor: pointer;
+}
+
+// For Well black
+.well-black .help-block,
+.well-black .help-inline,
+.well-black .info-block,
+.well-black .info-inline {
+    color: @inputWellBlackHelpColor;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.8);
+}
+
+// INPUT GROUPS
+// ------------
+
+.input-append, 
+.input-prepend {
+ 	input,
+    select,
+    .uneditable-input {
+        position: relative;
+        margin-bottom: 0;
+        vertical-align: top;
+        *margin-left: 0;
+    	.border-radius(0 @inputBorderRadius @inputBorderRadius 0);		
+		&:focus {
+            z-index: 2;			
+		}
+    }
+    .btn {
+        border-color: @inputBorder;
+        border-color: rgba(0,0,0,.3) rgba(0,0,0,.25) rgba(0,0,0,.2);
+    }
+    .add-on {
+        display: inline-block;
+        padding: 4px 5px;
+        min-width: 16px;
+        width: auto;
+        height: @baseLineHeight;
+        border-color: @inputBorder;
+        border-color: rgba(0,0,0,.3) rgba(0,0,0,.25) rgba(0,0,0,.2);
+        background-color: @grayLighter;
+        text-align: center;
+        text-shadow: 0 1px 0 @white; 
+        font-weight: normal;
+        font-size: @baseFontSize;
+        line-height: @baseLineHeight;
+    }
+    .add-on,
+    .btn,
+    .btn-group > .dropdown-toggle {
+        vertical-align: top;
+        .border-radius(0);
+    }
+    .active {
+        border-color: @green;
+        background-color: lighten(@green,.3);
+    }
+}
+
+.input-prepend {
+    .add-on,
+    .btn {
+        margin-right: -1px;
+    }
+    .add-on:first-child,
+    .btn:first-child {
+        .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    }
+}
+
+.input-append {
+    input,
+    select,
+    .uneditable-input {
+        .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+        + .btn-group .btn:last-child {
+            .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+        }					
+    }	
+    .add-on, 
+    .btn,
+    .btn-group {
+        margin-left: -1px;
+    }
+    .add-on:last-child,
+    .btn:last-child,
+    .btn-group:last-child > .dropdown-toggle {
+        .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    }
+}
+
+// Remove all border-radius for inputs with both prepend and append
+.input-prepend.input-append {
+    input,
+    select,
+    .uneditable-input {
+        .border-radius(0);
+        + .btn-group .btn {
+            .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+        }
+    }
+    .add-on:first-child,
+    .btn:first-child {
+        margin-right: -1px;
+        .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    }
+    .add-on:last-child,
+    .btn:last-child {
+        margin-left: -1px;
+        .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    }
+    .btn-group:first-child {
+        margin-left: 0;
+    }
+}
+
+// SEARCH FORM
+// --------------------------
+
+/* Allow for input prepend/append in search forms */
+.form-search .input-append .search-query,
+.form-search .input-prepend .search-query {
+  .border-radius(0); // Override due to specificity
+}
+.form-search .input-append .search-query {
+  .border-radius(14px 0 0 14px);
+}
+.form-search .input-append .btn {
+  .border-radius(0 14px 14px 0);
+}
+.form-search .input-prepend .search-query {
+  .border-radius(0 14px 14px 0);
+}
+.form-search .input-prepend .btn {
+  .border-radius(14px 0 0 14px);
+}
+
+// HORIZONTAL & VERTICAL FORMS
+// ---------------------------
+
+legend + .control-group,
+legend + .section-form-content {
+    margin-top: @baseLineHeight;
+    -webkit-margin-top-collapse: separate;
+}
+
+// Horizontal-specific styles
+// --------------------------
+
+// Float the labels left
+label.label-left,
+.label-left label,
+.label-left .label-field,
+.form-horizontal.label-left .control-label,
+.form-horizontal .label-left .control-label {
+    text-align: left;
+}
+
+// Labels size
+.mini-labels {
+    .control-group {
+        > label {
+            width: 70px;
+        } 
+    } 
+    .controls {
+        margin-left: 80px;
+    }
+    .form-actions {
+        padding-left: 80px;
+    }
+}
+
+.small-labels {
+    .control-group {
+        > label {
+            width: 110px;
+        } 
+    } 
+    .controls {
+        margin-left: 120px;
+    }
+    .form-actions {
+        padding-left: 120px;
+    }
+}
+
+
+// Form Condensed styles
+// --------------------------
+
+.form-condensed select,
+.form-condensed textarea,
+.form-condensed input[type="text"],
+.form-condensed input[type="password"],
+.form-condensed input[type="datetime"],
+.form-condensed input[type="datetime-local"],
+.form-condensed input[type="date"],
+.form-condensed input[type="month"],
+.form-condensed input[type="time"],
+.form-condensed input[type="week"],
+.form-condensed input[type="number"],
+.form-condensed input[type="email"],
+.form-condensed input[type="url"],
+.form-condensed input[type="search"],
+.form-condensed input[type="tel"],
+.form-condensed input[type="color"],
+.form-condensed .uneditable-input {
+    margin-bottom: 0;
+}
+
+.form-condensed label {
+    margin-bottom: 0;
+}
+
+.form-condensed .control-group {
+    margin-bottom: 5px;
+}
+
+// Form Dark styles
+// --------------------------
+
+.form-dark select,
+.form-dark textarea,
+.form-dark input[type="text"],
+.form-dark input[type="password"],
+.form-dark input[type="datetime"],
+.form-dark input[type="datetime-local"],
+.form-dark input[type="date"],
+.form-dark input[type="month"],
+.form-dark input[type="time"],
+.form-dark input[type="week"],
+.form-dark input[type="number"],
+.form-dark input[type="email"],
+.form-dark input[type="url"],
+.form-dark input[type="search"],
+.form-dark input[type="tel"],
+.form-dark input[type="color"],
+.form-dark .uneditable-input {
+    background-color: #e1e2e9; 
+    //background-color: rgba(0,0,0,.1);
+}
+
+.form-dark input[disabled],
+.form-dark select[disabled],
+.form-dark textarea[disabled],
+.form-dark input[readonly],
+.form-dark select[readonly],
+.form-dark textarea[readonly] {
+    border: 1px solid #d1d1d1;
+    background-color: #f1f1f1;
+    cursor: not-allowed;
+    .box-shadow(inset 0 1px 1px rgba(0,0,0, .075));
+}
+
+
+
+// For bootstrap multiselect
+.input-prepend.input-append select[multiple="multiple"] {
+    .border-radius(0);
+}
+
+.input-prepend.input-append select[multiple="multiple"]:first-child + input,
+.input-prepend.input-append select[multiple="multiple"]:first-child + .btn,
+.input-prepend.input-append select[multiple="multiple"]:first-child + .btn-group .btn,
+.input-prepend.input-append select[multiple="multiple"]:first-child + .dropdown .btn {
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+}
+
+
+// Specific styles
+// --------------------------
+
+// Statistic percent
+.input-append.append-percent {
+  position: relative;
+  padding-left: 10px;
+}
+
+.input-append.append-percent input {
+    margin-left: -10px;
+    padding-right: 0;
+}
+
+.input-append.append-percent .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+// Text label
+.form-datapreview label {
+    margin-top: 0px;
+}
+
+// wrapper for corection uniform checkbox
+.checkbox-wrap {
+    display: inline-block;
+    padding-left: 18px;
+}
+
+// For input/textarea whit clear icon
+.clear-icon-wrap {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+// FORM LIST
+// ----------------------------------------------------
+.form-list {
+    margin-left: 0;
+    list-style: none;
+}
+
+// only
+.section-form {
+    margin: 0;
+    padding: 9px 0;
+    min-height: 30px;
+    color: #3399ff;
+    font-size: @fontSizeLarge;
+    line-height: 30px;
+    .clearfix();
+    h4 {
+        margin: 10px 0 0;
+        font-weight: normal
+    }
+}
+
+
+//FileUpload Jasny 
+// ----------------------------
+.input-append,
+.input-prepend {
+    .btn-file {
+        position: relative;
+        > input {
+            position: absolute;
+        }
+    }
+}
+

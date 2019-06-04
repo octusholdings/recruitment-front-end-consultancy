@@ -1,0 +1,25 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+		    {{translate 'addToJob'}}
+		</div>
+		<div class="modal-body form-horizontal overflow-y-visible is-tall" >
+			<p>{{translate 'addCandidateToAJob'}}</p>
+	    	<div class="col-sm-12">
+	    		<div class="form-group">
+	    			<div class="tt-wrapper">
+                        <i class="tt-spinner fa fa-refresh fa-spin fa-fw"></i>
+						<input class="form-control item-name" type="text" autocomplete="off">
+						<span class="help-block">{{translate "enterTheJobNameToBeAddedToTheCandidates"}}</span>
+					</div>
+				</div>
+		    </div>
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group">
+		    	<button class="btn btn-danger" data-dismiss="modal">{{translate "cancel" }}</button>
+		    	<button class="btn btn-success" disabled id="add-item" data-dismiss="modal" disabled="disabled">{{translate "add" }}</button>
+			</div>
+		</div>
+	</div>
+</div>

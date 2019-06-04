@@ -1,0 +1,76 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - BREADCRUMBS 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.breadcrumb {
+  	padding: 6px 15px 6px;
+  	margin: 0;
+  	background: transparent;
+  	.border-radius(0);
+
+	> li {
+	   	display: inline-block;
+	  	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+		.ie7-inline-block();
+
+		> a {
+		  	font-weight: bold;
+		  	font-size: @fontSizeBaseSmall;
+		  	color: lighten(@booColor, 25%);
+			&:hover {
+			  	text-decoration: none;
+			  	color: lighten(@booColor, 60%);
+			}
+		}
+
+		> .divider.divider {
+			color: lighten(@booColor, 30%);
+		}
+	}	
+
+	.active {
+	  	font-weight: bold;
+	  	font-size: @fontSizeBaseSmall; 
+	  	color: @white;
+	  	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+	}
+
+	> li {
+		> .dropdown-menu {
+		  	position: absolute;
+		  	top: 97%;
+			&:after {
+				display: inline-block;
+				position: absolute;
+				left: 10px;
+				top: -6px;
+			  	border-bottom: 6px solid @white;
+			  	border-left:   6px solid transparent;
+			  	border-right:  6px solid transparent;
+			  	content: "";	
+			}
+			&:before {
+				display: inline-block;
+				position: absolute;
+				left: 9px;
+				top: -7px;
+			  	border-bottom: 7px solid rgba(0, 0, 0, 0.2);
+			  	border-left:   7px solid transparent;
+			  	border-right:  7px solid transparent;
+			  	content: "";			  	
+			}
+			> li {
+			  	display: block;
+			}
+		}	
+	}
+}

@@ -1,0 +1,197 @@
+/* 
+ * _component.labels.scss
+ * ------------------
+ */
+
+.label-candidate {
+    background-color: #444C5C;
+}
+
+.label-client {
+    background-color: #CE5A57;
+}
+
+.label-company {
+    background-color: #78A5A3;
+}
+
+.label-job {
+    background-color: #E1B16A;
+}
+
+.label-deleted {
+    background-color: #b0b0b0;
+}
+
+.label-user {
+    background-color: #8B0000;
+}
+
+.label-legend {
+	padding: 4px 15px;
+	margin-bottom: 10px;
+
+	ul {
+		margin: 0px;
+		text-align: right;
+
+		li {
+			color: $color_dove_gray_approx;
+			font-weight: bold;
+			font-size: 11px;
+		}
+	}
+	.label {
+		width: 15px; height: 15px;
+		padding: 0px;
+		border-radius: 15px;
+		margin-bottom: -2px;
+
+		&:empty {
+			display: inline-block;
+		}
+	}
+}
+
+.selectedKey {
+    margin-bottom: 5px;
+
+    .label {
+        margin-right: 10px;
+        margin-bottom: 5px;
+        display: inline-block;
+        line-height: 14px;
+        border: 1px solid #184b77;
+    }
+
+    .label-primary {
+		&.label-primary-0 {
+			margin-right: -3px;
+
+			+.label-primary-0 {
+				margin-left: 10px
+			}
+		}
+		&.label-primary-1 {
+			background: #286192;
+			color: #d6e4f0;
+			margin-right: -3px;
+			font-size: 85%; 
+
+			+.label-primary-0 {
+				margin-left: 10px
+			}
+		}
+		&.label-primary-2 {
+			background: #1e496d;
+			color: #adc9e2;
+			margin-right: -3px;
+			font-size: 70%;
+			line-height: 15px;
+
+			+.label-primary-0 {
+				margin-left: 10px
+			}
+		}
+		&.label-primary-3 {
+			background: #143049;
+			color: #84afd3;
+			margin-right: -3px;
+			font-size: 55%;
+
+			+.label-primary-0 {
+				margin-left: 10px
+			}
+		}
+		&.label-primary-4 {
+			background: #143049;
+			color: #84afd3;
+			margin-right: -3px;
+			font-size: 40%;
+
+			+.label-primary-0 {
+				margin-left: 10px
+			}
+		}
+	}
+}
+
+/* Modifiers
+_______________________________________*/
+.simple-header .label-legend { padding-top:0; padding-bottom:0; margin-bottom:0; }
+
+
+
+/* New Octus tags
+_______________________________________*/
+.o-tag { 
+	line-height: 1.3;
+	position: relative;
+	padding: .4rem .8rem;
+	display: inline-block;
+	background-color:#868e96;
+	border-radius:2px;
+	color:#fff;
+	text-shadow: none;
+
+	&.unfilled {
+	    background-color: #f3f3f3;
+    	color: #adadad;
+	}
+}
+
+.o-tag-hover {
+    line-height: 1.3;
+    position: relative;
+    padding: .4rem .8rem;
+    display: inline-block;
+
+    &:hover {
+        background-color:#1c7cd6;
+        border-radius:2px;
+        color:#fff;
+        text-shadow: initial;
+        text-shadow: none;
+    }
+}
+
+.o-tag.with-dropdown,
+.o-tag-hover.with-dropdown {
+    padding: .4rem 1.6rem .4rem .8rem;
+
+    &:hover {
+        background-color:#1c7cd6;
+        border-radius:2px;
+        color:#fff;
+        text-shadow: initial;
+        text-shadow: none;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: 5px;
+            bottom: 9px;
+            border-top: 4px dashed;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+        }
+    }
+}
+
+.o-tag:empty,
+.o-tag-hover:empty { display:none; }
+
+.o-tooltip { 
+	line-height: 1.3;
+	position: relative;
+	background-color: #323232;
+	opacity: 0.9 !important;
+	border-radius: 5px;
+	color:#fff;
+	border: none;
+	overflow: none;
+	text-shadow: none;
+}

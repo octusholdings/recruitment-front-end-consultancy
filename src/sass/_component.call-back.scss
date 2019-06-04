@@ -1,0 +1,31 @@
+/* FULL SCREEN SEARCH
+________________________________________ */
+
+.call-back { padding:0 .8rem; display:block; margin:0 0 .8rem 0; cursor:pointer; border-radius:.3rem; background-color:$color_gray95; box-shadow:0 1px 2px rgba(0,0,0,.3); border:1px solid transparent; transition:border .25s; }
+.call-back:hover { border-color:$color_suva_gray; }
+
+.call-back-header { display:flex; justify-content:space-between; align-items:center; min-height:4rem; box-sizing:border-box; padding:.8rem 0; }
+	.call-back-title { margin:0; padding:0; font-size:1.6rem; line-height:1.4; font-weight:500; color:#444c5c; transition:color .25s; }
+	.call-back-title > a { margin:0; padding:0; font-size:1.5rem; line-height:1.4; font-weight:500; color:#444c5c; transition:color .25s; }
+	input.call-back-checkbox { margin:0 .8rem 0 0; padding:.8rem; }
+	.call-back:hover .call-back-title,
+	.call-back:hover .call-back-title > a { color:#1862ab; }
+		.call-back-title > small { font-size:75%; color:#444c5c; }
+	.is-done .call-back-title { text-decoration:line-through; }
+	.call-back-details-button { background-color:transparent; transition:transform .35s; }
+	.call-back-header.is-extended .call-back-details-button { transform:rotate(180deg); }
+
+.call-back-details > table { margin-bottom:.8rem; }
+	.call-back-details-cell { font-size:1.2rem; line-height:1.4; padding:.4rem; }
+
+.call-back-home-list:empty { position:relative }
+.call-back-home-list:empty:after {
+		content: attr(data-no-result);
+		font-size: 1.4rem;
+		line-height:4rem;
+		padding:0 1.6rem;
+		display: block;
+		background-color:$color_gray95; 
+		box-shadow:0 1px 2px rgba(0,0,0,.3);
+		border-radius: .2rem;
+	}

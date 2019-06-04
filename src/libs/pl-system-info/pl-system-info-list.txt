@@ -1,0 +1,38 @@
+../libs/pl-system-info/bootstrapx-clickover/				1.0
+../libs/pl-system-info/gritter/								1.7.4
+../libs/pl-system-info/jquery.notyfy/
+../libs/pl-system-info/qtip2/								2.0.1
+
+
+Content/libs/pl-system-info/bootstrapx-clickover/js/bootstrapx-clickover.js
+
+Content/libs/pl-system-info/gritter/css/jquery.gritter.css
+Content/libs/pl-system-info/gritter/css/jquery.gritter-boothemes.css
+Content/libs/pl-system-info/gritter/img/ie-spacer.gif
+Content/libs/pl-system-info/gritter/js/jquery.gritter.js
+Content/libs/pl-system-info/gritter/js/jquery.gritter.min.js
+Content/libs/pl-system-info/gritter/less/jquery.gritter.less
+Content/libs/pl-system-info/gritter/less/jquery.gritter-boothemes.less
+Content/libs/pl-system-info/gritter/img/gritter-close.png
+Content/libs/pl-system-info/gritter/img/gritter-close.psd
+Content/libs/pl-system-info/gritter/sass/_jquery.gritter.scss
+Content/libs/pl-system-info/gritter/sass/_jquery.gritter-boothemes.scss
+
+Content/libs/pl-system-info/jquery.notyfy/css/boo-notyfycolor.css
+Content/libs/pl-system-info/jquery.notyfy/css/boo-notyfylight.css
+Content/libs/pl-system-info/jquery.notyfy/themes/default.css
+Content/libs/pl-system-info/jquery.notyfy/css/jquery.notyfy.css
+Content/libs/pl-system-info/jquery.notyfy/js/jquery.notyfy.js
+Content/libs/pl-system-info/jquery.notyfy/less/boo-notyfycolor.less
+Content/libs/pl-system-info/jquery.notyfy/less/boo-notyfylight.less
+Content/libs/pl-system-info/jquery.notyfy/less/jquery.notyfy.less
+Content/libs/pl-system-info/jquery.notyfy/sass/_boo-notyfycolor.scss
+Content/libs/pl-system-info/jquery.notyfy/sass/_boo-notyfylight.scss
+Content/libs/pl-system-info/jquery.notyfy/sass/_jquery.notyfy.scss
+
+Content/libs/pl-system-info/qtip2/css/jquery.qtip.css
+Content/libs/pl-system-info/qtip2/css/jquery.qtip.min.css
+Content/libs/pl-system-info/qtip2/js/jquery.qtip.js
+Content/libs/pl-system-info/qtip2/js/jquery.qtip.min.js
+Content/libs/pl-system-info/qtip2/less/jquery.qtip.less
+Content/libs/pl-system-info/qtip2/sass/_jquery.qtip.scss

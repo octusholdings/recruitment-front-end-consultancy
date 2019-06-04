@@ -1,0 +1,223 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - LAYOUT 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.filler { 
+	height: @basefillerHeight;
+}
+
+.header-sticky .filler,
+.base-layout .filler { 
+	height: @fillerSmallHeight;
+} 
+
+.base-layout {
+	#header-container {
+	  	height: @fillerSmallHeight;
+	  	.header-drawer {
+		  	height: 5px;
+		}
+	}	
+	.sidebar {
+	  	top: 0px
+	}
+}
+
+.mobile-nav {
+  	text-align: center;
+}
+.mobile-btn {
+  	display: block;
+  	padding: 7px 0 0;
+  	color: darken(@booColor,15%); 
+  	text-align: center;
+  	text-shadow: 0 1px 0 rgba(255,255,255,.3);
+  	font-weight: bold;
+  	font-size: @fontSizeLarge;
+	&:hover {
+	  	color: darken(@booColor,20%);
+	  	text-decoration: none
+	}
+}
+
+.nav-page {
+	> li {
+		border-top: 1px solid rgba(255,255,255,.6);
+		border-bottom: 1px solid rgba(0,0,0,.2);
+		> a {
+			padding: 9px;
+		}
+	}	
+}
+
+// CONTENT 
+// -------------------------------------------
+
+.page-container { 
+  	position: relative;  
+  	min-height: 100%;
+}
+
+#main-container { 
+  	position: absolute; 
+  	top:0; 
+  	bottom:0; 
+  	min-height: 100%; 
+  	width: 100%;
+}
+
+.main-content {
+  	position: relative;
+  	z-index: 1;  
+  	min-height: 100%;
+  	background: url("@{imagesPath}/background/body-bg-02.jpg") repeat scroll 0 0 #ECEDEF;
+}
+
+.sidebar-left {
+	.main-content {
+		margin-right: 0;
+		margin-left: @sidebarWidth;
+	}	
+}
+
+.sidebar-right {
+	.main-content {
+	  	margin-right: @sidebarWidth;
+	  	margin-left: 0;
+	}	
+}
+
+.sidebar-hidden {
+	.main-content {
+	  	margin-right: 0;
+	 	margin-left: 0;
+	}	
+}
+
+// Page Head 
+// -------------------------------------------
+
+.page-head {
+  	position: relative;
+  	margin: 0 -20px;
+  	padding: 0 20px;
+  	min-height: 100px;
+  	border-bottom: 1px solid @booBorderDarkColor;
+  	background: url("@{imagesPath}/background/body-bg-02-15.jpg") repeat scroll 0 0;
+	.page-title {
+	  	margin-bottom: 0px;
+		h1 {
+		}
+	}
+}
+
+.pagedesc {
+  text-shadow: 0 1px 0 rgba(255,255,255,.6);
+}
+
+.well-black .pagedesc {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.8);
+}
+
+.page-title + .pagedesc {
+  margin-top: -5px;
+}
+
+// Page Bar 
+// -------------------------------------------
+
+.page-bar {
+  	position: absolute;
+  	right: 20px;
+  	bottom: -1px;
+  	left: 20px;
+  	margin: auto;
+  	padding: 0;
+	.btn-toolbar {
+	  	margin: 0;
+	}
+	.nav-tabs {
+	  	margin: 0;
+		> li {
+			> a {
+			  	color: @textColor;
+			}	
+		}
+		.active {
+			a,
+			a:hover {
+			  	background: url("@{imagesPath}/background/body-bg-02.jpg") repeat scroll 0 0 #f5f5f5;
+			  	color: #3399ff;				
+			}
+		}
+	}	
+}
+
+
+// Page Content 
+// -------------------------------------------
+.page-content { 
+  	position: relative;
+  	padding-bottom: @baseLineHeight * 3;
+  	height: 100%;  
+}
+
+.wrap-shadow {
+  	.border-radius(@baseBorderRadius);
+  	.background-clip(padding-box);
+  	.box-shadow(0px 1px 2px rgba(0,0,0,.35));
+}
+
+.wrap-padding {
+  	padding: 0 15px
+}
+
+.wrap-border-grey {
+  	border: 1px solid darken(@booBorderColor, 2%);
+  	.border-radius(@baseBorderRadius);
+  	.background-clip(padding-box);
+}
+
+.wrap-border-white {
+  	border: 1px solid @white;
+  	.border-radius(@baseBorderRadius);
+  	.background-clip(padding-box);
+}
+
+.bg-white {
+  	background-color: #fafafa;
+}
+
+.toggle-btn {
+  	float: right;
+}
+
+legend .toggle-btn[class^="fontello-icon-"]:before,
+legend .toggle-btn[class*=" fontello-icon-"]:before,
+legend .toggle-btn[class^="aweso-icon-"]:before,
+legend .toggle-btn[class*=" aweso-icon-"]:before,
+legend .toggle-btn[class^="booicon-"]:before,
+legend .toggle-btn[class*=" booicon-"]:before {
+	font-size: 1em;
+	color: @grayLight;
+}
+
+
+// PAGE SCROLLUP 
+// -------------------------------------------
+
+#btnScrollup {
+	display: none;
+	float: left;
+	color: #D6B200 !important;
+}
+

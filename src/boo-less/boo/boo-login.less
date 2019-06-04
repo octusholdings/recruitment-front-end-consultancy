@@ -1,0 +1,217 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - LOGIN PAGE 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.signin {
+	a.link {
+	  	color: @linkColor;
+	  	text-decoration: none;
+		&:hover {
+		  	color: @linkColorHover;
+		}
+	}
+
+	.signin-signin {
+	  	max-width: 360px;
+	  	margin: 0 auto @baseLineHeight;
+	}	
+
+	.tab-content {
+	  	padding-top: 0;
+	}
+
+	.welcome {
+//	  	color: #b4b5ba;
+	  	margin: (@baseLineHeight / 2) 0 @baseLineHeight;
+//	  	font-size: 86px;
+//	  	font-family: ForteMT;
+//	  	line-height: 1.1;
+	  	letter-spacing: -0.02em;
+	  	text-shadow: 0 1px 0 rgba(255,255,255,.65), 0 -1px 0 rgba(0,0,0,.30);
+		.opacity(75);
+		span,
+		small {
+		  	font-size: 36px;
+		}
+	}	
+	.btn {
+		margin-bottom: 5px;		
+	}
+	.note {
+	  	color: @gray;
+	  	line-height: @baseLineHeight - 2;
+	}
+	.web-description {
+	  	text-align: center;
+	  	color: #8b8c8e;
+	  	text-shadow: 0 1px 0 rgba(255,255,255, 1);
+		h5 {
+		  	margin-bottom: @baseLineHeight / 2;
+			color: #6d6e71
+		}
+		p {
+		  	font-size: @fontSizeSmall;
+		  	line-height: @baseLineHeight - 4;
+		}
+	}
+	input[type="text"],
+    input[type="password"] {
+	  	height: 18px;
+	  	padding: 10px 6px;
+	  	margin-bottom: 5px;
+	  	font-size: @fontSizeBaseLarge;
+	  	font-weight: 400;
+	  	line-height: 18px;
+	  	text-shadow: 0 1px 0 rgba(255,255,255,.4);
+		.border-radius(@borderRadiusLarge);
+	}
+	.input-block-level {
+	  	min-height: 40px;
+	}
+	.form-tied {
+		input {
+	  		margin-bottom: 0;
+		}
+		legend {
+		  	font-size: @fontSizeBaseSmall;
+		  	font-weight: bold;
+		  	line-height: @baseLineHeight;
+		  	padding: 0 6px;
+		  	margin-bottom: 5px;
+		  	border-bottom: none;
+		}
+		ul {
+		  	margin: 0 0 @baseLineHeight;
+		  	list-style: none;
+			> li {
+			  	padding: 0;
+			  	margin: 0;
+				input {
+				  	margin-bottom: 0;
+				  	border-top-color: #b5b7c4;
+				  	border-bottom: none;
+				  	background-color: rgba(0,0,0,.09);
+					.border-radius(0);
+					.box-shadow(0 1px 0 rgba(255,255,255,.4) inset, -2px 0 4px -3px rgba(0,0,0,.2) inset, 2px 0 4px -3px rgba(0,0,0,.2) inset);
+				}
+				&:first-child {
+					input {
+					  	border-top-color: #a8aBBa;
+					  	border-bottom: none;
+						.border-radius(@borderRadiusLarge @borderRadiusLarge 0 0);
+						.box-shadow(0 1px 2px rgba(0,0,0,.2) inset);
+					}
+				}
+				&:last-child {
+					input {
+					  	border: 1px solid;
+					  	border-color: #b5b7c4 #b5b7c5 #c5c7d2;
+						.border-radius(0 0 @borderRadiusLarge @borderRadiusLarge);
+						.box-shadow(0 1px 0 rgba(255,255,255,.2), -2px 0 4px -3px rgba(0,0,0,.2) inset, 2px 0 4px -3px rgba(0,0,0,.2) inset);
+					}
+				}				
+			}
+		}
+	}	
+	
+	.signin-horizontal {
+		.web-description {
+		  	text-align: left;
+		}
+		.welcome {
+		  	color: #b4b5ba;
+		  	margin: 10px 0 20px;
+		  	font-size: 86px;
+		  	font-family: ForteMT;
+		  	line-height: 1.1;
+		  	letter-spacing: -0.02em;
+		  	text-shadow: 0 1px 0 rgba(255,255,255,.65), 0 -1px 0 rgba(0,0,0,.30);
+			.opacity(75);
+			span,
+			small {
+			  	font-size: 36px;
+			}
+			
+		}
+	} 
+	input:-moz-placeholder, 
+	input:-ms-input-placeholder,
+	input::-webkit-input-placeholder {
+	 	text-shadow: 0 1px 0 rgba(255,255,255,.6);
+	}
+	.well-black {
+		a.link {
+	  		color: #1E90FF;
+			&:hover {
+			  	color: #68b5ff;
+			}
+		}
+		.btn {
+			.box-shadow(0 0 1px rgba(0,0,0,.5));
+		}
+		input {
+		  	text-shadow: 0 -1px 0 rgba(0,0,0,.8);
+		}
+		.note {
+		  	color: #acb0b5;
+		}
+		.form-tied {
+			input {
+		  	background-color: #2d3033;
+			}
+			legend {
+			  	color: #c7cacf;
+			  	text-shadow: 0 -1px 0 rgba(0,0,0,.8);
+			}
+			ul {
+				> li {
+					input {
+					  	border-top-color: #272727;
+						.box-shadow(0 1px 0 rgba(255,255,255,.05) inset);
+					}
+					&:first-child input {
+					  	border-top-color: #272727;
+					  	border-bottom: none;
+						.box-shadow(0 1px 2px rgba(0,0,0,.2) inset);
+					}
+
+					&:last-child input {
+					  	border: 1px solid;
+					  	border-color: #272727 #252525 #222222;
+					  	border-bottom: none;
+						.box-shadow(0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(255,255,255,.03) inset);
+					}
+					
+				}
+			}
+			input:-moz-placeholder, 
+			input:-ms-input-placeholder,
+			input::-webkit-input-placeholder {
+				text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+			}
+		}
+	}
+}
+.login {
+	textarea:-moz-placeholder,
+	textarea:-ms-input-placeholder,
+	textarea::-webkit-input-placeholder {
+		text-shadow: 0 1px 0 rgba(255,255,255,.6);
+	}
+	.well-block {
+		textarea:-moz-placeholder,
+		textarea:-ms-input-placeholder,
+		textarea::-webkit-input-placeholder {
+			text-shadow: 0 -1px 0 rgba(0,0,0,.4);	
+		}		
+	}
+}

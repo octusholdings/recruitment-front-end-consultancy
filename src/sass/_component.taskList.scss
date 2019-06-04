@@ -1,0 +1,13 @@
+.taskList {
+	tr td:first-child{
+	    vertical-align: middle;
+	    text-align: center;
+	}
+	tr td:last-child{
+	    vertical-align: middle;
+	    text-align: center;
+	}
+	.task-checkbox{
+	    margin-bottom: 3px;
+	}
+}

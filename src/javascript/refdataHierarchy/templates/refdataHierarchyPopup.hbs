@@ -1,0 +1,55 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">
+		    	{{translate modalTitle}}
+	    	</h4>
+		</div>
+		<div class="modal-body">
+			<div class="row">
+				<div class="col-lg-8 col-md-6">
+					<strong>{{translate "selectedKey"}}</strong>		
+					<div class="selectedKey"></div>			
+				</div>
+				<div class="col-lg-4 col-md-6 text-right selectOptions wb">
+					<strong>{{translate "selectOptions"}}</strong>		
+					<div>
+						<div class="btn-group btn-group-sm" data-toggle="buttons">
+							<label class="btn btn-default">
+							<label class="btn btn-default">
+								<input name="refDataSelOpt" type="radio" value="byGrp"> {{translate "byGroup"}}
+							</label>
+							<label class="btn btn-default active">
+								<input name="refDataSelOpt" type="radio" value="byInd" checked="true"> {{translate "byIndividual"}}
+							</label>
+						</div>
+						<div class="btn-group btn-group-sm" data-toggle="button">
+							<button name="getParent" class="btn btn-default getParent active">{{translate "getParent"}}</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<strong>{{translate 'refData'}}</strong>
+			    	<div id="treeView" class="TREE-LIST"></div>
+			    </div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			{{#if (hasPermission 'DEBUG')}}
+			<button class="btn btn-default get-data">
+		    	{{ translate "getData" }}
+		    </button>
+		    {{/if}}
+		    <div class="btn-group">
+		    	<button class="btn btn-danger cancel-data" data-dismiss="modal">
+			    	{{translate "no" }}
+			    </button>
+			    <button type="submit" class="btn btn-success confirm-data" data-dismiss="modal">
+			    	{{translate "yes" }}
+			    </button>
+		    </div>
+		</div>
+	</div>
+</div>

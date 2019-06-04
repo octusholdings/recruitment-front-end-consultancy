@@ -1,0 +1,37 @@
+.gritter-error {
+    margin-top: 40px;
+    background-color: #de4343;
+    border-color: #665d5e;
+    
+    a {
+        color: #eeff5e !important;
+    }
+}
+
+.gritter-error,
+.gritter-success p {
+    color: #c6c0c0 !important;
+}
+
+.gritter-success,
+.gritter-info a {
+    color: #eeff5e !important;
+}
+
+.gritter-success {
+    margin-top: 40px;
+    background-color: #27a264;
+    border-color: #665d5e;
+}
+
+.gritter-info {
+    margin-top: 40px;
+    background-color: #1067a5;
+    border-color: black;
+    /*background-color: #D9EDF7;*/
+    /*border-color: #a3a1a1;*/
+}
+
+.alert[data-notify="container"] {
+    z-index: 9004 !important;
+}

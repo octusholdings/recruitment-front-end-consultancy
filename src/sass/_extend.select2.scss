@@ -1,0 +1,52 @@
+/*
+ * Extension of select2 dropdown
+ * ------------------
+ */
+
+.select2-container .select2-selection--single {
+    height: 34px;
+}
+.select2-container--default .select2-selection--single {
+    border-color: #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 32px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height:32px;
+}
+
+// used with Spec CV 3.0
+// #client-recipient .select2-wrapper {
+// 	padding: 0px;
+// 	border: none;
+// 	width: 99%;
+
+// 	.select2-container--default .select2-selection--multiple {
+// 		border-top-left-radius: 0px;
+// 		border-bottom-left-radius: 0px;
+// 	}
+
+// 	.select2-search__field {
+// 		width: 0.75em !important;
+// 	}
+
+// 	.select2-search {
+// 		min-width: 0;
+// 		width: 0.75em !important;
+// 	}
+// }
+
+// .select2-container--default.select2-container--focus .select2-selection {
+//     border-color: #66afe9;
+//     border-top-color: rgb(102, 175, 233);
+//     border-right-color: rgb(102, 175, 233);
+//     border-bottom-color: rgb(102, 175, 233);
+//     border-left-color: rgb(102, 175, 233);
+//     outline: 0;
+//     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+//     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+// }

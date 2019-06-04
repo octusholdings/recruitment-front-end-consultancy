@@ -1,0 +1,103 @@
+.ms-container{
+    background: transparent url('@{pluginMultiselectPath}/img/switch.png') no-repeat 50% 50%;
+}
+
+.ms-container:after{ 
+    display: block; 
+    visibility: hidden; 
+    clear: both; 
+    min-height: 0; 
+    height: 0;
+    content: "."; 
+    font-size: 0; 
+    line-height: 0;
+}
+
+.ms-container .ms-selectable, 
+.ms-container .ms-selection{
+    float: left;
+    width: 45%;
+    .border-radius(3px);
+}
+
+.ms-container .ms-list{
+    border: 1px solid;
+    border-color: #a8abba #b5b7c5 #c5c7d2;
+    background: #fff;
+    .border-radius(3px);
+    .box-shadow(0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset);
+    
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+       -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+        -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+         -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+            transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.form-dark .ms-container .ms-list{
+    background-color: #e1e2e9;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ms-selected{
+    display:none;
+}
+.ms-container .ms-selectable {
+    margin-right: 10%;
+}
+
+.ms-container .ms-list.ms-focus{
+    outline: 0;
+    outline: thin dotted \9;
+    border-color: rgba(82, 168, 236, 0.8);
+    .box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+}
+
+.ms-container ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.ms-container .ms-optgroup-container{
+    width: 100%;
+}
+
+.ms-container ul.ms-list{
+    overflow-y: auto;
+    padding: 0;
+    height: 200px;
+}
+
+.ms-container .ms-optgroup-label{
+    margin: 0;
+    padding: 3px 0px 0px 5px;
+    color: #aaa;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.ms-container .ms-selectable li.ms-elem-selectable,
+.ms-container .ms-selection li.ms-elem-selection{
+    padding: 5px 10px;
+    border-bottom: 1px #eee solid;
+    color: #555;
+    font-size: 14px;
+}
+
+.ms-container .ms-selectable li.ms-hover,
+.ms-container .ms-selection li.ms-hover{
+    background-color: #08c;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ms-container .ms-selectable li.disabled,
+.ms-container .ms-selection li.disabled{
+    background-color: #eee;
+    color: #aaa;
+    cursor: text;
+}

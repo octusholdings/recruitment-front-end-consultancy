@@ -1,0 +1,32 @@
+{{#if subMenu}}
+    <a href="#{{url}}" data-parent="#mainSideMenu" data-toggle="collapse" class="list-group-item {{name}} clearfix">
+        {{#if dataIcon}}
+        <span class="item-icon"><i class="fa fa-fw {{dataIcon}}"></i></span>
+        <span class="item-copy">{{translate name}}</span>
+        <span class="pull-right arrow-icon"><i class="fa fa-fw fa-chevron-right"></i></span>
+        {{/if}}
+        {{#if glyphIcon}}
+        <span class="item-icon"><span class="fa-fw glyphicon {{glyphIcon}}"></span></span>
+        <span class="item-copy">{{translate name}}</span>
+        <span class="pull-right arrow-icon"><i class="fa fa-fw fa-chevron-right"></i></span>
+        {{/if}}
+    </a>
+    <div class="collapse list-group" id="{{url}}">
+    {{#each subMenu}}
+        <a class="list-group-item wb {{id}}" href="{{{url}}}"><span class="item-icon"><i class="fa fa-fw fa-caret-right"></i></span>{{title}}</a>
+    {{/each}}
+    </div>
+{{else}}
+    <a href="{{url}}" data-parent="#mainSideMenu" class="list-group-item {{name}} noSub clearfix">
+        {{#if dataIcon}}
+        <span class="item-icon"><i class="fa fa-fw {{dataIcon}}"></i></span>
+        <span class="item-copy">{{translate name}}</span>
+        <span class="pull-right arrow-icon"><i class="fa fa-fw fa-chevron-right"></i></span>
+        {{/if}}
+        {{#if glyphIcon}}
+        <span class="item-icon"><span class="fa-fw glyphicon {{glyphIcon}}"></span></span>
+        <span class="item-copy">{{translate name}}</span>
+        <span class="pull-right arrow-icon"><i class="fa fa-fw fa-chevron-right"></i></span>
+        {{/if}}
+    </a>
+{{/if}}

@@ -1,0 +1,80 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - POPOVER 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    display: none;
+    padding: 1px;
+    width: 236px;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.2);
+    background-color: #ffffff;
+    .border-radius(@borderRadiusLarge);
+    .box-shadow(0 5px 10px rgba(0,0,0,.2));
+    .background-clip(padding-box);
+}
+
+.popover-error {
+    border: 2px solid #eed3d7;
+    border: 2px solid rgba(185, 74, 72, 1);
+    background-color: #f2dede;
+    color: #b94a48;
+  	.box-shadow(0 5px 10px rgba(0,0,0,.4));	
+  	&.top {
+        .arrow {
+            border-top-color: #f2dede;
+            &:after {
+                bottom: -2px;
+                left: -12px;
+                border-width: 12px 12px 0;
+                border-top-color: rgba(185, 74, 72, 1);
+            }
+        } 
+    }
+    &.right {
+        .arrow {
+            border-right-color: #f2dede;
+            &:after {
+                bottom: -12px;
+                left: -2px;
+                border-width: 12px 12px 12px 0;
+                border-right-color: rgba(185, 74, 72, 1);
+            }
+        } 
+    }
+    .bottom {
+        .arrow {
+            border-bottom-color: #f2dede;
+            &:after {
+                top: -2px;
+                left: -12px;
+                border-width: 0 12px 12px;
+                border-bottom-color: rgba(185, 74, 72, 1);
+            }
+        } 
+    }
+    .left {
+        .arrow {
+            border-left-color: #f2dede;
+            &:after {
+                right: -2px;
+                bottom: -12px;
+                border-width: 12px 0 12px 12px;
+                border-left-color: rgba(185, 74, 72, 1);
+            }
+        } 
+    }
+}

@@ -1,0 +1,2 @@
+..\libs\pl-editors\bootstrap-wysihtml5\				0.0.2
+..\libs\pl-editors\ckeditor\						4.0.1 standard

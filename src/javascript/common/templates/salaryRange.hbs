@@ -1,0 +1,31 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">
+		    	{{translate "rangeSelection" }}
+	    	</h4>
+		</div>
+		<div class="modal-body">
+		    <h5>{{translate "currency" }}:</h5>
+		    <select class="form-control currencySelect">
+		    	
+		    </select>
+
+            <h5 style="margin-top: 2em">{{translate "startSalaryRange" }}:</h5>
+            <input id="start" class="form-control" type="text" style="width: 100%;" value="{{startSalary}}" />
+
+            <h5 style="margin-top: 2em">{{translate "endSalaryRange" }}:</h5>
+            <input id="end" class="form-control" type="text" style="width: 100%;" value="{{endSalary}}" />
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger cancel-range" data-dismiss="modal">
+			    	{{translate "no" }}
+			    </button>
+			    <button type="submit" class="btn btn-success confirm-range">
+			    	{{translate "yes" }}
+			    </button>
+			</div>
+		</div>
+	</div>
+</div>

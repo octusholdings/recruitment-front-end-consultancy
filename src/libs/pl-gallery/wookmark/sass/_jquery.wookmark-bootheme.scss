@@ -1,0 +1,67 @@
+/*! ----------------------------------------------------
+ * ADMIN TEMPLATE | BOO Admin Template
+ * --------------------------------------
+ * BOO - WOOKMARK Plugins   
+ * ----------------------------------------------------- 
+ */
+
+// Wookmark Grid Container
+#tiles {
+    list-style-type: none;
+    position: relative; /* Needed to ensure items are laid out relative to this container */
+    margin: 0;
+
+    // Grid items
+    li {
+        display: none;
+        padding: 4px;
+        width: 200px; /* Hide items initially to avoid a flicker effect */
+        cursor: pointer;
+        @include border-radius($borderRadiusSmall);
+        @include transition(all 0.3s ease-out);
+        
+        img {
+          display: block;
+        }  
+        
+        .thumb-title {
+          margin: 5px 0;
+        }
+
+        p {
+            margin: 5px;
+            color: #666;
+            font-size: $fontSizeSmall;
+            line-height: 16px;
+        }
+
+        &.inactive {
+            @include opacity(0);
+        }
+    }  
+    .imgshare {
+        padding-right: 9px;
+        padding-left: 9px;
+        a {
+            text-decoration: none;
+            @include opacity(60);
+            &:hover {
+                @include opacity(90); 
+            }       
+        }
+    }
+}
+
+// Wookmark  Loader
+#loader {
+    padding: 25px 0 25px 0;
+    height: 16px;
+    text-align: center;
+}
+
+#loaderCircle {
+    margin: 0 auto;
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/loader.gif');
+}

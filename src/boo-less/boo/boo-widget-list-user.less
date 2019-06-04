@@ -1,0 +1,64 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - WIDGET - List User 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.user-list {
+	.title {
+		a {
+	  		text-decoration: none;
+			&:hover {
+			  	color: @textColor;
+			}
+		}
+		small {
+		  	font-weight: normal;
+		  	font-size: @fontSizeSmall;
+		}
+	}	
+	.data {
+	  	font-size: @fontSizeSmall;
+	  	line-height: 16px;
+		> li {
+		  	font-size: @fontSizeSmall;
+		}
+		> .divider-vertical {
+		  	margin: 2px 6px 0;
+		  	padding: 0;
+		  	height: 16px;
+		  	border-right: 1px solid #ffffff;
+		  	border-left: 1px solid #bdbdbd;
+		}
+	}
+	.meta {
+	  	margin: 0;
+	  	font-size: @fontSizeMini;
+	  	line-height: @baseLineHeight - 4;
+	  	color: #777;
+		a {
+		  	color: #00315d;
+		  	font-weight: bold
+		}
+		strong {
+		  	color: #111;
+		}
+		> li {
+
+		}
+		> .divider-vertical {
+		  	margin: 3px 6px 0;
+		  	padding: 0;
+		  	height: 14px;
+		  	border-right: 1px solid #ffffff;
+		  	border-left: 1px solid #bdbdbd;
+		}
+	}
+}

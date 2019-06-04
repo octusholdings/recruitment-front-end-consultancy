@@ -1,0 +1,64 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">
+		    	{{translate "teamSelection" }}
+		    	<div class="pull-right">
+		    		<button class="btn-expand-compress btn-expand">
+		    			<i class="fa fa-expand" aria-hidden="true"></i>
+		    		</button>
+		    		<button class="btn-expand-compress btn-compress hidden">
+		    			<i class="fa fa-compress" aria-hidden="true"></i>
+		    		</button>
+		    	</div>
+	    	</h4>
+		</div>
+		<div class="modal-body teamQueryBuilder queryBuilder">
+			<div class="btn-group btn-group-xs {{uniqueClass}}">
+			    <button type="button" class="btn btn-success addrule-btn">
+					<i class="glyphicon glyphicon-plus"></i> {{translate "addRule"}}       
+				</button>
+				<button type="button" class="btn btn-success addgroup-btn">
+					<i class="fa fa-plus-circle" aria-hidden="true"></i> {{translate "addGroup"}}       
+				</button>
+			</div>
+			
+			<div class="rules-wrapper">
+				<div class="console">
+					<label class="color-coded">{{translate "color"}} <input class="color-coded-checkbox" type="checkbox"></label>
+					<div class="read-only code no-color clearfix"></div>
+				</div>
+				<div class="clearfix">
+					<div class="btn-group btn-group-xs group-conditions {{uniqueClass}}" data-toggle="buttons">
+						<label class="btn btn-info">
+							<input class="radioGrpCond" name="grpCond" type="radio" value="AND"> AND
+						</label>
+						<label class="btn btn-info">
+							<input class="radioGrpCond" name="grpCond" type="radio" value="OR"> OR
+						</label>
+					</div>
+				</div>
+
+				<ul class="rules-list">
+					
+				</ul>
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			{{#if (hasPermission 'DEBUG')}}
+			<button class="btn btn-default get-rules">
+		    	Get Rules
+		    </button>
+			{{/if}}
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger cancel-range" data-dismiss="modal">
+			    	{{translate "no" }}
+			    </button>
+			    <button type="submit" class="btn btn-success confirm-range">
+			    	{{translate "yes" }}
+			    </button>
+			</div>
+		</div>
+	</div>
+</div>

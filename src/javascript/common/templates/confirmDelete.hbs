@@ -1,0 +1,26 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">
+		    	{{!-- {{ translate "deleteConfirmation" }} {{#if toDelete}}- <span>{{toDelete}}</span>{{/if}} --}}
+		    	{{ translate "deleteConfirmation" }}
+	    	</h4>
+		</div>
+		<div class="modal-body">
+		    <p class="deleteMsg"> 
+		    	<i class="fa fa-exclamation-triangle fa-lg"></i>
+		    	<span class="message">{{ message }}</span>
+		    </p>
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger cancel-delete" data-dismiss="modal">
+		    		{{translate "no" }}
+			    </button>
+			    <button type="submit" class="btn btn-success confirm-delete">
+			    	{{translate "yes" }}
+			    </button>
+			</div>
+		</div>
+	</div>
+</div>

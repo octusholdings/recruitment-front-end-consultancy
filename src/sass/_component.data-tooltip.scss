@@ -1,0 +1,165 @@
+/* 
+ * _component.data-tooltip.scss
+ * ------------------
+ */
+
+/* Add this attribute to the element that needs a tooltip */
+
+[data-tooltip] {
+    position: relative;
+    // z-index: 1000;
+    cursor: pointer;
+    // display: inline;
+    
+    /* Hide the tooltip content by default */
+    &:before, &:after {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    /* Position tooltip above the element */
+    &:before {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-bottom: 4px;
+        margin-left: -60px;
+        padding: 7px;
+        width: 120px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 5px;
+        color: #fff;
+        content: attr(data-tooltip);
+        text-align: center;
+        font-size: 12px;
+        line-height: 1;
+        background: #333;
+        background: rgba(0, 0, 0, .8);
+        z-index: 999;
+        font-weight: 300;
+        letter-spacing: 1px;
+        white-space: normal;
+    }
+    
+    /* Triangle hack to make tooltip look like a speech bubble */
+    &:after {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        width: auto;
+        border-top: 5px solid #333;
+        border-top: 5px solid rgba(0, 0, 0, .8);;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        content: " ";
+        font-size: 0;
+        line-height: 0;
+        border-radius: 5px;
+        z-index: 99;
+    }
+
+    &:hover:before, &:hover:after {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+        -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+        transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        pointer-events: none;
+    }
+}
+
+[data-tooltip][data-placement*="left"] {
+    /* Position tooltip above the element */
+    &:before {
+        bottom: initial;
+        left: initial;
+        right:calc(100% + 5px);
+        margin-bottom: 0;
+        margin-left: 0;
+        top:50%;
+    }
+
+    /* Triangle hack to make tooltip look like a speech bubble */
+    &:after {
+        bottom: initial;
+        left: initial;
+        right:100%;
+        margin-left: 0;
+        top:50%;
+        border-left: 5px solid #333;
+        border-left: 5px solid rgba(0, 0, 0, .8);;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right:0;
+    }
+    &:hover:before, &:hover:after {
+        -webkit-transform: translate3d(0, -50%, 0);
+        -moz-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+        pointer-events: none;
+    }
+}
+
+[data-tooltip][data-placement*="right"] {
+    /* Position tooltip above the element */
+    &:before {
+        bottom: initial;
+        left: calc(100% + 5px);
+        margin-bottom: 0;
+        margin-left: 0;
+        top:50%;
+    }
+    /* Triangle hack to make tooltip look like a speech bubble */
+    &:after {
+        bottom: initial;
+        left:100%;
+        margin-left: 0;
+        top:50%; 
+        border-right: 5px solid #333;
+        border-right: 5px solid rgba(0, 0, 0, .8);;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left:0;      
+    }
+    &:hover:before, &:hover:after {
+        -webkit-transform: translate3d(0, -50%, 0);
+        -moz-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+        pointer-events: none;
+    }
+}
+
+[data-tooltip][data-placement*="bottom"] {
+
+    /* Position tooltip above the element */
+    &:before {
+        bottom: initial;
+        top:100%;
+        left: 50%;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    
+    /* Triangle hack to make tooltip look like a speech bubble */
+    &:after {
+        position: absolute;
+        bottom: 0;
+        top: 100%;
+        left: 50%;
+        border-bottom: 5px solid #333;
+        border-bottom: 5px solid rgba(0, 0, 0, .8);
+        border-top:0;
+    }
+}
+
+// Special rules for exception cases.
+// These are in fact hacks to fix issues from other places.
+.input-group-btn a.btn[data-tooltip] { display:inline-block; }
+
+.alert { max-height:70vh; max-height:calc( 100vh - 140px ); overflow:auto; }

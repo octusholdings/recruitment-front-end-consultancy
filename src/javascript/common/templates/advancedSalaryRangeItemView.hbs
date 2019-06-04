@@ -1,0 +1,115 @@
+{{#if group}}
+<div class="rules-group-container">
+	<div class="btn-group btn-group-xs {{uniqueClass}}">
+	    <button type="button" class="btn btn-success add-subrule-btn">
+			<i class="glyphicon glyphicon-plus"></i> {{translate "addRule"}}       
+		</button>
+		<button type="button" class="btn btn-success add-subgroup-btn">
+			<i class="fa fa-plus-circle" aria-hidden="true"></i> {{translate "addGroup"}}       
+		</button>
+	</div>
+	
+	<div class="btn-group btn-group-xs group-conditions {{uniqueClass}}" data-toggle="buttons">
+		<button class="btn btn-danger btn-remove-group" type="button">
+	  		<i class="glyphicon glyphicon-remove"></i> {{!-- Remove Group {{translate "removeGroup"}} --}}
+		</button>
+		<label class="btn btn-info">
+			<input class="radioGrpCond" name="grpCond" type="radio" value="AND"> AND
+		</label>
+		<label class="btn btn-info">
+			<input class="radioGrpCond" name="grpCond" type="radio" value="OR"> OR
+		</label>
+	</div>
+
+	<ul class="rules-list">
+{{else}}
+			<div class="advanced-salary-wrapper">
+				<table cellspacing="0">
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "period"}}
+						</td>
+						<td colspan="3">
+							<select class="select-period form-control"></select>
+						</td>
+					</tr>
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "currency"}}
+						</td>
+						<td colspan="3">
+							<select class="select-currency form-control"></select>
+						</td>
+					</tr>
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "numberOfIntervals"}}
+						</td>
+						<td>
+							<input type="number" min="0" class="number-of-intervals-from form-control" placeholder="{{translate "from"}}"/>
+						</td>
+						<td class="input-group-addon text-left">
+						</td>
+						<td>
+							<input type="number" min="0" class="number-of-intervals-to form-control" placeholder="{{translate "to"}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "baseSalary"}}
+						</td>
+						<td>
+							<input type="number" min="0" class="base-salary-from form-control" placeholder="{{translate "from"}}"/>
+						</td>
+						<td class="input-group-addon text-left">
+						</td>
+						<td>
+							<input type="number" min="0" class="base-salary-to form-control" placeholder="{{translate "to"}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "bonus"}}
+						</td>
+						<td>
+							<input type="number" min="0" class="bonus-salary-from form-control" placeholder="{{translate "from"}}"/>
+						</td>
+						<td class="input-group-addon text-left">
+						</td>
+						<td>
+							<input type="number" min="0" class="bonus-salary-to form-control" placeholder="{{translate "to"}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "allowancesBenefits"}}
+						</td>
+						<td colspan="3">
+							<input type="text" class="allowance-salary form-control" placeholder="{{translate "allowancesBenefits"}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "totalSalary"}}
+						</td>
+						<td>
+							<input type="number" min="0" class="total-salary-from form-control" placeholder="{{translate "from"}}"/>
+						</td>
+						<td class="input-group-addon text-left">
+						</td>
+						<td>
+							<input type="number" min="0" class="total-salary-to form-control" placeholder="{{translate "to"}}"/>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<span class="{{uniqueClass}} advanced-salary-btn-remove">
+				<button class="btn btn-danger btn-xs btn-remove" type="button">
+			  		<i class="glyphicon glyphicon-remove"></i> {{!-- {{translate "remove"}} --}}
+				</button>
+			</span>
+{{/if}}
+{{#if group}}
+	</ul>
+</div>
+{{/if}}

@@ -1,0 +1,46 @@
+<h1 class="welcome-jac text-center" style="line-height: 1;">
+    <span style="welcome-text">Welcome to</span><br>
+    <span class="brand-name">
+        <span class="client-name"></span>
+        <small>recruitment</small>
+    </span>
+</h1>
+<div class="welcome">
+    <div class="logo"></div>
+</div>
+<div class="well well-nice form-dark">
+    <div class="tab-content overflow">
+        <div class="tab-pane fade in active" id="login">
+            <h3 class="no-margin-top"><i class="fa fa-user"></i>  {{translate "signInWithYourID"}}</h3>
+            <form class="form-tied margin-00" name="login_form">
+                <fieldset>
+                    <ul class="list-unstyled">
+                        <li>
+                            <input id="username" class="input-block-level" type="text" name="username" placeholder="{{translate "username"}}">
+                        </li>
+                        <li>
+                            <input id="password" class="input-block-level" type="password" name="password" placeholder="{{translate "password"}}">
+                        </li>
+                    </ul>
+                    <button id="sendLogin" type="submit" class="btn btn-envato btn-block btn-lg uppercase">{{translate "signIn"}}</button>
+                    <hr class="margin-xm">
+
+                    <a href="#/forgotPassword" class="link pull-right">Forgot Password?</a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="web-description">
+    <ul class="list-inline">
+        <li><a target="_blank" href="https://octus.io/">Octus Homepage</a></li>
+        <li><a target="_blank" href="https://octus.io/terms.html">Terms of Service</a></li>
+        <li><a target="_blank" href="https://octus.io/privacy.html">Privacy</a></li>
+    </ul>
+    <p>
+        <br>
+        {{translate "allRightsReserved"}}
+        <br>
+        &copy; <span class="currentYear"></span>
+    </p>
+</div>

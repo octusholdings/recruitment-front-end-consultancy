@@ -1,0 +1,51 @@
+{{#if group}}
+<div class="rules-group-container">
+	<div class="btn-group btn-group-xs {{uniqueClass}}">
+	    <button type="button" class="btn btn-success add-subrule-btn">
+			<i class="glyphicon glyphicon-plus"></i> {{translate "addRule"}}       
+		</button>
+		<button type="button" class="btn btn-success add-subgroup-btn">
+			<i class="fa fa-plus-circle" aria-hidden="true"></i> {{translate "addGroup"}}       
+		</button>
+	</div>
+	
+	<div class="btn-group btn-group-xs group-conditions {{uniqueClass}}" data-toggle="buttons">
+		<button class="btn btn-danger btn-remove-group" type="button">
+	  		<i class="glyphicon glyphicon-remove"></i> {{!-- Remove Group {{translate "removeGroup"}} --}}
+		</button>
+		<label class="btn btn-info">
+			<input class="radioGrpCond" name="grpCond" type="radio" value="AND"> AND
+		</label>
+		<label class="btn btn-info">
+			<input class="radioGrpCond" name="grpCond" type="radio" value="OR"> OR
+		</label>
+	</div>
+
+	<ul class="rules-list">
+{{else}}
+	<div class="employment-history-wrapper input-group {{uniqueClass}}">
+		<table cellspacing="0">
+			<tr class="first-child">
+				<td class="input-group-addon text-left">{{translate "employer"}}</td>
+				<td>
+					<select class="select-company form-control select2" data-live-search="true"></select>
+				</td>
+			</tr>
+			<tr class="last-child">
+				<td class="input-group-addon text-left">{{translate "title"}}</td>
+				<td>
+					<select class="select-title form-control select2" data-live-search="true"></select>
+				</td>
+			</tr>
+		</table>
+		<span class="remove-btn-wrapper remove-btn-wrapper-no-border">
+			<button class="btn btn-danger btn-xs btn-remove" type="button">
+				 <i class="glyphicon glyphicon-remove"></i>
+			</button>
+		</span>
+	</div>
+{{/if}}
+{{#if group}}
+	</ul>
+</div>
+{{/if}}

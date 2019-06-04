@@ -1,0 +1,110 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">
+		    	{{ translate "mergeConfirmation" }}
+	    	</h4>
+		</div>
+		<div class="modal-body mh-80vh">
+			<div class="alert alert-warning" role="alert">
+				<p>{{translate "selectedRecordsWillBeMerged"}}</p>
+				<p>{{translate "notesDocumentsMoreWillBeMerged"}}</p>
+				<p>{{translate "materRecordWillReplaceDuplicates"}}</p>
+			</div>
+			<div class="alert alert-danger" role="alert">
+				<p>{{translate "pleaseReviewDataBeforeMerge"}}</p>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 mb-16">
+					<section class="o-panel">
+						<header class="o-card-header">
+							<h4 class="o-card-title all-names"></h4>
+						</header>
+					</section>
+				</div>
+				<div class="col-md-6 col-sm-12 mb-16 details-panel hidden">
+					<section class="o-panel o-h">
+						<div class="candidate-details-section hidden">
+							<header class="o-card-header mb-16">
+								<h4 class="o-card-title">{{translate "candidate"}} {{translate "details"}}</h4>
+							</header>
+							<div class="candidate-details-region mb-16"></div>
+						</div>
+						<div class="client-details-section hidden">
+							<header class="o-card-header mb-16">
+								<h4 class="o-card-title">{{translate "client"}} {{translate "details"}}</h4>
+							</header>
+							<div class="client-details-region"></div>
+						</div>
+					</section>
+				</div>
+				<div class="col-md-6 col-sm-12 mb-16 personal-assistant-panel hidden">
+					<section class="o-panel">
+						<header class="o-card-header mb-16">
+							<h4 class="o-card-title">{{translate "personalAssistant"}}</h4>
+						</header>
+						<div class="personal-assistant-region"></div>
+					</section>
+				</div>
+				<div class="col-md-6 col-sm-12 mb-16 salary-panel hidden">
+					<section class="o-panel">
+						<header class="o-card-header mb-16">
+							<h4 class="o-card-title">{{translate "salary"}}</h4>
+						</header>
+						<div class="salary-region"></div>
+					</section>
+				</div>
+				<div class="col-md-6 col-sm-12 mb-16 skills-panel hidden">
+					<section class="o-panel">
+						<div class="candidate-skills-section hidden">
+							<header class="o-card-header mb-16">
+								<h4 class="o-card-title">{{translate "candidate"}} {{translate "skills"}}</h4>
+							</header>
+							<div class="candidate-skills-region mb-16"></div>
+						</div>
+						<div class="client-skills-section hidden">
+							<header class="o-card-header mb-16">
+								<h4 class="o-card-title">{{translate "client"}} {{translate "skills"}}</h4>
+							</header>
+							<div class="client-skills-region"></div>
+						</div>
+					</section>
+				</div>
+				<div class="col-sm-12 mb-16 employment-history-panel hidden">
+					<section class="o-panel">
+						<header class="o-card-header mb-16">
+							<h4 class="o-card-title">{{translate "employmentHistory"}}</h4>
+						</header>
+						<div class="employment-history-region"></div>
+					</section>
+				</div>
+				<div class="col-sm-12 mb-16 education-panel hidden">
+					<section class="o-panel">
+						<header class="o-card-header mb-16">
+							<h4 class="o-card-title">{{translate "education"}}</h4>
+						</header>
+						<div class="education-region"></div>
+					</section>
+				</div>
+				<div class="col-sm-12 mb-16 qualification-panel hidden">
+					<section class="o-panel">
+						<header class="o-card-header mb-16">
+							<h4 class="o-card-title">{{translate "qualification"}}</h4>
+						</header>
+						<div class="qualification-region"></div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">
+		    		{{translate "cancel" }}
+			    </button>
+			    <button type="submit" class="btn btn-success confirm-merge">
+			    	{{translate "confirmMerge" }}
+			    </button>
+			</div>
+		</div>
+	</div>
+</div>

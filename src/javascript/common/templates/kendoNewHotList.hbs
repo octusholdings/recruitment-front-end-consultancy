@@ -1,0 +1,22 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+		    {{translate 'newHotList'}}
+		</div>
+		<div class="modal-body form-horizontal">
+			<p>{{translate "createANewHotList"}}</p>
+	    	<div class="col-sm-12">
+	    		<div class="form-group">
+					<input class="form-control hotlist-name" type="text" placeholder="{{translate "name" }}">
+					<span class="help-block">{{translate "enterTheNameOfYourNewHotList"}}</span>
+				</div>
+		    </div>
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group">
+		    	<button class="btn btn-danger" data-dismiss="modal">{{translate "cancel" }}</button>
+		    	<button class="btn btn-success create-filter" data-dismiss="modal" disabled="disabled">{{translate "save" }}</button>
+			</div>
+		</div>
+	</div>
+</div>

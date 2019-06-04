@@ -1,0 +1,148 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - WIDGET - List 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.widget-list {
+  	margin: 0;
+  	list-style: none;
+	a {
+	  	text-decoration: none;
+	}
+	> li {
+	  	position: relative;
+	  	padding: 8px 0;
+		.clearfix();
+	}
+	> .media {
+	  	margin-top: 0;
+	}
+	.media-heading {
+	  	text-overflow: ellipsis;
+		small {
+		  	font-size: @fontSizeBaseSmall;
+		}
+	}
+	h4.media-heading {
+	  	font-weight: bold;
+	  	font-size: @fontSizeBaseLarge;
+	}
+	h5.media-heading {
+	  	font-weight: normal;
+	  	font-size: @fontSizeBaseLarge;
+	}
+	h6.media-heading {
+	  	font-weight: bold;
+	  	font-size: @fontSizeSmall;
+		small {
+		  	font-size: @fontSizeSmall;
+		}
+	}
+	li {
+		.well {
+		  	margin-bottom: 5px
+		}	
+	}
+	.date {
+	    font-size: @fontSizeSmall;
+	}
+	.note,
+	.post {
+		font-size: @fontSizeBaseSmall;
+		line-height: @baseLineHeight - 2;
+		margin-bottom: 5px
+	}
+	.data,
+	.meta {
+	  	margin: 0;
+	  	list-style: none;
+		&.inline > li {
+		  	margin-right: 0;
+		  	margin-left: 0;
+			&:first-child {
+			  	padding-left: 0;
+			}
+		}
+		.divider-vertical {
+		  	padding: 0;
+		  	border-right: 1px solid #ffffff;
+		  	border-left: 1px solid #bdbdbd;
+		}	
+	}
+	.data {
+	  	font-size: @fontSizeSmall;
+		> .divider-vertical {
+		  	margin: 2px 6px 0;
+		  	height: 16px;
+		}
+	}
+	.meta {
+	  	color: #777;
+	  	font-size: @fontSizeMini;
+	  	line-height: @baseLineHeight - 4;
+		> li {
+		  	color: #777;
+		  	font-size: @fontSizeMini;
+		  	line-height: @baseLineHeight - 4;
+		}
+		a {
+		  	color: #00315d;
+		  	font-weight: bold
+		}
+		strong {
+		  	color: #111;
+		}
+		> .divider-vertical {
+		  	margin: 1px 6px 0;
+		  	height: 14px;
+		}
+	}
+
+	// quick menu 
+	.quick-menu {
+		&.menu-right {
+		  	margin-bottom: 5px;
+		  	margin-left: 5px;
+		}
+	}
+	.quick-menu-icon {
+	  	font-size: @baseFontSize;
+		&.menu-right {
+		  	margin-bottom: 5px;
+		  	margin-left: 5px;
+		}
+		a {
+		  	color: @textColor;
+		  	cursor: pointer;
+			.opacity(50);
+			&:hover {
+				.opacity(100);
+			}
+		}
+	}
+	.menu-right {
+	  	float: right;
+	  	margin-left: 10px;
+	}
+	.menu-left {
+	  	float: left;
+	  	margin-right: 10px;
+	}
+}
+
+// style widget list for table 
+
+.table h4.media-heading,
+.table h5.media-heading,
+.table h6.media-heading {
+  	margin: 0;
+  	font-weight: bold;
+}

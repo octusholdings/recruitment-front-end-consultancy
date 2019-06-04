@@ -1,0 +1,344 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - SIDEBAR 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.sidebar {
+  	position: fixed;
+  	top: 0;
+  	padding-bottom: @baseLineHeight * 2;
+  	width: @sidebarWidth;
+  	background: url("@{imagesPath}/background/body-bg-02-15.jpg") repeat scroll 0 0 @sidebarBackground;
+	.nav-side {
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px solid @sidebarNavBorderLight;
+		.collapse {
+		  	overflow: hidden;
+		}
+		.accordion-group {
+		  	margin-bottom: 0;
+		  	border-top-color: @sidebarNavBorderLight;
+		  	border-right: none;
+		  	border-bottom-color: @sidebarNavBorderDark;
+		  	border-left: none;
+		  	.border-radius(0);
+			> .active {
+			  	background: url("@{imagesPath}/background/body-bg-02.jpg") repeat scroll 0 0;
+			}
+			&:first-child {
+				border-top-color: @sidebarInverseNavBorderDark;
+			}
+		}	
+
+		.accordion-heading {
+		  	margin: 0;		
+			.accordion-toggle {
+			  	display: block;
+			  	padding: 13px 14px;
+			  	color: @sidebarNavColor;
+			  	text-decoration: none;
+			  	text-shadow: 0 1px 0 rgba(255,255,255,.4);
+			  	font-weight: bold;
+			  	font-size: @fontSizeBaseLarge;
+			  	.chevron,
+			  	.item-icon {		  		
+				  	color: @sidebarIconColor;
+				  	.opacity(30);
+				}
+				.chevron {
+				  	font-size: 0.886em;
+                    &:before {
+                        font-family: @iconFontFamily;
+                        vertical-align: middle;
+                    }
+				}
+                .item-icon {
+                    font-size: 1.166em;		  		
+				  	&[data-icon]:before {                        
+                        vertical-align: middle;
+                    }
+				}
+				&:hover {
+				  	background: url("@{imagesPath}/background/transparent-25.png") repeat scroll 0 0; /* ie */
+				  	background: rgba(0,0,0,.05);
+				  	.chevron,
+				  	.item-icon {					
+					  	color: @sidebarIconColor;
+					  	.opacity(100);
+					}
+				}
+			}
+			&.active {
+				.accordion-toggle {
+					background: none;
+					color: @sidebarNavColorActive;
+					text-shadow: 0 1px 0 rgba(255,255,255,1);
+					.chevron,
+					.item-icon {					
+					  	color: @sidebarNavColorActive;
+					  	.opacity(100);
+					}
+				}		
+			}	
+		}			
+
+		.accordion-content {
+		  	background: url("@{imagesPath}/background/body-bg-02-25.jpg") repeat scroll 0 0 @sidebarBackgroundDark;
+		  	background-color: rgba(0,0,0,.15);
+			> li {		
+				> a {
+				  	padding: 8px 15px 6px 25px;
+				  	color: @sidebarNavColor;
+				  	font-weight: bold;
+				  	font-size: @fontSizeBaseSmall;                      
+                    &:before {                          
+                        margin-right: 6px;
+                        content: "\e139";
+                        font-family:  @iconFontFamily;
+                    }
+					&:hover {
+					  	background: rgba(0,0,0,.1);
+					  	color: #111111;
+					}
+				}
+				&:first-child {
+					margin-top: @baseLineHeight / 2;				
+				}
+				&:last-child {
+					margin-bottom: @baseLineHeight / 2;
+				}				
+			}
+			.active {
+				a, 
+				a:hover {
+				  	background-color: @sidebarBackgroundSubActive;
+				  	color: @sidebarNavColorSubActive;
+				  	text-shadow: 0 -1px 0 rgba(0,0,0,.6);			
+				}
+			}
+		}	
+        
+        // improvise ***
+        .badge {
+            float: right;
+            margin-top: 4px;
+            padding: 0 5px 2px;
+            font-size: 10px;
+            line-height: 12px;
+        }				
+	}	
+}
+
+.sidebar-item {
+	.profile {
+	  	padding: 15px;
+	  	height: 70px;
+	  	background: url("@{imagesPath}/background/body-bg-02a.jpg") repeat 0 0;
+		.box-shadow(-5px 0 20px -5px rgba(0,0,0,.5) inset, -2px 0 10px -2px rgba(0,0,0,.5) inset);
+		.media-heading {
+		  	margin: 0;
+		  	color: #e1e1e1;
+		  	text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+		  	font-weight: normal;
+			small {
+			  	display: block;
+			  	margin-top: 2px;
+			  	font-size: @fontSizeSmall;
+			}
+		}
+		.data {
+		  	margin-top: 2px;
+		  	color: #e1e1e1;
+		  	text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+		  	font-weight: normal;
+		  	font-size: @fontSizeMini;
+		}
+		.thumb {
+		  	border: 5px solid #222;
+		}
+		.media-thumb {
+			.img-shadow {
+			  	width: 55px;
+			  	height: 55px;
+			}	
+		}
+	}	
+}
+
+// Sidebar style for position
+// --------------------------
+
+.sidebar-left {
+	.sidebar {
+	  	bottom: 0;
+	  	left: 0;
+	  	border-right: 1px solid #ffffff;
+		.box-shadow(inset -5px 0 15px -5px rgba(0,0,0,.15),inset -2px 0 8px -2px rgba(0,0,0,.2) );
+		.accordion-content {
+		  	.box-shadow(inset 0 2px 6px -2px rgba(0,0,0,.3), inset -2px 0 8px -2px rgba(0,0,0,.2));			
+			.active {
+				> a, 
+				> a:hover {
+				  	.box-shadow(inset -5px 0 10px -5px rgba(0,0,0,.2), inset -2px 0 5px -2px rgba(0,0,0,.2));				
+				}
+			}
+		}
+	}	
+	.sidebar-inverse {
+		.box-shadow(inset -5px 0 20px -5px rgba(0,0,0, 1), inset -2px 0 10px -2px rgba(0,0,0,.5));
+	}
+	.nav-side {
+		.accordion-group {
+			> .active {
+			  	//margin-right: -1px; // only works if you do not scroll to sidebar
+			}				
+		}
+		.accordion-toggle {
+			.chevron {
+			  	float: right;
+                margin-right: -2px;
+                &:before {
+	                content: "\f488";
+                }
+			}
+			.item-icon {
+			  	margin-right: 10px;
+			}	
+		}		
+	}
+}
+
+.sidebar-right {
+	.sidebar {
+	    right: 0;
+	    bottom: 0;
+	    border-left: 1px solid #ffffff;
+		.box-shadow(inset 5px 0 15px -5px rgba(0,0,0,.15), inset 2px 0 8px -2px rgba(0,0,0,.2));
+		.accordion-content {
+		  	.box-shadow(inset 0 2px 6px -2px rgba(0,0,0,.3), inset 2px 0 8px -2px rgba(0,0,0,.2));			
+			.active {
+				> a, 
+				> a:hover {
+				  	.box-shadow(inset 5px 0 10px -5px rgba(0,0,0,.3), inset 2px 0 5px -2px rgba(0,0,0,.2));				
+				}
+			}
+		}
+	}	
+	.sidebar-inverse {
+		.box-shadow(inset 5px 0 20px -5px rgba(0,0,0, 1), inset 2px 0 10px -2px rgba(0,0,0,.5));
+	}
+	.sidebar-item {
+		.profile {
+			.box-shadow(inset 5px 0 20px -5px rgba(0,0,0,.5), inset 2px 0 10px -2px rgba(0,0,0,.5));
+		}		
+	}
+	.nav-side {
+		.accordion-group {
+			> .active {
+			  	//margin-left: -1px; // only works if you do not scroll to sidebar
+			}			
+		}
+		.accordion-toggle {
+			.chevron {
+		  		float: left;
+		  		margin-right: 10px;
+                margin-left: -2px;
+                &:before {
+	                content: "\f489";
+                }
+			}
+			.item-icon {
+			  	float: right;
+			  	//margin-right: -2px;
+			}
+		}
+	}
+}
+
+// Sidebar Invert
+// --------------
+
+.sidebar-inverse {
+  	background-color: @sidebarInverseBackground;
+  	background-image: none;
+	.nav-side {
+	  	border-bottom: 1px solid @sidebarInverseNavBorderLight;
+		.accordion-group {
+		  	border-top-color: @sidebarInverseNavBorderLight;
+		  	border-bottom-color: @sidebarInverseNavBorderDark;
+		  	&:first-child {
+				border-top-color: @sidebarInverseNavBorderDark;
+			}
+		}
+
+		.accordion-heading {
+			.accordion-toggle {
+			  	color: @sidebarInverseNavColor;
+			  	text-shadow: 0 -1px 0 rgba(0,0,0, 1);
+				.chevron,
+			  	.item-icon {
+				  	color: @sidebarInverseIconColor;
+				  	text-shadow: 0 1px 0 rgba(255,255,255,.1);
+				  	.opacity(70);
+				}
+				&:hover {
+				  	text-shadow: 0 -1px 0 rgba(0,0,0, 1);
+					.chevron,
+					.item-icon {
+					  	color: @sidebarInverseText;
+					  	text-shadow: 0 -1px 0 rgba(0,0,0, 1);
+						.opacity(100);
+					}
+				}
+			}
+			&.active {
+				.accordion-toggle {
+					background: none;
+					color: @sidebarNavColorActive;
+					text-shadow: 0 1px 0 rgba(255,255,255, 1);
+					.chevron,
+					.item-icon {					
+					  	color: @sidebarNavColorActive;
+					  	.opacity(100);
+					  	text-shadow: 0 1px 0 rgba(255,255,255, 1);
+					}
+				}		
+			}
+		}
+
+		.accordion-content {
+		  	background: @sidebarInverseBackgroundDark;
+		  	background: rgba(0,0,0,.15);
+			.box-shadow(inset -2px 2px 6px -1px rgba(0,0,0,.7), inset 0 1px 2px rgba(0,0,0,.3), inset 0 -1px 6px -1px rgba(0,0,0,.1));
+			> li {
+				> a {
+				  	color: darken(@sidebarInverseNavColor, 8%);
+				  	text-shadow: 0 -1px 0 rgba(0,0,0, 1);
+					&:hover {
+					  	color: lighten(@sidebarInverseNavColor, 5%);
+					  	background: url("@{imagesPath}/background/transparent-25.png") repeat scroll 0 0; /* ie */
+					  	background: rgba(0,0,0,.1);
+					}
+				}	
+			}	
+			.active {
+				> a, 
+				> a:hover {
+				  	background-color: @sidebarBackgroundSubActive;
+				  	color: @sidebarInverseNavColorSubActive;
+				  	text-shadow: 0 -1px 0 rgba(0,0,0,.6);			
+				}
+			}
+		}
+	}
+}
+

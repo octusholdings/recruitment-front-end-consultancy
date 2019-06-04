@@ -1,0 +1,44 @@
+{{#if group}}
+<div class="rules-group-container">
+	<div class="btn-group btn-group-xs {{uniqueClass}}">
+	    <button type="button" class="btn btn-success add-subrule-btn">
+			<i class="glyphicon glyphicon-plus"></i> {{translate "addRule"}}       
+		</button>
+		<button type="button" class="btn btn-success add-subgroup-btn">
+			<i class="fa fa-plus-circle" aria-hidden="true"></i> {{translate "addGroup"}}       
+		</button>
+	</div>
+	
+	<div class="btn-group btn-group-xs group-conditions {{uniqueClass}}" data-toggle="buttons">
+		<button class="btn btn-danger btn-remove-group" type="button">
+	  		<i class="glyphicon glyphicon-remove"></i> {{!-- Remove Group {{translate "removeGroup"}} --}}
+		</button>
+		<label class="btn btn-info">
+			<input class="radioGrpCond" name="grpCond" type="radio" value="AND"> AND
+		</label>
+		<label class="btn btn-info">
+			<input class="radioGrpCond" name="grpCond" type="radio" value="OR"> OR
+		</label>
+	</div>
+
+	<ul class="rules-list">
+{{else}}
+			<div class="input-group">
+				<span class="input-group-addon">{{translate "country"}}</span>
+				{{!-- <select class="select-location form-control" data-live-search="true">
+				</select> --}}
+				<div class="tt-wrapper">
+			        <i class="tt-spinner fa fa-refresh fa-spin fa-fw"></i>
+			        <input class="select-location form-control typeahead" type="text" data-live-search="true" placeholder="{{translate "location"}}">
+			    </div>
+				<span class="input-group-addon remove-btn-wrapper {{uniqueClass}}">
+					<button class="btn btn-danger btn-xs btn-remove" type="button">
+				  		<i class="glyphicon glyphicon-remove"></i> {{!-- {{translate "remove"}} --}}
+					</button>
+				</span>
+			</div>
+{{/if}}
+{{#if group}}
+	</ul>
+</div>
+{{/if}}

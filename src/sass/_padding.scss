@@ -1,0 +1,29 @@
+.paddingTop0 {
+    padding-top: 0px;
+
+    .list-bordered .form-group & {
+        padding-top: 0px;
+    }
+}
+
+.paddingTop10 {
+	padding-top: 10px;
+} 
+
+.paddingTop15 {
+	padding-top: 15px;
+} 
+
+.paddingBottom10 {
+	padding-bottom: 10px;
+}
+
+.paddingLeft10 {
+	padding-left: 10px;
+}
+
+// Octus padding
+// pt = padding-top; pl = padding-left; pb = padding-bottom; pr = padding-right
+// __________________________________________________________________
+
+.pt-90 { padding-top:9rem; }

@@ -1,0 +1,49 @@
+
+<td class="name"></td>
+<td>
+    {{#if createdBy}}
+        {{createdBy}}&nbsp;
+    {{/if}}
+    <span class="created"></span>
+</td>
+<td class="revisionDate"></td>
+<td>
+    {{#each tagList}}
+        {{#if @last}}
+            <span class="label label-default remove-tag" data-item-id="{{{this}}}">x &nbsp{{{ translate this}}}</span>
+        {{else}}
+            <span class="label label-default remove-tag" data-item-id="{{{this}}}">x &nbsp{{{ translate this}}}</span>
+            <br/>
+        {{/if}}
+    {{/each}}
+</td>
+<td>
+    <div class="pull-right btn-group dropdown">
+        <button type="button" class="btn btn-default btn-xs delete" data-tooltip="{{translate "delete"}}">
+            <i class="fa fa-trash-o fa-lg text-danger"></i>
+        </button>
+        <button type="button" class="btn btn-default btn-xs download" data-tooltip="{{translate "download"}}">
+            <i class="fa fa-download fa-lg text-primary"></i>
+        </button>
+        {{#if documentTemplates}}
+            <button type="button" class="btn btn-default btn-xs brand dropdown-toogle" data-toggle="dropdown" data-tooltip="{{translate "brandDocument"}}">
+                <i class="fa fa-indent fa-lg"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right brand-document-menu" role="menu">
+                {{#each documentTemplates}}
+                <li>
+                    <div>
+                        <span class="template-name">{{ name }}</span>                        
+                        <span class="brand-document pdf">
+                            <i class="fa fa-file-pdf-o fa-lg" aria-hidden="true" data-template-id="{{id}}" data-type="PDF"></i>
+                        </span>
+                        <span class="brand-document word">
+                            <i class="fa fa-file-word-o fa-lg" aria-hidden="true" data-template-id="{{id}}" data-type="MSWORD"></i>
+                        </span>                                
+                    </div>
+                </li>
+                {{/each}}         
+            </ul>
+        {{/if}}
+    </div>
+</td>

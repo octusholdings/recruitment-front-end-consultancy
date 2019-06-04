@@ -1,0 +1,86 @@
+        <div class="o-footer-item">
+            <a id="btnAddNote"  href="javascript:void(0);" data-tooltip="{{translate 'quickNote'}}">
+                <i class="fa fa-pencil-square-o lg"></i> 
+            </a>
+        </div>
+        <div class="o-footer-item">
+            <div class="dropup quick-add">
+                <a data-toggle="dropdown" id="btnQuickAddDropdown" data-tooltip="Quick Add" class="dropdown-toggle"> 
+                    <i class="fa fa-plus lg"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{uiRoot}}/#/candidate/create" target="_blank">
+                            <i class="fa fa-user fa-fw"></i> {{ translate "newCandidate" }}
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="{{uiRoot}}/#/client/create" target="_blank">
+                            <i class="fa fa-address-card fa-fw"></i> {{ translate "newClient" }}
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="{{uiRoot}}/#/company/create" target="_blank">
+                            <i class="fa fa-building fa-fw"></i> {{ translate "newCompany" }}
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="{{uiRoot}}/#/job/create" target="_blank">
+                            <i class="fa fa-briefcase fa-fw"></i>  {{ translate "newJob" }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="o-footer-item">
+            <a id="btnAddHotList" href="javascript:void(0);" data-tooltip="{{translate 'quickHotList'}}"> 
+                <span class="glyphicon glyphicon-fire"></span> 
+            </a>
+        </div>
+        <div class="o-footer-item"> 
+           <div class="dropup recent-items-company">
+                <a data-toggle="dropdown" id="btnRecentItemsCompany" data-tooltip="{{translate 'recentItems'}} - {{translate 'company'}}" class="dropdown-toggle"> 
+                    <i class="fa fa-building lg"></i>
+                </a>
+                <ul class="dropdown-menu">
+                </ul>
+            </div>
+        </div>
+        <div class="o-footer-item"> 
+            <div class="dropup recent-items-client">
+                <a data-toggle="dropdown" id="btnRecentItemsClient" data-tooltip="{{translate 'recentItems'}} - {{translate 'clientPerson'}}" class="dropdown-toggle"> 
+                    <i class="fa fa-address-card lg"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                </ul>
+            </div>
+        </div>
+        <div class="o-footer-item"> 
+            <div class="dropup recent-items-candidate">
+                <a data-toggle="dropdown" id="btnRecentItemsCandidate" data-tooltip="{{translate 'recentItems'}} - {{translate 'candidate'}}" class="dropdown-toggle"> 
+                    <i class="fa fa-user lg"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                </ul>
+            </div>
+        </div>
+        <div class="o-footer-item"> 
+            <div class="dropup recent-items-job">
+                <a data-toggle="dropdown" id="btnRecentItemsJob" data-tooltip="{{translate 'recentItems'}} - {{translate 'job'}}" class="dropdown-toggle"> 
+                    <i class="fa fa-briefcase lg"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                </ul>
+            </div>
+        </div>
+        <div class="o-footer-item footerUploadCv"> 
+            <input name="files" id="quickUploadCV" type="file" />
+            <a id="btnQuickUploadCV" data-tooltip="{{translate 'importResumeSaveTime'}}"> 
+                <i class="upload-start fa fa-cloud-upload lg"></i>
+                <i class="upload-progress hidden fa fa-refresh fa-spin lg fa-fw"></i>
+                <span class="lbl"> {{translate 'quickUploadCV'}} </span>
+            </a>
+        </div>

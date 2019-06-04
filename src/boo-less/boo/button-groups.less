@@ -1,0 +1,252 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - BUTTON GROUPS 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.btn-group > .btn,
+.btn-group > .dropdown-menu,
+.btn-group > .popover {
+    font-size: @fontSizeSmall; // 12px
+}
+
+// Reset fonts for other sizes
+.btn-group > .btn-mini {
+    font-size: @fontSizeMini; // 11px
+}
+.btn-group > .btn-small {
+    font-size: @fontSizeSmall;
+}
+.btn-group > .btn-large {
+    font-size: @fontSizeBaseLarge; // 16px
+}
+
+// Set corners individual
+.btn-group > .btn:first-child {
+    margin-left: 0;
+    .border-top-left-radius(@baseBorderRadius);
+    .border-bottom-left-radius(@baseBorderRadius);
+}
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle {
+    .border-top-right-radius(@baseBorderRadius);
+    .border-bottom-right-radius(@baseBorderRadius);
+}
+// Reset corners for large buttons
+.btn-group > .btn.large:first-child {
+    margin-left: 0;
+    .border-top-left-radius(@borderRadiusLarge);
+    .border-bottom-left-radius(@borderRadiusLarge);
+}
+.btn-group > .btn.large:last-child,
+.btn-group > .large.dropdown-toggle {
+    .border-top-right-radius(@borderRadiusLarge);
+    .border-bottom-right-radius(@borderRadiusLarge);
+}
+
+.btn-broken i {
+    display: block;
+}
+
+.btn-mini .caret {
+    margin-top: 6px;
+}
+.btn-small .caret {
+    margin-top: 7px;
+}
+.btn-large .caret {
+    margin-top: 8px;
+}
+
+.btn-group.open {
+    .btn-boo.dropdown-toggle { 
+        background-color: #cbd0da; 
+    }
+    .btn-blue.dropdown-toggle { 
+        background-color: #006bb7; 
+    }
+    .btn-turgu.dropdown-toggle { 
+        background-color: #1080a2; 
+    }
+    .btn-green.dropdown-toggle { 
+        background-color: #3b9b28; 
+    }
+    .btn-yellow.dropdown-toggle { 
+        background-color: #d6b200; 
+    }
+    .btn-red.dropdown-toggle { 
+        background-color: #981e1e; 
+    }
+    .btn-black.dropdown-toggle { 
+        background-color: #141414; 
+    }
+    .btn-navi.dropdown-toggle { 
+        background-color: #353839; 
+    }
+    .btn-sky.dropdown-toggle { 
+        background-color: #3594E9; 
+    }
+    .btn-orange.dropdown-toggle { 
+        background-color: #d07107; 
+    }
+    .btn-slategray.dropdown-toggle { 
+        background-color: #3b5b6c; 
+    }
+    .btn-redlight.dropdown-toggle { 
+        background-color: #a80005; 
+    }
+}
+
+.btn-blue .caret,
+.btn-turgu .caret,
+.btn-green .caret,
+.btn-red .caret,
+.btn-black .caret,
+.btn-navi .caret,
+.btn-sky .caret,
+.btn-orange .caret,
+.btn-slategray .caret,
+.btn-redlight .caret {
+    border-top-color: @white;
+    border-bottom-color: @white;
+}
+
+// Vertical button groups
+// ----------------------
+
+.btn-group-vertical {
+    display: inline-block;
+    .ie7-inline-block();
+}
+
+.btn-group-vertical > .btn {
+    display: block;
+    float: none;
+    max-width: 100%;
+    .border-radius(0);
+}
+
+.btn-group-vertical > .btn + .btn {
+    margin-left: 0;
+    margin-top: -1px;
+}
+
+.btn-group-vertical > .btn:first-child {
+    .border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+}
+.btn-group-vertical > .btn:last-child {
+    .border-radius(0 0 @baseBorderRadius @baseBorderRadius);
+}
+.btn-group-vertical > .btn-large:first-child {
+    .border-radius(@borderRadiusLarge @borderRadiusLarge 0 0);
+}
+.btn-group-vertical > .btn-large:last-child {
+    .border-radius(0 0 @borderRadiusLarge @borderRadiusLarge);
+}
+
+// btn-toolbar
+// ----------------------
+
+.btn-toolbar {
+    .clearfix();
+}
+
+ul.btn-toolbar {
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px; 
+    list-style: none;
+    > li {
+        display: block;
+        float: left;
+        padding-right: 2px;
+        padding-left: 2px;
+        margin: 2px 0;
+        list-style: none;
+        &.divider-vertical {
+            height: 30px;
+            padding: 0;
+            margin: 2px 6px;
+            border-right: 1px solid #fff;
+            border-left: 1px solid #bbb;
+        }        
+    }   
+}
+
+.navbar ul.btn-toolbar > li.divider-vertical {
+    height: 40px;
+}
+
+ul.btn-toolbar > li.divider-vertical.small,
+.header-small ul.btn-toolbar > li.divider-vertical {
+  height: 26px;
+}
+
+ul.toolbar-inline > li {
+    display: inline-block;
+    float: none;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin: 2px 0;
+    list-style: none;
+    vertical-align: top;
+    .ie7-inline-block();
+}
+
+// Bootstrap Selectpicker - btn-group 
+// ----------------------------------------------------------------------------------------
+
+.bootstrap-select.btn-group,
+.bootstrap-select.btn-group[class*="span"] {
+    float: none;
+    display: inline-block;
+    // margin-bottom: 10px;
+    margin-left:0;
+}
+
+// .bootstrap-select {
+//   width: 220px;
+// }
+
+.bootstrap-select .btn {
+    width: 100%; // 220px
+    &:focus {
+        outline: thin dotted #333333 !important;
+        outline: 5px auto -webkit-focus-ring-color !important;
+        outline-offset: -2px;
+    } 
+    .filter-option {
+        overflow: hidden;
+        // position:absolute;
+        // left:12px; 
+        // right:25px;
+        text-align: left;
+        margin-right: 12px;
+    } 
+    .caret {
+        position: absolute;
+        right: 10px;
+    }
+}
+
+.bootstrap-select.btn-group .disabled {
+    cursor: not-allowed;
+}
+.bootstrap-select.btn-group[class*="span"] .btn {
+    width: 100%;
+}
+.bootstrap-select.btn-group .dropdown-menu {
+    min-width: 100%;
+    .box-sizing(border-box);
+    ul {
+        margin: 0;
+        list-style: none;
+    }    
+}

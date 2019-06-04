@@ -1,0 +1,225 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - RESPONSIVE - Landscape phone to desktop/tablet 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+@media (max-width: 767px) {
+
+	.container,
+	.container-fluid {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#header-container,
+	.base-layout #header-container {
+		height: auto;
+		position: relative;
+	}
+
+	#header {
+		left: 0;
+		position: relative;
+		top: 0;
+	}
+
+	.navbar-fixed-top,
+	.navbar-fixed-bottom,
+	.navbar-static-top {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.navbar-page {
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+
+	.page-head {
+		margin: 0 -10px;
+		padding: 0 10px;
+		h2.page-title {
+			font-size: 24.5px;
+			small {
+				font-size: @fontSizeLarge;
+			}
+		}
+		.page-title + .pagedesc {
+			margin-top: -10px;
+		}
+	}
+
+	.sidebar {	
+		.profile {
+			.media-left {
+				float: left;
+				margin-right: 10px;
+			}	
+		}
+		.nav-side {
+			padding-bottom: @baseLineHeight / 2;
+		}
+	}
+
+	.sidebar-left .sidebar,
+	.sidebar-right .sidebar {
+		position: relative;
+		left: 0;
+		top: 0;
+		bottom: auto;
+		display: block;
+		padding-bottom: 0;
+		width: 100%;
+		height: 0;
+		border-right: none;
+		border-left: none;
+		z-index: @zindexSidebar;
+		.box-shadow(0 1px 8px 1px rgba(0, 0, 0, 0.6));
+	}
+
+	.sidebar-left {
+		.footer-sidebar {
+			left: 0;
+			width: 0;
+		}	
+	}
+
+	.sidebar-right {
+		.footer-sidebar {
+			right: 0;
+			width: 0;
+		}	
+	}
+
+	.sidebar-left .main-content,
+	.sidebar-hidden.sidebar-left .main-content,
+	.sidebar-left .footer-content,
+	.sidebar-hidden.sidebar-left .footer-content,
+	.sidebar-right .nav-side .accordion-group > .active {
+		margin-left: 0px;
+	}
+
+	.sidebar-right .main-content,
+	.sidebar-hidden.sidebar-right .main-content,
+	.sidebar-right .footer-content,
+	.sidebar-hidden.sidebar-right .footer-content,
+	.sidebar-left .nav-side .accordion-group > .active {
+		margin-right: 0;
+	}
+
+	.navbar-fixed-top {
+	  margin-bottom: 0px;
+	}
+
+	#header {
+		.header-bar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: @baseHeaderHeight;
+		}	
+		.header-drawer {
+			position: relative;
+			top: 0px;
+			margin-top: 0px;
+		}
+	}
+
+	.base-layout {
+		#header {
+			.header-draver {
+				height: 5px;
+			}		
+		}
+	}
+
+	.mobile-nav {
+		text-align: center;
+	}
+
+	.mobile-btn {
+		display: block;
+		padding: 7px 0;
+		font-size: @fontSizeLarge;
+		font-weight: bold;
+		color: darken(@booColor,15%); 
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+		text-align: center;
+		&:hover {
+			color: darken(@booColor,20%);
+			text-decoration: none;
+		}
+	
+	}
+
+	
+	#footer-fix {
+		background-color: #222222;
+	}
+
+	.footer-sidebar {
+		display: none;
+		background: #16171A;
+		bottom: 0;
+		min-height: @baseLineHeight * 2;
+		position: relative;
+		width: 0px;
+	}
+
+	input[class*="span"] + input[class*="span"],
+	input[class*="span"] + select[class*="span"],
+	select[class*="span"] + select[class*="span"],
+	input[class*="span"] + textarea[class*="span"],
+	.uneditable-input + .uneditable-input {
+		margin-top: 9px;
+	}
+
+	.media-left,
+	.media-right {
+		display: block;
+		margin-bottom: @baseLineHeight / 2;
+	}	
+}
+
+
+
+// UP TO LANDSCAPE PHONE
+// -----------------------------------------------------------------------------
+/* RESPONSIVE - Up to Landscape phone */
+
+@media (max-width: 480px) {
+
+// -----------------------------------------------------------------------------
+// BOO STYLE
+// -----------------------------------------------------------------------------
+	
+	.media-left,
+	.media-right {
+		display: block;
+		float: left;
+		margin-bottom: @baseLineHeight / 2;
+	}
+
+	#footer-fix .navbar-inverse .navbar-inner {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	#footer-fix .navbar .divider-vertical {
+		border-left: none;
+		border-right: none;
+	}
+
+	#footer-fix .navbar .nav > li > a {
+		padding: 10px 5px;
+	}	
+	
+}

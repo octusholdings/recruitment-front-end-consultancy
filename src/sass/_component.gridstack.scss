@@ -1,0 +1,142 @@
+.gs-wrapper {
+	margin-top: 25px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.grid-stack-item-content {
+	background-image: none;
+	background-color: $white;
+	// transition: box-shadow 200ms ease;
+
+	&.candidates, &.clients, &.company, &.job {
+		text-align: center;
+    	color: white;
+
+    	.fa {
+			font-size: 20px;
+			margin-top: 12px;
+    	}
+
+    	small {
+    		color: #313131;
+    		font-weight: 200;
+    	}
+	}
+
+	&.candidates {
+		color: #444C5C;
+	}
+
+	&.clients {
+		color: #ce5a57;
+	}
+
+	&.company {
+		color: #78A5A3;
+	}
+
+	&.job {
+		color: #E1B16A;
+	}
+}
+
+.gs-toolbar {
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-bottom: 15px;
+}
+.gs-content {
+	.simple-header {
+		margin-top: -10px;
+	}
+	.k-grid .k-button.k-button-icon {
+		display: none;
+	}
+}
+.gs-snapshot {
+
+	margin-bottom: 0px;
+
+	&.fixed {
+	    position: fixed;
+	    top: 43px;
+	    right: 0px;
+	    height: 50px;
+	    width: calc(100% - 210px);
+	    z-index: 1;
+	    background: #ededed;
+	    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+
+		small {
+			display: inline-block;
+		}
+		.count {
+			font-size: 20px;
+		}
+		
+		.gs-snapshot-content {
+			.well {
+				padding-bottom: 0px;
+	
+				.fa {
+					font-size: 15px;
+				}
+			}
+		}
+
+		+ .grid-stack {
+			margin-top: 90px;
+		}
+	}
+
+	.gs-snapshot-content {
+		width: 100%;
+		float: left;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		.well {
+		    background: transparent;
+    		border: none;
+    		box-shadow: none;
+    		padding-top: 0px;
+    		margin-bottom: 0px;
+    		text-align: center;
+
+			.fa {
+				font-size: 20px;
+			}
+		}
+	}
+
+	@media (min-width: 320px) {
+		.well {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+
+	@media (max-width: 992px) {
+		.gs-snapshot-content {
+			width: 33.333%;
+		}
+	}
+
+	@media (min-width: 993px) { 
+		.gs-snapshot-content {
+			width:14.2857%;
+		}
+	}
+}
+.grid-stack-item:not(.ui-draggable-disabled) {
+	.grid-stack-item-content {
+		// box-shadow: 0 1px 8px 0 rgba(192, 3, 3, 0.5);
+		opacity: 0.4;
+		border: 2px dashed #666;
+		pointer-events: none;
+	}
+}
+
+// .grid-stack-item-content::-webkit-scrollbar-track {  border:none; background-color:transparent; }
+// .grid-stack-item-content::-webkit-scrollbar {  width:1.2rem; background-color:transparent; }
+// .grid-stack-item-content::-webkit-scrollbar-thumb {  background-color:#b5b5b5; border-radius:.3rem; }

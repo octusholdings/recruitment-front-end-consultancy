@@ -1,0 +1,15 @@
+// ========================
+// PRINTER-FRIENDLY
+// ========================
+@media print {
+    #header-container, #main-sidebar, .page-head, 
+    #page-content > .well *:not(#print-jd-content), .o-footer {
+        display: none;
+    }
+
+    .print-friendly {
+    	width: 100%;
+    	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    	font-size: 14px;
+    }
+}

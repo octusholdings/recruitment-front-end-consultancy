@@ -1,0 +1,268 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - NAVBAR 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.navbar {
+    font-weight: bold;
+    font-size: @fontSizeBaseSmall;
+}
+
+.navbar-inner {
+    padding-right: 20px;
+    padding-left:  20px;
+    min-height: @navbarHeight;
+    border: 1px solid @navbarBorder;
+    #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);    
+    .border-radius(@baseBorderRadius);
+    .box-shadow(0 1px 4px rgba(0,0,0,.065));
+
+    // Prevent floats from breaking the navbar
+    .clearfix();
+    .title {
+        float: left;
+        margin: 0 0 0 -15px;
+        padding: 9px 15px 9px;
+        font-size: @fontSizeLarge; // 18px
+    }
+}
+
+// Brand
+// -------------------------
+.navbar .brand {
+    padding: 5px 20px;
+}
+
+// Fixed navbar
+// -------------------------
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+    //position: fixed;
+    position: relative;
+    margin-bottom: 0; // remove 18px margin for default navbar
+}
+
+// Navigation
+// -------------------------
+
+.navbar .btn-navbar {
+    margin-top: 4px;
+    padding: 8px 10px 7px;
+    .buttonBackground(darken(@navbarBackgroundHighlight, 5%), darken(@navbarBackground, 5%));
+    .box-shadow(inset 0 1px 0 rgba(255,255,255,.1), inset 0 -1px 0 rgba(255,255,255,.15), 0 1px 0 rgba(255,255,255,.2));
+    .icon-bar {
+        background-color: #D6B200;
+    }
+}
+
+.navbar .btn-toolbar {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Navbar for page navigation
+// -------------------------
+
+.navbar-page {
+    margin-top: -1px;
+    margin-right: -20px;
+    margin-left: -20px;
+    .navbar-inner {
+        min-height: 46px;
+        border-right: none;
+        border-left: none;
+        border-radius: 0;
+    } 
+    .divider-vertical {
+        margin: 0 6px;
+        height: 46px;
+        border-right: 1px solid @white;
+        border-left: 1px solid #e1e1e1;        
+    }       
+    .btn-navbar {
+        padding: 7px 10px 8px;
+        margin-top: 4px;
+        border: none;
+        background-color: transparent;
+        background-image: none;
+        .box-shadow(inset 0 1px 0 rgba(255,255,255,.1), inset 0 -1px 0 rgba(255,255,255,.15), 0 1px 0 rgba(255,255,255,.2));
+        .icon-bar {
+            background-color: #a1a1a1;
+        }    
+    }
+    .nav > li > a {
+        padding: 12px 15px 12px;
+        min-height: 22px;
+        color: #666;
+        &:focus,
+        &:hover {
+            background-color: transparent;
+            color: #3399FF;
+            text-decoration: none;
+        }
+    }
+    .nav > .active > a,
+    .nav > .active > a:hover,
+    .nav > .active > a:focus {
+        background-color: #f4f5fb;
+        color: #3399FF;
+        text-decoration: none;
+    }
+    .nav-icon {
+        border-right: 1px solid @white;
+        border-left: 1px solid #e1e1e1; color: #878d98;
+    }
+    .nav > li > .btn-icon {
+        padding: 13px 11px 11px;
+        border-right: 1px solid #e1e1e1;
+        border-left: 1px solid @white;
+        text-shadow: 0 1px 0 rgba(255,255,255,.8);
+        line-height: 22px;
+    }
+    .nav .btn-icon [class^="fontello-icon-"]::before, 
+    .nav .btn-icon [class*=" fontello-icon-"]::before,
+    .nav .btn-icon [class^="aweso-icon-"]::before, 
+    .nav .btn-icon [class*=" aweso-icon-"]::before {
+        text-shadow: 0 1px 0 rgba(255,255,255,.8);
+        font-size: @fontSizeLarge; // 18px
+    }
+    .nav > .active > .btn-icon {
+        // border-left: 1px solid #e1e1e1;
+        border: none;
+    }
+    .btn,
+    .btn-group,
+    .navbar-form input,
+    .navbar-form select,
+    .navbar-form .radio,
+    .navbar-form .checkbox,
+    .navbar-form .input-append,
+    .navbar-form .input-prepend,
+    .navbar-search {
+        margin-top: 8px;
+    }
+    .pagination {
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    .navbar-form input[type="image"],
+    .navbar-form input[type="checkbox"],
+    .navbar-form input[type="radio"] {
+        margin-top: 3px;
+    }
+    .navbar-form .input-append input,
+    .navbar-form .input-prepend input,
+    .navbar-form .input-append .btn,
+    .navbar-form .input-prepend .btn,
+    .navbar-form .input-append .btn-group,
+    .navbar-form .input-prepend .btn-group {
+        margin-top: 0;
+    }
+    label {
+        display: inline-block;
+        margin-top: 10px;
+        vertical-align: middle;
+    }
+}
+
+// Inverted navbar
+// -------------------------
+
+.navbar-inverse {
+    .navbar-inner {
+        #gradient > .vertical(@navbarInverseBackgroundHighlight, @navbarInverseBackground);
+        border-color: @navbarInverseBorder;
+    }
+    .brand,
+    .title,
+    .nav > li > a {
+        color: #7d828a;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.9);
+        .transition(all 0.2s ease-in-out);
+    } 
+    .nav .active > a,
+    .nav .active > a:hover,
+    .nav .active > a:focus {
+        background-color: #111;
+        color: @white;
+    }     
+    // Navbar collapse button
+    .navbar-inverse .btn-navbar {
+        .buttonBackground(#151515, #040404);
+    }      
+}
+
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+
+// Navbar user menu
+// -------------------------------------------
+
+.navbar {
+    .user-menu {
+        float: right;
+        > li > a {
+            position: relative;
+            padding: 10px 10px 8px;
+            color: #7d828a;
+            font-size: @fontSizeLarge; // 18px
+            text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+            // Label badge info
+            span {
+                position: absolute;
+                top: 5px;
+                right: 0;
+                padding: 2px 6px;
+            }  
+        }
+    }
+}
+
+// Navbar global gearch 
+// -------------------------------------------
+
+.search-global {
+    position: relative;
+    float: right;
+}
+
+.search-global .search,
+.search-global input[type="search"] {
+    margin: 4px 0 0;
+    border-color: #131517; // #eeeeee
+    background: #181a1d;
+    color: @grayLighter;
+}
+
+.search-global {
+    .search-button {
+        position: absolute;
+        top: 9px;
+        right: 4px; // 14px
+        color: @white;
+        font-size: @baseFontSize;
+        .transition(all 0.2s ease-in-out);
+        .opacity(10);
+    }
+}
+.search-global:hover .search-button {
+    .opacity(40);
+}
+
+.search-global .search-button:hover {
+    .opacity(80);
+}
+
+.search-global input[type="search"]:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+}
+

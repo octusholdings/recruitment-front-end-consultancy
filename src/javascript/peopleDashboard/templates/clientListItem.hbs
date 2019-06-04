@@ -1,0 +1,31 @@
+
+<td>
+    <a href="#/client/{{id}}/dashboard" class="name" id="name"  ></a>
+</td>
+<td>
+    <a href="#/client/{{id}}/dashboard" class="jobTitle" id="jobTitle"  ></a>
+</td>
+
+<td>
+    {{#each telephoneList}}
+        <a href="tel:+{{this.countryCode}}{{this.number}}"><div>+{{this.countryCode}}&nbsp;{{this.number}}</div></a>
+    {{/each}}
+</td>
+
+<td class="align-right">
+    <a href="mailto:{{primaryEmail}}" class="email"></a>
+</td>
+<td>
+    <span class="company"></span>
+</td>
+<td class="mass-mail-list" data-octus-type-id="{{id}}" data-octus-type="client"></td>
+<td class="align-right">
+    <div class="pull-right">
+        <button class="btn btn-danger btn-sm delete-client">{{translate "delete"}}</button>
+        <a href="#/client/{{id}}/edit">
+            <button class="btn btn-success btn-sm edit-client">
+                {{translate "edit"}}
+            </button>
+        </a>
+    </div>
+</td>

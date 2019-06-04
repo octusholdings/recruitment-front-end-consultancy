@@ -1,0 +1,261 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - WELLS 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.well {
+    border-color: @wellBorder;
+    background-color: @wellBackground;
+    color: @textColor;
+}
+
+
+// Well Nice
+// -------------------------------------------
+.well-nice {
+	  border-color: @wellNiceBorder;
+    .box-shadow(0 1px 2px rgba(0,0,0,.30));
+}
+
+
+// Well Black
+// -------------------------------------------
+.well-black {
+  	color: @wellBlackTextColor;
+  	background: @wellBlackBackground;
+  	border-color: @wellBlackBorderColor;
+  	// a { color: #a4c7d5; }
+    .page-header {
+        border-bottom-color: @wellBlackBorderDarkColor;
+        .box-shadow(0 1px 0 rgba(255,255,255,.2));  
+    }
+    hr {
+        border-top-color: @hrWellBlackBorder;
+        border-bottom-color: @hrWellBlackBorderBottom;
+    }
+    code {
+        background-color: #303335;
+        border: 1px solid #2a2c2e;
+        color: #ff6666;
+    } 
+}
+
+
+// Well Black Heading
+// ------------------
+.well-black h1, 
+.well-black h2, 
+.well-black h3,
+.well-black h4, 
+.well-black h5, 
+.well-black h6,
+h1.well-black, 
+h2.well-black, 
+h3.well-black, 
+h4.well-black, 
+h5.well-black, 
+h6.well-black {
+  	color: @wellBlackTextColor;
+  	text-shadow: 0px -1px 0 rgba(0,0,0,.8);
+}
+
+
+// Well Impressed
+// -------------------------------------------
+.well-impressed {
+  	border-color: @wellBorder;
+  	.box-shadow(inset 0 1px 8px rgba(0,0,0,.05), inset 0 1px 1px rgba(0,0,0,.05), inset 1px 0 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255, 1));
+}
+
+
+// Well Wrap
+// -------------------------------------------
+.well-wrap {
+  	padding: 0px;
+  	background-color: transparent;
+  	border-color: @wellBorder;
+  	.box-shadow(0 1px 3px rgba(0,0,0,.133));
+  	&.inverse {
+  	  	border-color: @white;
+  	  	border-color: rgba(255,255,255,.5);
+  	}  	
+}
+
+// Well Content
+// -------------------------------------------
+.well-content {
+  	margin: 0 -19px;
+  	border-top: 1px solid @white;
+}
+
+// Well Box
+// -------------------------------------------
+
+.well-box {
+    padding: 0;
+    .btn-toolbar {
+        margin: 0px;
+    }
+    .section-content {
+        padding: 16px;
+        border-top: 1px solid @white;
+        &.item {
+            border-bottom: 1px solid @wellBorder;
+        } 
+        &.footer {
+            padding: 6px 16px;
+            min-height: @baseLineHeight;
+        } 
+    }
+    .section-content-table {
+        padding: 0;
+        border-top: 1px solid @white;
+    }   
+}
+
+// Well Box navbar
+.well-box {
+    .navbar {
+        margin-bottom: 0;
+        .navbar-inner {
+            padding-right: 15px;
+            padding-left: 15px;
+            border: none;
+            border-bottom: 1px solid @wellBorder;
+            .border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+            .box-shadow(0 1px 0 rgba(255,255,255, 1));
+            .title {
+                color: @textColor;
+            }
+        }
+        .nav > li > a {
+            padding: @baseLineHeight / 2;
+        }
+        .divider-vertical {
+            margin: 0 6px;
+            border-left-color: @wellBorder;
+            border-right-color: @white;
+        }
+    }
+    .navbar-inverse {
+        .divider-vertical {
+            border-left-color: @wellBlackBorderDarkColor; 
+            border-right-color: @wellBlackBorderLightColor;
+        }
+        .navbar-inner {
+            .title {
+                color: #e6e8eb;
+            }
+        }
+    }    
+}
+
+// Well Box.Well Black navbar
+.well-box {
+    &.well-black {
+        .navbar-inner {
+            border-bottom: 1px solid @wellBlackBorderDarkColor; 
+            .box-shadow(0 1px 0 rgba(255,255,255,.15));
+            .title {
+                color: #e6e8eb;
+            }
+        }
+    }
+}
+
+// Well in Well
+// -------------------------------------------
+.well {
+	.well {
+		.clearfix();
+	}
+	.well-nice {
+  		border-color: #f5f6f9;
+	}
+}
+
+.well-nice {
+	.well-nice {
+		border-color: darken(desaturate(@wellBackground, 40%), 6%);
+		background-color: darken(desaturate(@wellBackground, 40%), 3%);
+		box-shadow: none;
+		&.well-impressed {
+		  	border-color: @white;
+		  	background-color: #edeef5;
+		  	.box-shadow(inset 0 1px 6px rgba(0,0,0,.1), inset 0 1px 1px rgba(0,0,0,.1), inset 1px 0 2px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255, 1));
+		}
+	}
+}
+
+.well-black {
+	.well-black {
+	  	border-color: darken(@wellBlackBackground, 4%);
+	  	background-color: darken(@wellBlackBackground, 3%);
+	    box-shadow: none;
+	    &.well-impressed {
+	  		border: none;
+	  		.box-shadow(inset 0 1px 6px rgba(0,0,0,.4), inset 0 1px 1px rgba(0,0,0,.15), inset 1px 0 2px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.15));
+		}
+	}
+	.well-nice {
+	  	border: none;	  	
+	  	h1,  
+	  	h2, 
+	  	h3, 
+	  	h4, 
+	  	h5, 
+	  	h6 {
+		  	color: @wellTextColor;
+		  	text-shadow: 0px 1px 0 rgba(255,255,255, 1);
+		}
+	}
+	&.well-impressed {
+	  	border: none;
+	  	.box-shadow(inset 0 1px 6px rgba(0,0,0,.7), inset 0 1px 1px rgba(0,0,0,.5), inset 1px 0 2px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255, 1));
+	}	
+}
+
+// Sizes
+// -------------------------------------------
+.well-mini {
+  	padding: 5px;
+  	min-height: @baseLineHeight - 10;
+  	&.well-impressed {
+  	    border-color: darken(@wellBorder, 7%);
+  		  .box-shadow(inset 0 1px 4px rgba(0,0,0,.05), inset 0 1px 1px rgba(0,0,0,.05), inset 1px 0 2px rgba(0,0,0,.15), 0 1px 0 rgba(255, 255, 255, 1));
+  	}
+}
+
+// Simple header for well
+// -------------------------------------------
+.well .simple-header:first-child {
+  	margin-top: -10px;
+}
+
+.well-small .simple-header:first-child {
+  	margin-top: 0px;
+}
+
+.well-box .simple-header:first-child {
+  	margin-top: @baseLineHeight - 10;
+}
+
+.well-black .simple-header {
+  	border-bottom-color: @wellBlackBorderDarkColor;
+  	.box-shadow(0 1px 0 rgba(255,255,255,.15));
+}
+
+// List as Well
+// -------------------------------------------
+ul li a.well,
+ol li a.well {
+  	display: block;
+}

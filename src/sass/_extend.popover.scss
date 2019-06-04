@@ -1,0 +1,40 @@
+/*
+ * Extension of Bootstrap Popover and the associated button
+ * ------------------
+ */
+
+.popover-content {
+    max-height: 40vh;
+    overflow: auto;
+}
+
+
+.on-hover-button {
+    line-height: 1.3;
+    position: relative;
+    padding: .4rem 1.6rem .4rem .8rem;
+    display: block;
+
+    &:hover {
+        background-color:#1c7cd6;
+        border-radius:2px;
+        color:#fff;
+        text-shadow: initial;
+        text-shadow: none;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: 5px;
+            bottom: 9px;
+            border-top: 4px dashed;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+        }
+    }
+}
+
+.on-hover-button:empty { display:none; }

@@ -1,0 +1,175 @@
+﻿// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * WIZARD - BOOTSTRAP-WIZARD 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.wizard {
+	h1, h2, h3, h4, h5, h6 {
+	  	margin: 0 0 10px;
+	}	
+	form {
+  		margin-bottom: 0;
+	}
+	legend {
+		line-height: 30px;
+		margin-bottom: 10px;
+		font-size: @fontSizeBaseLarge;
+		font-weight: bold;
+		color: @textColor;
+		text-transform: uppercase;
+		small {
+		  	font-weight: normal;
+		}
+		span {
+		  	font-size: 15px;
+		  	color: #3399FF;
+		  	font-weight: normal;
+		}
+	}	
+	.navbar,
+	.progress {
+	  	margin-bottom: 10px;
+	}
+	.tab-content {
+	  	padding-top: 5px;
+		.pager {
+		  	margin: 5px 0;
+		}
+	}	
+}
+
+.number-page {
+  	display: inline-block;
+	.ie7-inline-block();
+}
+
+.navbar {
+	.number-page {
+	  	padding: 10px 15px;
+	  	margin: 3px 2px 2px;
+	  	line-height: 14px;
+	  	font-size: @fontSizeSmall;
+	  	color: @textColor;
+	  	background-color: transparent;
+		.border-radius(@baseBorderRadius);
+	  	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	}	
+	.wizard-indicator {
+		.progress {
+		  	margin-top: 10px;
+		}	
+		.progress-small {
+		  	margin-top: 14px;
+		}
+		.progress-mini {
+		  	margin-top: 15px;
+		}
+	}
+}
+
+.navbar-inverse {
+	.number-page {
+	  	color: #f1f1f1;
+		.box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.35), inset 0px 2px 5px -3px rgba(0, 0, 0, 0.3));
+	  	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+	}	
+}
+
+.wizard-indicator {
+  	float: right;
+  	width: 150px;
+}
+
+.wizard-action {
+  	margin: 10px 0 0;
+  	padding-top: 10px;
+  	border-top: 1px solid #c8ccce;
+  	list-style: none;
+	.clearfix();
+	&.center {
+	  	text-align: center;
+	}
+}
+
+.well-black {
+	.wizard-action {
+	  	border-top-color: #515356;
+	}	
+}
+
+.footer {
+	.wizard-action {
+	  	border-top: none;
+	  	margin: 5px 0;
+	  	padding-top: 0;
+	}	
+}
+
+.wizard-pager {
+  	margin: 5px 0 10px;
+  	text-align: center;
+  	list-style: none;
+	.clearfix();
+}
+
+.wizard-action,
+.wizard-pager {
+	li {
+	  	display: inline;
+		.btn {
+		  	margin: 0 2px;
+		}
+	}
+	.next {
+	  	float: right;
+	}
+	.previous {
+        float: left;
+	}
+} 
+
+.well-box {
+	&.wizard {
+		.navbar {
+            margin-bottom: 0;
+		}	
+	}
+}
+
+.summary-list {
+  	list-style: none;
+  	margin-left: 0;
+	p {
+	  	margin-bottom: 0px;
+	  	font-size: @fontSizeBaseSmall;
+	}
+	.label-field {
+	  	display: inline-block;
+	  	margin-right: 20px;
+	  	width: 160px;
+	  	text-align: right;
+	  	font-weight: normal;
+		.ie7-inline-block();
+	}
+}
+
+.summary {
+	.label-small {
+		.label-field {
+		  	width: 110px;
+		}	
+	}	
+	.label-left {
+		.label-field {
+		  	text-align: left;
+		}	
+	}
+}

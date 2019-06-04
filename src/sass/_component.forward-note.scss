@@ -1,0 +1,12 @@
+.preview-box-container { margin:2.4rem 0; }
+.fw-note-preview-box { width: 90%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.3); margin:auto; }
+    .fw-note-header { padding: 8% 8% 4% 8%; background-color:#fff; font-family: sans-serif; font-size: 15px; line-height: 1.4; color: #212529; font-weight: normal; }
+        .fw-note-title { margin: 0 0 10px 0; font-family: sans-serif; font-size: 24px; line-height: 1.3; color: #212529; font-weight: normal; }
+		.fw-note-message { white-space:pre-wrap; }
+
+	.fw-note-content { padding: 8%; background-color:#dee2e6; font-family: sans-serif; font-size: 15px; line-height: 1.4; color: #343a40; }
+		.fw-note-content-text { white-space:pre-wrap; }
+	
+	.fw-note-footer { padding: 4% 8%; text-align:center; background-color:#fff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #343a40; }
+		.fw-note-button { line-height:44px; display:inline-block; border-radius:2px; background-color:#1862ab; color:#fff; font-weight:700; padding:0 30px; font-size:12px; margin: 0 0 15px 0; border:0; transition: all 100ms ease-in; }
+		.fw-note-button:hover { background: #1c7cd6 !important; border-color: #1c7cd6 !important; }

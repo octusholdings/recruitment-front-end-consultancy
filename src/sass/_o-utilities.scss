@@ -1,0 +1,118 @@
+// Octus utilities
+// ___________________________________________________________________________
+
+.o-flex-middle { display:flex; align-items:center; }
+
+.o-button { min-width:3.6rem; line-height:3.6rem; display:inline-block; border-radius:2px; border:none; background-color:transparent; padding:0; }
+
+.is-centered { margin:0 auto; }
+
+.form-error-message { font-size:12px; color:$color_persian_red_approx; }
+
+.flex { display:flex; }
+.sb,
+.jc-sb { justify-content:space-between; }
+.jc-center { justify-content:center; }
+
+.ai-center { align-items:center; }
+.align-center { text-align:center; }
+.align-right { text-align:right; }
+
+.overflow-visible   { overflow:visible; }
+.overflow-x-visible { overflow-x:visible; }
+.overflow-y-visible { overflow-y:visible; }
+.overflow-hidden    { overflow:hidden; }
+.overflow-x-hidden  { overflow-x:hidden; }
+.overflow-y-hidden  { overflow-y:hidden; }
+.overflow-auto    { overflow:auto; }
+.overflow-x-auto  { overflow-x:auto; }
+.overflow-y-auto  { overflow-y:auto; }
+
+input[type="date"] {
+    position: relative;
+}
+
+input[type="date"]::-webkit-inner-spin-button { display:none; }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:3rem;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+    padding: 0;
+}
+
+.o-h { overflow:hidden; }
+.overflow-auto { overflow: auto; }
+
+.bg-gray-1 { background-color:#f1f3f5; }
+
+.mh-80vh { max-height:80vh; }
+.mh-300 { max-height:30rem; }
+@media all and (min-width:768px) and (max-width: 992px) {
+    .tablet-force-clear { clear:both !important; }
+}
+
+.one-line-ellipsis {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/**
+    Better formatting for CV Html content
+**/
+.cvContent p, 
+.cvContent h1, 
+.cvContent h2, 
+.cvContent h3, 
+.cvContent h4, 
+.cvContent h5, 
+.cvContent h6,
+#document-text p, 
+#document-text h1, 
+#document-text h2, 
+#document-text h3, 
+#document-text h4, 
+#document-text h5, 
+#document-text h6 { white-space:pre-line; }
+
+.cvContent h1,
+#document-text h1 { font-size:2.2rem; }
+
+.color-bilbao { color:$color_bilbao; }
+.color-blue { color:$color_linkedin_blue_approx; }
+.rounded { border-radius:999rem; }
+.inline-block { display:inline-block; }
+
+.mb-4 { margin-bottom:.4rem; }
+.record-header-ellipsis{
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: auto;
+}
+.flex-none{
+    flex: none;
+}
+.btn-toolbar-flex{
+    display: flex;
+}
+
+a.stats-header{
+    text-decoration: none;
+}
+.top-10{
+    top: 10px;
+}
+
+.mtop-10{
+    margin-top:10px;
+}

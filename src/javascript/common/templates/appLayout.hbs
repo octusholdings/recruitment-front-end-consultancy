@@ -1,0 +1,69 @@
+<div id="header-container">
+    <div id="header">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="{{uiRoot}}/#"></a>
+                <ul id="breadcrumbs" class="breadcrumbs-nav">
+                    <li><a href="{{uiRoot}}/#">Home</a></li>
+                </ul>
+                <div class="user-bar"></div>
+            </div>
+            <div class="header-drawer">
+ {{!--                <div class="breadcrumbs-header">{{translate 'recentItems'}}:   </div>
+                <div class="breadcrumbs-nav"></div> --}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main-container">
+    {{#if (hasPermission 'DEBUG')}}
+    <div id="DEBUG">
+        <div class="alert alert-developer text-center">
+            <code><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Debug Mode</code> 
+            <button class="btn btn-xs btn-default off-debug">
+                <i class="fa fa-fw fa-bug" aria-hidden="true"></i> Exit Debug Mode <span data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Hide features that are under development"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+            </button> 
+            <button class="btn btn-xs btn-default refresh-permission">
+                <i class="fa fa-fw fa-key" aria-hidden="true"></i> Refresh Permissions <span data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Reloads the permission for the current user"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+            </button>
+            <div class="dropdown">
+                <a class="btn btn-xs btn-default roles-list" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-fw fa-users" aria-hidden="true"></i> Roles
+                </a>
+                <ul class="dropdown-menu">
+                    {{#each (returnRole)}}
+                    <li><a class='role-link'>{{this.name}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+            <button class="btn btn-xs btn-default refresh-language">
+                <i class="fa fa-fw fa-language" aria-hidden="true"></i> Refresh Language <span data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Reloads the language"></span>
+            </button>
+        </div>
+    </div>
+    {{else}}
+        {{#if (hasRole 'OCTUS')}}
+        <div id="OCTUS">
+            <div class="alert alert-warning text-center">
+                <code><i class="fa fa-lock" aria-hidden="true"></i> Octus User</code> 
+                <button class="btn btn-xs btn-default on-debug">
+                    <i class="fa fa-fw fa-bug" aria-hidden="true"></i> Go Debug Mode <span data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Includes features that are still under development"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                </button>
+            </div>
+        </div>
+        {{/if}}
+    {{/if}}
+    <div id="main-sidebar" class="sidebar sidebar-inverse">
+        <!--<div class="sidebar-item" id="user-profile"></div>-->
+        <div id="mainSideMenu"></div>
+    </div>
+    <div id="main-content" class="main-content container-fluid">
+    </div>
+</div>
+
+<footer class="o-footer" id="footer-content">
+</footer>
+
+<div class="full-screen-search-wrapper"></div>

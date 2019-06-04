@@ -1,0 +1,59 @@
+<div class="modal-dialog document-filter">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4>{{name}}'s {{translate "documents"}}</h4>
+            
+            {{#if searchQuery}}
+                {{translate "theKeyword"}} <span class="searchQuery">{{searchQuery}}</span> {{translate "hasFound"}} <span class="results"><span class="no"></span> {{translate "results"}}</span> {{translate "in"}} <span class="fileName"></span>
+            {{/if}}
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-3 documents-list">
+                    {{!-- <div class="form-group search-form">
+                        <div class="input-group input-group-sm">
+                            <input class="form-control" type="text" placeholder="{{translate "search"}}" value="{{searchQuery}}">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div> --}}
+                    <ul class="list-unstyled"></ul>
+                </div>
+                <div class="col-md-9 document-content-wrapper">
+                    <div class="document-options clearfix">
+                        <div class="tags-content pull-left">{{translate "tags"}}: <i><span class="tags"></span></i></div>
+                        <div class="btn-group btn-group-sm pull-right">
+                            <button class="btn btn-content-type btn-default show-text active">
+                                <i class="fa fa-file-text-o" aria-hidden="true"></i> Text only
+                            </button>
+                            <button class="btn btn-content-type btn-default show-pdf">
+                                <i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF
+                            </button>
+                            <button class="btn btn-content-type btn-default show-image">
+                                <i class="fa fa-file-image-o" aria-hidden="true"></i> Image
+                            </button>
+                            <button class="btn btn-content-type btn-default show-office">
+                                <i class="fa fa-file-word-o" aria-hidden="true"></i> Office
+                            </button>
+                        </div>
+                    </div>
+                    <div class="document-content">
+                        <div id="document-text">
+                            {{!-- stickit --}}
+                        </div>
+                        <div id="document-pdf">
+                        </div>
+                        <div id="document-office">
+                        </div>
+                        <div id="document-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

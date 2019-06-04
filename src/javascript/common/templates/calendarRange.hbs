@@ -1,0 +1,38 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">
+		    	{{translate "rangeSelection" }}
+	    	</h4>
+		</div>
+		<div class="modal-body">
+			<label class="text-default-range hidden" style="margin-bottom:25px!important;">{{ translate "pleaseChooseACustomDate" }}</label>
+
+		    <h5>{{translate "startDate" }}:</h5>
+            <input id="start" style="width: 100%;" value="{{startDate}}" />
+
+            <h5 class="margin-top-2em">{{translate "endDate" }}:</h5>
+            <input id="end" style="width: 100%;" value="{{endDate}}"/>
+			
+			<div class="select-default-range hidden">
+				<h5 class="margin-top-2em">{{translate "setDefaultRange" }}:</h5>
+				<select class="form-control" id="dateDefaultRange" style="width: 100%;">
+					<option value="">{{ translate "none" }}</option>
+					<option value="last24Hours">{{ translate "last24Hours" }}</option>
+					<option value="last7Days">{{ translate "last7Days" }}</option>
+					<option value="last30Days">{{ translate "last30Days" }}</option>
+				</select>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger cancel-range" data-dismiss="modal">
+		    		{{translate "no" }}
+			    </button>
+			    <button type="submit" class="btn btn-success confirm-range">
+			    	{{translate "yes" }}
+			    </button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<td class="col-md-1">
+    {{#if hasCv}}
+        <button class="btn btn-info btn-sm show-cv">{{translate "viewCv"}}</button>
+    {{/if}}
+</td>
+<td class="col-md-2">
+    <a href="#/candidate/{{id}}/dashboard" >
+        <span >{{name}}</span>
+    </a>
+</td>
+<td class="col-md-2">
+    {{#each telephoneList}}
+        <a href="tel:{{{this}}}"><span class="phone"></span></a>
+    {{/each}}
+</td>
+
+<td class="col-md-3 ">
+    <a href="mailto:{{email}}" class="email">{{email}}</a>
+</td>
+<td class="span2 skills">
+    {{#each skillList}}
+        <span class="skill bootstrap-tagsinput">
+            <span class="badge">{{{value}}}</span>
+            </span>
+    {{/each}}
+</td>
+<td class="span2 align-right">
+    <div class="pull-right">
+        <button class="btn btn-danger btn-sm delete-candidate">{{translate "delete"}}</button>
+        <a href="#/candidate/{{id}}/edit">
+            <button class="btn btn-success btn-sm edit-candidate">
+                {{translate "edit"}}
+            </button>
+        </a>
+    </div>
+</td>

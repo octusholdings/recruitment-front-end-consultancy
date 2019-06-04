@@ -1,0 +1,233 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - BUTTONS 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.btn {
+    font-weight: bold;
+    font-size: @fontSizeSmall; // 12px
+    .border-radius(@baseBorderRadius); 
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn-large {
+    padding: 9px 14px;
+    font-size: @fontSizeBaseLarge; // 16px
+    line-height: normal;
+    .border-radius(@borderRadiusLarge); 
+}
+.btn-small {
+    padding: 3px 9px;
+    font-size: @fontSizeSmall; // 12px
+    line-height: 18px;
+}
+.btn-mini {
+    padding: 2px 6px;
+    font-size: 11px;
+    line-height: 17px;
+}
+
+.btn-link,
+.btn-link:active,
+.btn-link[disabled] {
+    background-color: transparent;
+    background-image: none;
+    .box-shadow(none);
+}
+
+.btn-glyph {
+    padding: 4px 10px;
+    cursor: pointer; 
+}
+.btn-glyph,
+.btn-glyph:hover,
+.btn-glyph:active {
+    color: @grayDark;
+}
+.btn-glyph,
+.btn-glyph:hover,
+.btn-glyph:active,
+.btn-glyph[disabled] {
+    text-decoration: none;
+}
+/*.btn.btn-glyph {
+    padding-right: 8px;
+    padding-left: 8px;
+}*/
+.btn-mini.btn-glyph {
+    padding: 2px 6px;
+}
+.btn-small.btn-glyph {
+    padding: 3px 8px;
+}
+.btn-large.btn-glyph {
+    padding: 9px 12px; 
+    //font-size: @fontSizeSmall; // 12px
+}
+.btn-glyph[class^="fontello-icon-"]:before,
+.btn-glyph[class*=" fontello-icon-"]:before,
+.btn-glyph[class^="aweso-icon-"]:before,
+.btn-glyph[class*=" aweso-icon-"]:before,
+.btn-glyph [class^="fontello-icon-"]:before,
+.btn-glyph [class*=" fontello-icon-"]:before,
+.btn-glyph [class^="aweso-icon-"]:before,
+.btn-glyph [class*=" aweso-icon-"]:before {
+    margin-right: 0;
+    font-size: 1.2em;
+}
+
+.btn[data-icon]:before,
+.btn [data-icon]:before {
+    vertical-align: middle;
+} 
+
+.txt-r,
+.btn.txt-r {
+    &[data-icon]:before,
+    > [data-icon]:before {
+        padding-right: 4px;
+    }
+} 
+.txt-l,
+.btn.txt-l {
+    &[data-icon]:before,
+    > [data-icon]:before {
+        padding-left: 4px;
+    }
+} 
+
+.btn-mini[class^="fontello-icon-"]:before,
+.btn-mini[class*=" fontello-icon-"]:before,
+.btn-mini[class^="aweso-icon-"]:before,
+.btn-mini[class*=" aweso-icon-"]:before,
+.btn-mini [class^="fontello-icon-"]:before,
+.btn-mini [class*=" fontello-icon-"]:before,
+.btn-mini [class^="aweso-icon-"]:before,
+.btn-mini [class*=" aweso-icon-"]:before,
+.btn-small[class^="fontello-icon-"]:before,
+.btn-small[class*=" fontello-icon-"]:before,
+.btn-small[class^="aweso-icon-"]:before,
+.btn-small[class*=" aweso-icon-"]:before,
+.btn-small [class^="fontello-icon-"]:before,
+.btn-small [class*=" fontello-icon-"]:before,
+.btn-small [class^="aweso-icon-"]:before,
+.btn-small [class*=" aweso-icon-"]:before,
+.btn-large[class^="fontello-icon-"]:before,
+.btn-large[class*=" fontello-icon-"]:before,
+.btn-large[class^="aweso-icon-"]:before,
+.btn-large[class*=" aweso-icon-"]:before,
+.btn-large [class^="fontello-icon-"]:before,
+.btn-large [class*=" fontello-icon-"]:before,
+.btn-large [class^="aweso-icon-"]:before,
+.btn-large [class*=" aweso-icon-"]:before {
+    font-size: 1.1em;
+}
+
+.btn-well {    
+    border-color: @white;
+    background-color: #f6f7fe;
+    background-image: none;
+    color: #878a92 !important;
+    text-shadow: 0px 1px 0 rgba(255, 255, 255, 1);
+    .box-shadow(0 1px 2px rgba(0, 0, 0, 0.30));    
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-primary {
+  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+}
+// Warning appears are orange
+.btn-warning {
+  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+}
+// Danger and error appear as red
+.btn-danger {
+  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+}
+// Success appears as green
+.btn-success {
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+}
+// Info appears as a neutral blue
+.btn-info {
+  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+}
+
+// Extra
+// ---------------------------
+.itext,
+.futon {    
+    display: inline-block;
+    border: none;
+    background: none;
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: 0px 1px 0 rgba(255, 255, 255, .75);
+    line-height: 20px;
+    cursor: pointer;
+    .box-shadow(none);
+    .ie7-inline-block();
+}
+.itext {
+    margin-bottom: 0;
+    padding: 3px 3px;
+    color: @grayDark;
+    font-size: @fontSizeBaseSmall;
+    *margin-left: .3em;
+}
+
+// Button for icon Fugue
+.futon {
+    padding: 4px 6px 6px;
+    margin-bottom: 0;
+    *margin-left: .3em;
+    font-size: @fontSizeSmall; // 12px
+    font-weight: normal;
+}
+.futon [class*=" fugue-uicon-"],
+.futon [class^="fugue-uicon-"] {
+    margin-top: -1px;
+    *margin-top: -2px;
+}
+
+.btn-toolbar .futon:hover {
+    background-color: #d3d5da;
+    .border-radius(@borderRadiusSmall);
+    .box-shadow(inset 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.4));    
+}
+
+// Btn with checkbox/radio
+// ---------------------------
+.btn-check {
+    padding-right: 5px;
+    padding-left: 5px;
+    .checker {
+        margin-right: 0;
+    }
+    input[type="radio"], 
+    input[type="checkbox"] {
+        margin: 0;
+        min-height: 14px;
+    }    
+}
+
+
+
+
+

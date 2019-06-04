@@ -1,0 +1,982 @@
+[
+  {
+    "colorName": "AliceBlue", 
+    "hexValue": "#F0F8FF", 
+    "rgbValue": "240,248,255", 
+    "colorBackground": "#F0F8FF",
+    "colorText": "#F0F8FF"
+  }, 
+  {
+    "colorName": "AntiqueWhite", 
+    "hexValue": "#FAEBD7", 
+    "rgbValue": "250,235,215", 
+    "colorBackground": "#FAEBD7",
+    "colorText": "#FAEBD7"
+  }, 
+  {
+    "colorName": "Aqua", 
+    "hexValue": "#00FFFF", 
+    "rgbValue": "0,255,255", 
+    "colorBackground": "#00FFFF",
+    "colorText": "#00FFFF"
+  }, 
+  {
+    "colorName": "Aquamarine", 
+    "hexValue": "#7FFFD4", 
+    "rgbValue": "127,255,212", 
+    "colorBackground": "#7FFFD4",
+    "colorText": "#7FFFD4"
+  }, 
+  {
+    "colorName": "Azure", 
+    "hexValue": "#F0FFFF", 
+    "rgbValue": "240,255,255", 
+    "colorBackground": "#F0FFFF",
+    "colorText": "#F0FFFF"
+  }, 
+  {
+    "colorName": "Beige", 
+    "hexValue": "#F5F5DC", 
+    "rgbValue": "245,245,220", 
+    "colorBackground": "#F5F5DC",
+    "colorText": "#F5F5DC"
+  }, 
+  {
+    "colorName": "Bisque", 
+    "hexValue": "#FFE4C4", 
+    "rgbValue": "255,228,196", 
+    "colorBackground": "#FFE4C4",
+    "colorText": "#FFE4C4"
+  }, 
+  {
+    "colorName": "Black", 
+    "hexValue": "#000000", 
+    "rgbValue": "0,0,0", 
+    "colorBackground": "#000000",
+    "colorText": "#000000"
+  }, 
+  {
+    "colorName": "BlanchedAlmond", 
+    "hexValue": "#FFEBCD", 
+    "rgbValue": "255,235,205", 
+    "colorBackground": "#FFEBCD",
+    "colorText": "#FFEBCD"
+  }, 
+  {
+    "colorName": "Blue", 
+    "hexValue": "#0000FF", 
+    "rgbValue": "0,0,255", 
+    "colorBackground": "#0000FF",
+    "colorText": "#0000FF"
+  }, 
+  {
+    "colorName": "BlueViolet", 
+    "hexValue": "#8A2BE2", 
+    "rgbValue": "138,43,226", 
+    "colorBackground": "#8A2BE2",
+    "colorText": "#8A2BE2"
+  }, 
+  {
+    "colorName": "Brown", 
+    "hexValue": "#A52A2A", 
+    "rgbValue": "165,42,42", 
+    "colorBackground": "#A52A2A",
+    "colorText": "#A52A2A"
+  }, 
+  {
+    "colorName": "BurlyWood", 
+    "hexValue": "#DEB887", 
+    "rgbValue": "222,184,135", 
+    "colorBackground": "#DEB887",
+    "colorText": "#DEB887"
+  }, 
+  {
+    "colorName": "CadetBlue", 
+    "hexValue": "#5F9EA0", 
+    "rgbValue": "95,158,160", 
+    "colorBackground": "#5F9EA0",
+    "colorText": "#5F9EA0"
+  }, 
+  {
+    "colorName": "Chartreuse", 
+    "hexValue": "#7FFF00", 
+    "rgbValue": "127,255,0", 
+    "colorBackground": "#7FFF00",
+    "colorText": "#7FFF00"
+  }, 
+  {
+    "colorName": "Chocolate", 
+    "hexValue": "#D2691E", 
+    "rgbValue": "210,105,30", 
+    "colorBackground": "#D2691E",
+    "colorText": "#D2691E"
+  }, 
+  {
+    "colorName": "Coral", 
+    "hexValue": "#FF7F50", 
+    "rgbValue": "255,127,80", 
+    "colorBackground": "#FF7F50",
+    "colorText": "#FF7F50"
+  }, 
+  {
+    "colorName": "CornflowerBlue", 
+    "hexValue": "#6495ED", 
+    "rgbValue": "100,149,237", 
+    "colorBackground": "#6495ED",
+    "colorText": "#6495ED"
+  }, 
+  {
+    "colorName": "Cornsilk", 
+    "hexValue": "#FFF8DC", 
+    "rgbValue": "255,248,220", 
+    "colorBackground": "#FFF8DC",
+    "colorText": "#FFF8DC"
+  }, 
+  {
+    "colorName": "Crimson", 
+    "hexValue": "#DC143C", 
+    "rgbValue": "220,20,60", 
+    "colorBackground": "#DC143C",
+    "colorText": "#DC143C"
+  }, 
+  {
+    "colorName": "Cyan", 
+    "hexValue": "#00FFFF", 
+    "rgbValue": "0,255,255", 
+    "colorBackground": "#00FFFF",
+    "colorText": "#00FFFF"
+  }, 
+  {
+    "colorName": "DarkBlue", 
+    "hexValue": "00008B", 
+    "rgbValue": "0,0,139", 
+    "colorBackground": "00008B",
+    "colorText": "#00008B"
+  }, 
+  {
+    "colorName": "DarkCyan", 
+    "hexValue": "#008B8B", 
+    "rgbValue": "0,139,139", 
+    "colorBackground": "#008B8B",
+    "colorText": "#008B8B"
+  }, 
+  {
+    "colorName": "DarkGoldenRod", 
+    "hexValue": "#B8860B", 
+    "rgbValue": "184,134,11", 
+    "colorBackground": "B8860B",
+    "colorText": "#B8860B"
+  }, 
+  {
+    "colorName": "DarkGray", 
+    "hexValue": "#A9A9A9", 
+    "rgbValue": "169,169,169", 
+    "colorBackground": "#A9A9A9",
+    "colorText": "#A9A9A9"
+  }, 
+  {
+    "colorName": "DarkGreen", 
+    "hexValue": "#006400", 
+    "rgbValue": "0,100,0", 
+    "colorBackground": "#006400",
+    "colorText": "#006400"
+  }, 
+  {
+    "colorName": "DarkKhaki", 
+    "hexValue": "#BDB76B", 
+    "rgbValue": "189,183,107", 
+    "colorBackground": "#BDB76B",
+    "colorText": "#BDB76B"
+  }, 
+  {
+    "colorName": "DarkMagenta", 
+    "hexValue": "#8B008B", 
+    "rgbValue": "139,0,139", 
+    "colorBackground": "#8B008B",
+    "colorText": "#8B008B"
+  }, 
+  {
+    "colorName": "DarkOliveGreen", 
+    "hexValue": "#556B2F", 
+    "rgbValue": "85,107,47", 
+    "colorBackground": "#556B2F",
+    "colorText": "#556B2F"
+  }, 
+  {
+    "colorName": "Darkorange", 
+    "hexValue": "#FF8C00", 
+    "rgbValue": "255,140,0", 
+    "colorBackground": "#FF8C00",
+    "colorText": "#FF8C00"
+  }, 
+  {
+    "colorName": "DarkOrchid", 
+    "hexValue": "#9932CC", 
+    "rgbValue": "153,50,204", 
+    "colorBackground": "#9932CC",
+    "colorText": "#9932CC"
+  }, 
+  {
+    "colorName": "DarkRed", 
+    "hexValue": "#8B0000", 
+    "rgbValue": "139,0,0", 
+    "colorBackground": "#8B0000",
+    "colorText": "#8B0000"
+  }, 
+  {
+    "colorName": "DarkSalmon", 
+    "hexValue": "#E9967A", 
+    "rgbValue": "233,150,122", 
+    "colorBackground": "#E9967A",
+    "colorText": "#E9967A"
+  }, 
+  {
+    "colorName": "DarkSeaGreen", 
+    "hexValue": "#8FBC8F", 
+    "rgbValue": "143,188,143", 
+    "colorBackground": "#8FBC8F",
+    "colorText": "#8FBC8F"
+  }, 
+  {
+    "colorName": "DarkSlateBlue", 
+    "hexValue": "#483D8B", 
+    "rgbValue": "72,61,139", 
+    "colorBackground": "#483D8B",
+    "colorText": "#483D8B"
+  }, 
+  {
+    "colorName": "DarkSlateGray", 
+    "hexValue": "#2F4F4F", 
+    "rgbValue": "47,79,79", 
+    "colorBackground": "#2F4F4F",
+    "colorText": "#2F4F4F"
+  }, 
+  {
+    "colorName": "DarkTurquoise", 
+    "hexValue": "#00CED1", 
+    "rgbValue": "0,206,209", 
+    "colorBackground": "#00CED1",
+    "colorText": "#00CED1"
+  }, 
+  {
+    "colorName": "DarkViolet", 
+    "hexValue": "#9400D3", 
+    "rgbValue": "148,0,211", 
+    "colorBackground": "#9400D3",
+    "colorText": "#9400D3"
+  }, 
+  {
+    "colorName": "DeepPink", 
+    "hexValue": "#FF1493", 
+    "rgbValue": "255,20,147", 
+    "colorBackground": "#FF1493",
+    "colorText": "#FF1493"
+  }, 
+  {
+    "colorName": "DeepSkyBlue", 
+    "hexValue": "#00BFFF", 
+    "rgbValue": "0,191,255", 
+    "colorBackground": "#00BFFF",
+    "colorText": "#00BFFF"
+  }, 
+  {
+    "colorName": "DimGray", 
+    "hexValue": "#696969", 
+    "rgbValue": "105,105,105", 
+    "colorBackground": "#696969",
+    "colorText": "#696969"
+  }, 
+  {
+    "colorName": "DodgerBlue", 
+    "hexValue": "#1E90FF", 
+    "rgbValue": "30,144,255", 
+    "colorBackground": "#1E90FF",
+    "colorText": "#1E90FF"
+  }, 
+  {
+    "colorName": "FireBrick", 
+    "hexValue": "#B22222", 
+    "rgbValue": "178,34,34", 
+    "colorBackground": "#B22222",
+    "colorText": "#B22222"
+  }, 
+  {
+    "colorName": "FloralWhite", 
+    "hexValue": "#FFFAF0", 
+    "rgbValue": "255,250,240", 
+    "colorBackground": "#FFFAF0",
+    "colorText": "#FFFAF0"
+  }, 
+  {
+    "colorName": "ForestGreen", 
+    "hexValue": "#228B22", 
+    "rgbValue": "34,139,34", 
+    "colorBackground": "#228B22",
+    "colorText": "#228B22"
+  }, 
+  {
+    "colorName": "Fuchsia", 
+    "hexValue": "#FF00FF", 
+    "rgbValue": "255,0,255", 
+    "colorBackground": "#FF00FF",
+    "colorText": "#FF00FF"
+  }, 
+  {
+    "colorName": "Gainsboro", 
+    "hexValue": "#DCDCDC", 
+    "rgbValue": "220,220,220", 
+    "colorBackground": "#DCDCDC",
+    "colorText": "#DCDCDC"
+  }, 
+  {
+    "colorName": "GhostWhite", 
+    "hexValue": "#F8F8FF", 
+    "rgbValue": "248,248,255", 
+    "colorBackground": "#F8F8FF",
+    "colorText": "#F8F8FF"
+  }, 
+  {
+    "colorName": "Gold", 
+    "hexValue": "#FFD700", 
+    "rgbValue": "255,215,0", 
+    "colorBackground": "#FFD700",
+    "colorText": "#FFD700"
+  }, 
+  {
+    "colorName": "GoldenRod", 
+    "hexValue": "#DAA520", 
+    "rgbValue": "218,165,32", 
+    "colorBackground": "#DAA520",
+    "colorText": "#DAA520"
+  }, 
+  {
+    "colorName": "Gray", 
+    "hexValue": "#808080", 
+    "rgbValue": "128,128,128", 
+    "colorBackground": "#808080",
+    "colorText": "#808080"
+  }, 
+  {
+    "colorName": "Green", 
+    "hexValue": "#008000", 
+    "rgbValue": "0,128,0", 
+    "colorBackground": "#008000",
+    "colorText": "#008000"
+  }, 
+  {
+    "colorName": "GreenYellow", 
+    "hexValue": "#ADFF2F", 
+    "rgbValue": "173,255,47", 
+    "colorBackground": "#ADFF2F",
+    "colorText": "#ADFF2F"
+  }, 
+  {
+    "colorName": "HoneyDew", 
+    "hexValue": "#F0FFF0", 
+    "rgbValue": "240,255,240", 
+    "colorBackground": "#F0FFF0",
+    "colorText": "#F0FFF0"
+  }, 
+  {
+    "colorName": "HotPink", 
+    "hexValue": "#FF69B4", 
+    "rgbValue": "255,105,180", 
+    "colorBackground": "#FF69B4",
+    "colorText": "#FF69B4"
+  }, 
+  {
+    "colorName": "IndianRed", 
+    "hexValue": "#CD5C5C", 
+    "rgbValue": "205,92,92", 
+    "colorBackground": "#CD5C5C",
+    "colorText": "#CD5C5C"
+  }, 
+  {
+    "colorName": "Indigo", 
+    "hexValue": "#4B0082", 
+    "rgbValue": "75,0,130", 
+    "colorBackground": "#4B0082",
+    "colorText": "#4B0082"
+  }, 
+  {
+    "colorName": "Ivory", 
+    "hexValue": "#FFFFF0", 
+    "rgbValue": "255,255,240", 
+    "colorBackground": "#FFFFF0",
+    "colorText": "#FFFFF0"
+  }, 
+  {
+    "colorName": "Khaki", 
+    "hexValue": "#F0E68C", 
+    "rgbValue": "240,230,140", 
+    "colorBackground": "#F0E68C",
+    "colorText": "#F0E68C"
+  }, 
+  {
+    "colorName": "Lavender", 
+    "hexValue": "#E6E6FA", 
+    "rgbValue": "230,230,250", 
+    "colorBackground": "#E6E6FA",
+    "colorText": "#E6E6FA"
+  }, 
+  {
+    "colorName": "LavenderBlush", 
+    "hexValue": "#FFF0F5", 
+    "rgbValue": "255,240,245", 
+    "colorBackground": "#FFF0F5",
+    "colorText": "#FFF0F5"
+  }, 
+  {
+    "colorName": "LawnGreen", 
+    "hexValue": "#7CFC00", 
+    "rgbValue": "124,252,0", 
+    "colorBackground": "#7CFC00",
+    "colorText": "#7CFC00"
+  }, 
+  {
+    "colorName": "LemonChiffon", 
+    "hexValue": "#FFFACD", 
+    "rgbValue": "255,250,205", 
+    "colorBackground": "#FFFACD",
+    "colorText": "#FFFACD"
+  }, 
+  {
+    "colorName": "LightBlue", 
+    "hexValue": "#ADD8E6", 
+    "rgbValue": "173,216,230", 
+    "colorBackground": "#ADD8E6",
+    "colorText": "#ADD8E6"
+  }, 
+  {
+    "colorName": "LightCoral", 
+    "hexValue": "#F08080", 
+    "rgbValue": "240,128,128", 
+    "colorBackground": "#F08080",
+    "colorText": "#F08080"
+  }, 
+  {
+    "colorName": "LightCyan", 
+    "hexValue": "#E0FFFF", 
+    "rgbValue": "224,255,255", 
+    "colorBackground": "#E0FFFF",
+    "colorText": "#E0FFFF"
+  }, 
+  {
+    "colorName": "LightGoldenRodYellow", 
+    "hexValue": "#FAFAD2", 
+    "rgbValue": "250,250,210", 
+    "colorBackground": "#FAFAD2",
+    "colorText": "#FAFAD2"
+  }, 
+  {
+    "colorName": "LightGray", 
+    "hexValue": "#D3D3D3", 
+    "rgbValue": "211,211,211", 
+    "colorBackground": "#D3D3D3",
+    "colorText": "#D3D3D3"
+  }, 
+  {
+    "colorName": "LightGreen", 
+    "hexValue": "#90EE90", 
+    "rgbValue": "144,238,144", 
+    "colorBackground": "#90EE90",
+    "colorText": "#90EE90"
+  }, 
+  {
+    "colorName": "LightPink", 
+    "hexValue": "#FFB6C1", 
+    "rgbValue": "255,182,193", 
+    "colorBackground": "#FFB6C1",
+    "colorText": "#FFB6C1"
+  }, 
+  {
+    "colorName": "LightSalmon", 
+    "hexValue": "#FFA07A", 
+    "rgbValue": "255,160,122", 
+    "colorBackground": "#FFA07A",
+    "colorText": "#FFA07A"
+  }, 
+  {
+    "colorName": "LightSeaGreen", 
+    "hexValue": "#20B2AA", 
+    "rgbValue": "32,178,170", 
+    "colorBackground": "#20B2AA",
+    "colorText": "#20B2AA"
+  }, 
+  {
+    "colorName": "LightSkyBlue", 
+    "hexValue": "#87CEFA", 
+    "rgbValue": "135,206,250", 
+    "colorBackground": "#87CEFA",
+    "colorText": "#87CEFA"
+  }, 
+  {
+    "colorName": "LightSlateGray", 
+    "hexValue": "#778899", 
+    "rgbValue": "119,136,153", 
+    "colorBackground": "#778899",
+    "colorText": "#778899"
+  }, 
+  {
+    "colorName": "LightSteelBlue", 
+    "hexValue": "#B0C4DE", 
+    "rgbValue": "176,196,222", 
+    "colorBackground": "#B0C4DE",
+    "colorText": "#B0C4DE"
+  }, 
+  {
+    "colorName": "LightYellow", 
+    "hexValue": "#FFFFE0", 
+    "rgbValue": "255,255,224", 
+    "colorBackground": "#FFFFE0",
+    "colorText": "#FFFFE0"
+  }, 
+  {
+    "colorName": "Lime", 
+    "hexValue": "#00FF00", 
+    "rgbValue": "0,255,0", 
+    "colorBackground": "#00FF00",
+    "colorText": "#00FF00"
+  }, 
+  {
+    "colorName": "LimeGreen", 
+    "hexValue": "#32CD32", 
+    "rgbValue": "50,205,50", 
+    "colorBackground": "#32CD32",
+    "colorText": "#32CD32"
+  }, 
+  {
+    "colorName": "Linen", 
+    "hexValue": "#FAF0E6", 
+    "rgbValue": "250,240,230", 
+    "colorBackground": "#FAF0E6",
+    "colorText": "#FAF0E6"
+  }, 
+  {
+    "colorName": "Magenta", 
+    "hexValue": "#FF00FF", 
+    "rgbValue": "255,0,255", 
+    "colorBackground": "#FF00FF",
+    "colorText": "#FF00FF"
+  }, 
+  {
+    "colorName": "Maroon", 
+    "hexValue": "#800000", 
+    "rgbValue": "128,0,0", 
+    "colorBackground": "#800000",
+    "colorText": "#800000"
+  }, 
+  {
+    "colorName": "MediumAquaMarine", 
+    "hexValue": "#66CDAA", 
+    "rgbValue": "102,205,170", 
+    "colorBackground": "#66CDAA",
+    "colorText": "#66CDAA"
+  }, 
+  {
+    "colorName": "MediumBlue", 
+    "hexValue": "#0000CD", 
+    "rgbValue": "0,0,205", 
+    "colorBackground": "#0000CD",
+    "colorText": "#0000CD"
+  }, 
+  {
+    "colorName": "MediumOrchid", 
+    "hexValue": "#BA55D3", 
+    "rgbValue": "186,85,211", 
+    "colorBackground": "#BA55D3",
+    "colorText": "#BA55D3"
+  }, 
+  {
+    "colorName": "MediumPurple", 
+    "hexValue": "#9370D8", 
+    "rgbValue": "147,112,219", 
+    "colorBackground": "#9370D8",
+    "colorText": "#9370D8"
+  }, 
+  {
+    "colorName": "MediumSeaGreen", 
+    "hexValue": "#3CB371", 
+    "rgbValue": "60,179,113", 
+    "colorBackground": "#3CB371",
+    "colorText": "#3CB371"
+  }, 
+  {
+    "colorName": "MediumSlateBlue", 
+    "hexValue": "#7B68EE", 
+    "rgbValue": "123,104,238", 
+    "colorBackground": "#7B68EE",
+    "colorText": "#7B68EE"
+  }, 
+  {
+    "colorName": "MediumSpringGreen", 
+    "hexValue": "#00FA9A", 
+    "rgbValue": "0,250,154", 
+    "colorBackground": "#00FA9A",
+    "colorText": "#00FA9A"
+  }, 
+  {
+    "colorName": "MediumTurquoise", 
+    "hexValue": "#48D1CC", 
+    "rgbValue": "72,209,204", 
+    "colorBackground": "#48D1CC",
+    "colorText": "#48D1CC"
+  }, 
+  {
+    "colorName": "MediumVioletRed", 
+    "hexValue": "#C71585", 
+    "rgbValue": "199,21,133", 
+    "colorBackground": "#C71585",
+    "colorText": "#C71585"
+  }, 
+  {
+    "colorName": "MidnightBlue", 
+    "hexValue": "#191970", 
+    "rgbValue": "25,25,112", 
+    "colorBackground": "#191970",
+    "colorText": "#191970"
+  }, 
+  {
+    "colorName": "MintCream", 
+    "hexValue": "#F5FFFA", 
+    "rgbValue": "245,255,250", 
+    "colorBackground": "#F5FFFA",
+    "colorText": "#F5FFFA"
+  }, 
+  {
+    "colorName": "MistyRose", 
+    "hexValue": "#FFE4E1", 
+    "rgbValue": "255,228,225", 
+    "colorBackground": "#FFE4E1",
+    "colorText": "#FFE4E1"
+  }, 
+  {
+    "colorName": "Moccasin", 
+    "hexValue": "#FFE4B5", 
+    "rgbValue": "255,228,181", 
+    "colorBackground": "#FFE4B5",
+    "colorText": "#FFE4B5"
+  }, 
+  {
+    "colorName": "NavajoWhite", 
+    "hexValue": "#FFDEAD", 
+    "rgbValue": "255,222,173", 
+    "colorBackground": "#FFDEAD",
+    "colorText": "#FFDEAD"
+  }, 
+  {
+    "colorName": "Navy", 
+    "hexValue": "#000080", 
+    "rgbValue": "0,0,128", 
+    "colorBackground": "#000080",
+    "colorText": "#000080"
+  }, 
+  {
+    "colorName": "OldLace", 
+    "hexValue": "#FDF5E6", 
+    "rgbValue": "253,245,230", 
+    "colorBackground": "#FDF5E6",
+    "colorText": "#FDF5E6"
+  }, 
+  {
+    "colorName": "Olive", 
+    "hexValue": "#808000", 
+    "rgbValue": "128,128,0", 
+    "colorBackground": "#808000",
+    "colorText": "#808000"
+  }, 
+  {
+    "colorName": "OliveDrab", 
+    "hexValue": "#6B8E23", 
+    "rgbValue": "107,142,35", 
+    "colorBackground": "#6B8E23",
+    "colorText": "#6B8E23"
+  }, 
+  {
+    "colorName": "Orange", 
+    "hexValue": "#FFA500", 
+    "rgbValue": "255,165,0", 
+    "colorBackground": "#FFA500",
+    "colorText": "#FFA500"
+  }, 
+  {
+    "colorName": "OrangeRed", 
+    "hexValue": "#FF4500", 
+    "rgbValue": "255,69,0", 
+    "colorBackground": "#FF4500",
+    "colorText": "#FF4500"
+  }, 
+  {
+    "colorName": "Orchid", 
+    "hexValue": "#DA70D6", 
+    "rgbValue": "218,112,214", 
+    "colorBackground": "#DA70D6",
+    "colorText": "#DA70D6"
+  }, 
+  {
+    "colorName": "PaleGoldenRod", 
+    "hexValue": "#EEE8AA", 
+    "rgbValue": "238,232,170", 
+    "colorBackground": "EEE8AA",
+    "colorText": "#EEE8AA"
+  }, 
+  {
+    "colorName": "PaleGreen", 
+    "hexValue": "#98FB98", 
+    "rgbValue": "152,251,152", 
+    "colorBackground": "#98FB98",
+    "colorText": "#98FB98"
+  }, 
+  {
+    "colorName": "PaleTurquoise", 
+    "hexValue": "#AFEEEE", 
+    "rgbValue": "175,238,238", 
+    "colorBackground": "#AFEEEE",
+    "colorText": "#AFEEEE"
+  }, 
+  {
+    "colorName": "PaleVioletRed", 
+    "hexValue": "#D87093", 
+    "rgbValue": "219,112,147", 
+    "colorBackground": "#D87093",
+    "colorText": "#D87093"
+  }, 
+  {
+    "colorName": "PapayaWhip", 
+    "hexValue": "#FFEFD5", 
+    "rgbValue": "255,239,213", 
+    "colorBackground": "#FFEFD5",
+    "colorText": "#FFEFD5"
+  }, 
+  {
+    "colorName": "PeachPuff", 
+    "hexValue": "#FFDAB9", 
+    "rgbValue": "255,218,185", 
+    "colorBackground": "#FFDAB9",
+    "colorText": "#FFDAB9"
+  }, 
+  {
+    "colorName": "Peru", 
+    "hexValue": "#CD853F", 
+    "rgbValue": "205,133,63", 
+    "colorBackground": "#CD853F",
+    "colorText": "#CD853F"
+  }, 
+  {
+    "colorName": "Pink", 
+    "hexValue": "#FFC0CB", 
+    "rgbValue": "255,192,203", 
+    "colorBackground": "#FFC0CB",
+    "colorText": "#FFC0CB"
+  }, 
+  {
+    "colorName": "Plum", 
+    "hexValue": "#DDA0DD", 
+    "rgbValue": "221,160,221", 
+    "colorBackground": "#DDA0DD",
+    "colorText": "#DDA0DD"
+  }, 
+  {
+    "colorName": "PowderBlue", 
+    "hexValue": "#B0E0E6", 
+    "rgbValue": "176,224,230", 
+    "colorBackground": "#B0E0E6",
+    "colorText": "#B0E0E6"
+  }, 
+  {
+    "colorName": "Purple", 
+    "hexValue": "#800080", 
+    "rgbValue": "128,0,128", 
+    "colorBackground": "#800080",
+    "colorText": "#800080"
+  }, 
+  {
+    "colorName": "Red", 
+    "hexValue": "#FF0000", 
+    "rgbValue": "255,0,0", 
+    "colorBackground": "#FF0000",
+    "colorText": "#FF0000"
+  }, 
+  {
+    "colorName": "RosyBrown", 
+    "hexValue": "#BC8F8F", 
+    "rgbValue": "188,143,143", 
+    "colorBackground": "#BC8F8F",
+    "colorText": "#BC8F8F"
+  }, 
+  {
+    "colorName": "RoyalBlue", 
+    "hexValue": "#4169E1", 
+    "rgbValue": "65,105,225", 
+    "colorBackground": "#4169E1",
+    "colorText": "#4169E1"
+  }, 
+  {
+    "colorName": "SaddleBrown", 
+    "hexValue": "#8B4513", 
+    "rgbValue": "139,69,19", 
+    "colorBackground": "#8B4513",
+    "colorText": "#8B4513"
+  }, 
+  {
+    "colorName": "Salmon", 
+    "hexValue": "#FA8072", 
+    "rgbValue": "250,128,114", 
+    "colorBackground": "#FA8072",
+    "colorText": "#FA8072"
+  }, 
+  {
+    "colorName": "SandyBrown", 
+    "hexValue": "#F4A460", 
+    "rgbValue": "244,164,96", 
+    "colorBackground": "#F4A460",
+    "colorText": "#F4A460"
+  }, 
+  {
+    "colorName": "SeaGreen", 
+    "hexValue": "#2E8B57", 
+    "rgbValue": "46,139,87", 
+    "colorBackground": "#2E8B57",
+    "colorText": "#2E8B57"
+  }, 
+  {
+    "colorName": "SeaShell", 
+    "hexValue": "#FFF5EE", 
+    "rgbValue": "255,245,238", 
+    "colorBackground": "#FFF5EE",
+    "colorText": "#FFF5EE"
+  }, 
+  {
+    "colorName": "Sienna", 
+    "hexValue": "#A0522D", 
+    "rgbValue": "160,82,45", 
+    "colorBackground": "#A0522D",
+    "colorText": "#A0522D"
+  }, 
+  {
+    "colorName": "Silver", 
+    "hexValue": "#C0C0C0", 
+    "rgbValue": "192,192,192", 
+    "colorBackground": "#C0C0C0",
+    "colorText": "#C0C0C0"
+  }, 
+  {
+    "colorName": "SkyBlue", 
+    "hexValue": "#87CEEB", 
+    "rgbValue": "135,206,235", 
+    "colorBackground": "#87CEEB",
+    "colorText": "#87CEEB"
+  }, 
+  {
+    "colorName": "SlateBlue", 
+    "hexValue": "#6A5ACD", 
+    "rgbValue": "106,90,205", 
+    "colorBackground": "#6A5ACD",
+    "colorText": "#6A5ACD"
+  }, 
+  {
+    "colorName": "SlateGray", 
+    "hexValue": "#708090", 
+    "rgbValue": "112,128,144", 
+    "colorBackground": "#708090",
+    "colorText": "#708090"
+  }, 
+  {
+    "colorName": "Snow", 
+    "hexValue": "#FFFAFA", 
+    "rgbValue": "255,250,250", 
+    "colorBackground": "#FFFAFA",
+    "colorText": "#FFFAFA"
+  }, 
+  {
+    "colorName": "SpringGreen", 
+    "hexValue": "#00FF7F", 
+    "rgbValue": "0,255,127", 
+    "colorBackground": "#00FF7F",
+    "colorText": "#00FF7F"
+  }, 
+  {
+    "colorName": "SteelBlue", 
+    "hexValue": "#4682B4", 
+    "rgbValue": "70,130,180", 
+    "colorBackground": "#4682B4",
+    "colorText": "#4682B4"
+  }, 
+  {
+    "colorName": "Tan", 
+    "hexValue": "#D2B48C", 
+    "rgbValue": "210,180,140", 
+    "colorBackground": "#D2B48C",
+    "colorText": "#D2B48C"
+  }, 
+  {
+    "colorName": "Teal", 
+    "hexValue": "#008080", 
+    "rgbValue": "0,128,128", 
+    "colorBackground": "#008080",
+    "colorText": "#008080"
+  }, 
+  {
+    "colorName": "Thistle", 
+    "hexValue": "#D8BFD8", 
+    "rgbValue": "216,191,216", 
+    "colorBackground": "#D8BFD8",
+    "colorText": "#D8BFD8"
+  }, 
+  {
+    "colorName": "Tomato", 
+    "hexValue": "#FF6347", 
+    "rgbValue": "255,99,71", 
+    "colorBackground": "#FF6347",
+    "colorText": "#FF6347"
+  }, 
+  {
+    "colorName": "Turquoise", 
+    "hexValue": "#40E0D0", 
+    "rgbValue": "64,224,208", 
+    "colorBackground": "#40E0D0",
+    "colorText": "#40E0D0"
+  }, 
+  {
+    "colorName": "Violet", 
+    "hexValue": "#EE82EE", 
+    "rgbValue": "238,130,238", 
+    "colorBackground": "#EE82EE",
+    "colorText": "#EE82EE"
+  }, 
+  {
+    "colorName": "Wheat", 
+    "hexValue": "#F5DEB3", 
+    "rgbValue": "245,222,179", 
+    "colorBackground": "#F5DEB3",
+    "colorText": "#F5DEB3"
+  }, 
+  {
+    "colorName": "White", 
+    "hexValue": "#FFFFFF", 
+    "rgbValue": "255,255,255", 
+    "colorBackground": "#FFFFFF",
+    "colorText": "#FFFFFF"
+  }, 
+  {
+    "colorName": "WhiteSmoke", 
+    "hexValue": "#F5F5F5", 
+    "rgbValue": "245,245,245", 
+    "colorBackground": "#F5F5F5",
+    "colorText": "#F5F5F5"
+  }, 
+  {
+    "colorName": "Yellow", 
+    "hexValue": "#FFFF00", 
+    "rgbValue": "255,255,0", 
+    "colorBackground": "#FFFF00",
+    "colorText": "#FFFF00"
+  }, 
+  {
+    "colorName": "YellowGreen", 
+    "hexValue": "#9ACD32", 
+    "rgbValue": "154,205,50", 
+    "colorBackground": "#9ACD32",
+    "colorText": "#9ACD32"
+  }
+]

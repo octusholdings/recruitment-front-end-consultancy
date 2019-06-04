@@ -1,0 +1,36 @@
+/* ----------------------------------------------------
+ * ADMIN TEMPLATE | BOO Admin Template
+ * --------------------------------------
+ * version       : 12.05.2013 - 2.0.0
+ * copyright     : (c) 2013 Petr Marasek
+ * contact       : gootoboo@gmail.com
+ * ----------------------------------------------------
+ * BOO - PLUGIN STYLE - Plugin stylesheed 
+ * -----------------------------------------------------------------------------
+ */.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

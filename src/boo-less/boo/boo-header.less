@@ -1,0 +1,56 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - HEADER 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+#header-container {
+	height: @baseHeaderHeight;
+}
+
+#header {
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	z-index: @zindexHeader;
+  	width: 100%;	
+}
+
+.header-drawer {	
+  	position: absolute;
+  	top: 0px;
+  	z-index: @zindexHeaderDraver;
+  	margin-top: @navbarHeight + 1;
+    min-height: 5px;
+  	width: 100%;
+  	border-bottom: 1px solid lighten(@booColorHighlight, 5%); // 1px navbar-inner border bottom
+  	
+  	#gradient > .vertical(@booColorHighlight, @booColor);
+	.box-shadow(0 0 8px rgba(0,0,0,.4));
+}
+
+// Hover show hidde drawer - Breadcrumbs
+.header-sticky {
+	#header {
+		.header-drawer  {
+		  	top: 12px;
+			margin-top: 0px;
+		 	.transition(top 0.2s linear);
+		    .transition-delay(0.3s);
+		}
+		&:hover {
+			.header-drawer {
+			  	top: @navbarHeight + 1;
+			  	cursor: pointer;
+			}	
+		}
+	}	
+}
+

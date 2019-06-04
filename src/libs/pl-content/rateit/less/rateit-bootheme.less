@@ -1,0 +1,66 @@
+.rateit {
+    position: relative;
+    display: inline-block;    
+    .user-select(none);
+    -webkit-touch-callout: none;
+    .ie7-inline-block();
+
+    .rateit-range {
+        position: relative;
+        display: inline-block;        
+        height: 19px;
+        background: url('@{pluginjQRateitPath}/img/star-full-16.png');
+        .ie7-inline-block();
+    }
+
+    .rateit-hover, 
+    .rateit-selected {
+        position: absolute;
+        left: 0px;
+    }
+
+    .rateit-hover-rtl, 
+    .rateit-selected-rtl {
+        right: 0px;
+        left: auto;
+    }
+
+    .rateit-hover {
+        background: url('@{pluginjQRateitPath}/img/star-full-16.png') left -38px;
+    }
+
+    .rateit-hover-rtl {
+        background-position: right -38px;
+    }
+
+    .rateit-selected {
+        background: url('@{pluginjQRateitPath}/img/star-full-16.png') left -19px;
+    }
+
+    .rateit-selected-rtl {
+        background-position: right -19px;
+    }
+
+    .rateit-preset {
+        background: url('@{pluginjQRateitPath}/img/star-full-16.png') left -59px;
+    }
+
+    .rateit-preset-rtl {
+        background: url('@{pluginjQRateitPath}/img/star-full-16.png') left -59px;
+    }
+
+    .rateit-reset {
+        display: inline-block;    
+        float: left;
+        width: 16px;
+        height: 16px;
+        background: url('@{pluginjQRateitPath}/img/delete.gif') 0 0;
+        .ie7-inline-block();
+        &:hover {
+            background-position: 0 -16px;
+        }
+    }
+}
+
+
+

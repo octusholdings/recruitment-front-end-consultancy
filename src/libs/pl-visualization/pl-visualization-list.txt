@@ -1,0 +1,81 @@
+../libs/pl-visualization/bootstrap-progressbar/						0.5.0
+../libs/pl-visualization/easy-pie-chart/							1.4.0
+../libs/pl-visualization/excanvas/
+../libs/pl-visualization/flot/										0.7
+../libs/pl-visualization/gauge.js/
+../libs/pl-visualization/jquery.percentageloader/					1.0
+../libs/pl-visualization/jquery-knob/								1.2.2
+../libs/pl-visualization/justgage/
+../libs/pl-visualization/peity/										1.2.0
+../libs/pl-visualization/raphael/									2.1.0
+../libs/pl-visualization/sparkline/									2.1.1
+
+
+Content/libs/pl-visualization/bootstrap-progressbar/css/bootstrap-progressbar.css
+Content/libs/pl-visualization/bootstrap-progressbar/css/bootstrap-progressbar.min.css
+Content/libs/pl-visualization/bootstrap-progressbar/js/bootstrap-progressbar.js
+Content/libs/pl-visualization/bootstrap-progressbar/js/bootstrap-progressbar.min.js
+Content/libs/pl-visualization/bootstrap-progressbar/less/bootstrap-progressbar.less
+Content/libs/pl-visualization/bootstrap-progressbar/sass/_bootstrap-progressbar.scss
+
+Content/libs/pl-visualization/easy-pie-chart/css/easy-pie-chart.css
+Content/libs/pl-visualization/easy-pie-chart/js/jquery.easy-pie-chart.css
+Content/libs/pl-visualization/easy-pie-chart/js/jquery.easy-pie-chart.js
+Content/libs/pl-visualization/easy-pie-chart/less/easy-pie-chart.less
+Content/libs/pl-visualization/easy-pie-chart/sass/_easy-pie-chart.scss
+
+Content/libs/pl-visualization/excanvas/js/excanvas.js
+Content/libs/pl-visualization/excanvas/js/excanvas.min.js
+
+Content/libs/pl-visualization/flot/js/jquery.colorhelpers.js
+Content/libs/pl-visualization/flot/js/jquery.colorhelpers.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.js
+Content/libs/pl-visualization/flot/js/jquery.flot.categories.js
+Content/libs/pl-visualization/flot/js/jquery.flot.crosshair.js
+Content/libs/pl-visualization/flot/js/jquery.flot.crosshair.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.fillbetween.js
+Content/libs/pl-visualization/flot/js/jquery.flot.fillbetween.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.grow.js
+Content/libs/pl-visualization/flot/js/jquery.flot.image.js
+Content/libs/pl-visualization/flot/js/jquery.flot.image.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.navigate.js
+Content/libs/pl-visualization/flot/js/jquery.flot.navigate.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.orderBars.js
+Content/libs/pl-visualization/flot/js/jquery.flot.pie.js
+Content/libs/pl-visualization/flot/js/jquery.flot.pie.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.resize.js
+Content/libs/pl-visualization/flot/js/jquery.flot.resize.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.selection.js
+Content/libs/pl-visualization/flot/js/jquery.flot.selection.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.stack.js
+Content/libs/pl-visualization/flot/js/jquery.flot.stack.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.stackpercent.js
+Content/libs/pl-visualization/flot/js/jquery.flot.symbol.js
+Content/libs/pl-visualization/flot/js/jquery.flot.symbol.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.threshold.js
+Content/libs/pl-visualization/flot/js/jquery.flot.threshold.min.js
+Content/libs/pl-visualization/flot/js/jquery.flot.time.js
+
+Content/libs/pl-visualization/gauge.js/js/gauge.coffee
+Content/libs/pl-visualization/gauge.js/js/gauge.js
+Content/libs/pl-visualization/gauge.js/js/gauge.min.js
+
+Content/libs/pl-visualization/jquery.percentageloader/css/jquery.percentageloader.css
+Content/libs/pl-visualization/jquery.percentageloader/js/jquery.percentageloader.js
+Content/libs/pl-visualization/jquery.percentageloader/js/jquery.percentageloader.min.js
+Content/libs/pl-visualization/jquery.percentageloader/less/jquery.percentageloader.less
+Content/libs/pl-visualization/jquery.percentageloader/sass/_jquery.percentageloader.scss
+
+Content/libs/pl-visualization/jquery-knob/js/jquery.knob.js
+
+Content/libs/pl-visualization/justgage/js/justgage.js
+
+Content/libs/pl-visualization/peity/js/jquery.peity.js
+Content/libs/pl-visualization/peity/js/jquery.peity.min.js
+
+Content/libs/pl-visualization/raphael/js/raphael.js
+Content/libs/pl-visualization/raphael/js/raphael-min.js
+
+Content/libs/pl-visualization/sparkline/js/jquery.sparkline.js
+Content/libs/pl-visualization/sparkline/js/jquery.sparkline.min.js

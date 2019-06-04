@@ -1,0 +1,83 @@
+﻿// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - MODALS 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.modal-backdrop {
+    z-index: @zindexModalBackdrop;
+}
+
+.modal {
+    padding: 4px;
+    background-color: rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.6);
+  	.box-shadow(0 3px 15px rgba(0,0,0,.85));
+  	.border-radius(@borderRadiusLarge);
+    z-index: @zindexModal;
+}
+
+.modal-header {
+    color: #f1f1f1;
+    padding: 5px 15px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.8);
+    #gradient > .vertical(#464a56, #2b2d38);
+  	.border-radius(@borderRadiusLarge @borderRadiusLarge 0 0);
+  	.close {
+    	  color: #ffffff;
+    		.opacity(60);
+    	  text-shadow: 0 -1px 0 rgba(0,0,0, 1);
+    		i {
+    		    font-size: @fontSizeSmall;
+    		}
+  	}
+  	h3, h4 {
+    	  margin: 0;
+    	  line-height: 30px;
+    	  text-shadow: 0 -1px 0 rgba(0,0,0, 1);
+  	}
+	
+}
+
+.modal-body {
+    background-color: #f0f2f8;
+    min-height: 30px;
+    //max-height: 550px;
+}
+
+.modal-footer {
+    padding: 7px 15px 8px;
+    margin-bottom: 0;
+    text-align: right;
+    border-top-color: #b4b7be;
+    #gradient > .vertical(#dee3e7, #f5f6f7);
+   	.box-shadow(inset 0px 1px 3px rgba(0,0,0,.15)); 
+   	.border-radius(0 0 @borderRadiusLarge @borderRadiusLarge);
+}
+
+.modal {
+  	> .modal-body{
+    		&:first-child {
+    		    .border-radius(@borderRadiusLarge @borderRadiusLarge 0 0)
+    		}
+    		&:last-child {
+    		    .border-radius(0 0 @borderRadiusLarge @borderRadiusLarge);
+    		}
+  	}	
+}
+
+.modal-shadow {
+    padding: 0;
+    border: 1px solid #666;
+    border: 1px solid rgba(0,0,0,.4);
+  	.box-shadow(0 3px 7px rgba(0,0,0,.3));
+}
+
+

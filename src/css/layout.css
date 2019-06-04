@@ -1,0 +1,338 @@
+.file-heading {
+    font-family: Arial;
+    font-size: 1.1em;
+    display: inline-block;
+    float: left;
+    width: 320px;
+    margin: 10px 0 0 20px;
+    height: 25px;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+
+.file-note {
+    font-family: Arial;
+    font-size: 1.1em;
+    display: inline-block;
+    float: left;
+    width: 320px;
+    margin: 3px 0 5px 20px;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+
+/*for left menu scrollbar*/
+div[id^="ascrail"] {
+    margin-top: 31px;
+}
+
+input#globalSearch{
+    /*width: 180px*/
+    width: 250px;
+    height: 29px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 7px;
+}
+
+input#searchPerson{
+    width: 400px;
+}
+
+/*for create task animation*/
+#page-content{
+    overflow: hidden;
+}
+#activity-content.slideIn{
+    left: -700px;
+    -webkit-animation: slide .4s forwards;
+    -webkit-animation-delay: .2s;
+    animation: slide .4s forwards;
+    animation-delay: .2s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+tr.disappear{
+    opacity:0;
+    transition:opacity 1.5s linear;
+}
+
+.borderBlack{
+    border-color: black;
+}
+
+#cvParse .k-upload-button{
+    background-color: #51555b;
+}
+
+#cvParse .k-filename{
+    max-width: 50em;
+}
+
+.kpiSubTitle{
+    color: #b24f0e;
+    margin-right: 10px;
+}
+
+.lineBorder tr{
+    border-bottom: 1px solid #d1caca;
+}
+
+.lineBorder tr:last-child{
+    border-bottom: 0px;
+}
+
+.moreContent span {
+    display: none;
+}
+.moreLink {
+    display: block;
+}
+
+.pointerCursorTable td{
+    cursor: pointer;
+}
+
+#noteListItems,#consultantListItems,.documentListItems,#shortList,#massMailListItems,#emailTemplateListItems td{
+    cursor: pointer;
+}
+
+#teamListItems,#teamMemberListItems td{
+    cursor: pointer;
+    color: #4682b4 !important;
+}
+
+.textareaFull {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width : 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+#execute-search,#clear-search{
+    cursor: pointer;
+}
+
+.alnright {
+    text-align: right !important;
+}
+
+#leftMenuItems .list-group-item.active .item-icon{
+    color: #c10000 !important;
+}
+
+#leftMenuItems .list-group-item.active .arrow-icon{
+    color: #c10000 !important;
+}
+
+.subItem .item-icon .fa{
+    margin-right: 6px !important;
+}
+
+.add-on .fa.fa-calendar{
+    margin-top: 3px;
+}
+
+.page-title .fa{
+    margin-right: 10px;
+}
+
+/* .fa-trash, .fa-trash-o{
+    color: #ff0000;
+} */
+
+.kendo-icon.fa-trash-o:hover{
+    color: #930000;
+    font-size:20px;
+}
+
+.table-icon.fa-trash-o:hover{
+    color: #930000;
+}
+
+.kendo-icon.fa-pencil-square-o{
+    color: #3c454f;
+}
+
+.kendo-icon.fa-pencil-square-o:hover{
+    color: #000000;
+    font-size:20px;
+}
+
+/* .fa-pencil{
+    color: #009688;
+} */
+
+/* .fa-clone{
+    color: #317bc8;
+} */
+
+.kendo-icon.fa-pencil:hover{
+    color: #00695C;
+    font-size:20px;
+}
+
+.table-icon.fa-pencil:hover{
+    color: #00695C;
+}
+
+.table-icon.forward-note-action { color:#1c7cd6; }
+.table-icon.forward-note-action:hover { color:#1862ab; }
+
+.kendo-icon.fa-linkedin-square:hover{
+    font-size: 20px;
+}
+
+a.kendo-icon:hover{
+    text-decoration: none;
+}
+
+.modal.fade:not(.in).right .modal-dialog {
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+}
+
+.fa-print {
+    color: #317bc8;
+}
+
+.fa-print:hover {
+    color: #337ab7;
+}
+
+#candidateDetailSlide {
+    position: fixed;
+    background-color: #8B0000;
+    /*background: #ededed;*/
+    box-shadow: -3px 3px 3px rgba(0,0,0,.1);
+    border-left: 1px solid #aaa;
+    width: 400px;
+    right: -400px;
+    top: 46px;
+    padding: 8px 13px;
+    padding-top: 13px;
+    bottom: 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 9999999;
+    will-change: transform;
+    transition:transform .5s;
+}
+
+/*#candidateDetailSlide.jobDetail {
+    top: 95px;
+}*/
+
+#candidateDetailSlide.is-active { transform:translateX(-100%); }
+
+#candidateDetailSlide::-webkit-scrollbar { 
+    display:none; 
+}
+
+.close .fa-times-circle{
+    cursor: pointer;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+#jobDetailContent .candidateName{
+    /*color: #2b6cdb !important;*/
+    color: #4682b4 !important;
+}
+
+#jobDetailContent .candidateName:hover {
+    text-decoration: underline;
+}
+
+#jobDetailContent .section-content{
+    cursor: pointer;
+}
+
+.well-box .small-section-content{
+    padding: 5px;
+    border-top: 1px solid #fff;
+}
+
+.mid-section-content{
+    padding: 12px;
+    border-top: 1px solid #fff;
+}
+
+#targetName,#teamName {
+    color: lightseagreen;
+}
+
+.editInput{
+    width: 40px !important;
+}
+
+.endRange.editable{
+    color: #a52a2a !important;
+}
+
+.editable-input .editInput{
+    height: 12px;
+}
+
+.editable-submit,.editable-cancel{
+    margin-left: 3px !important;
+    height:21px !important;
+}
+
+.box-padding{
+    padding: 6px !important;
+}
+
+.padding12{
+    padding: 6px !important;
+}
+
+.icon-space{
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.visible {
+    overflow: visible !important;
+}
+
+.showKpiName{
+    color: #20b2aa;
+}
+
+.label.remove-tag:hover{
+    background-color: #3a71c9;
+}
+
+.user-bar .dropdown-menu li a:hover {
+    color: #000000 !important;
+    text-decoration: none;
+    background-color: #EBEBED;
+    background-image: -moz-linear-gradient(top, #EBEBED, #EBEBED);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#EBEBED), to(#EBEBED));
+    background-image: -webkit-linear-gradient(top, #EBEBED, #EBEBED);
+    background-image: -o-linear-gradient(top, #EBEBED, #EBEBED);
+    background-image: linear-gradient(to bottom, #EBEBED, #EBEBED);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6bd2db', endColorstr='#ff6bd2db', GradientType=0);
+}
+
+div.group-conditions > label.btn.btn-info.active {
+    background-color: #1A4A6C;
+    border-color: #174261;
+}

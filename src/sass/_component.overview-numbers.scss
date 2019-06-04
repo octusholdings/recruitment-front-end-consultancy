@@ -1,0 +1,11 @@
+/**
+ ** Overview numbers
+ ** Alex Radulescu
+ **/
+
+.mini-overview-item { display: inline-block; margin-right: .4rem; text-align: center; }
+	.mini-overview-item-count { margin-bottom: 0; line-height: 1; }
+
+.dashboard-overview-list { display:block; margin-bottom:15px; text-align:center; white-space:nowrap; overflow-y:auto; }
+	.dashboard-overview-item { display:inline-block; }
+		.dashboard-overview-icon { font-size:18px; }

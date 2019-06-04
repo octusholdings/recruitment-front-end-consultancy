@@ -1,0 +1,7 @@
+../libs/pl-table/datatables/				1.9.4
+
+Content/libs/pl-table/datatables-1.9.4/js/jquery.dataTables.js
+Content/libs/pl-table/datatables-1.9.4/js/jquery.dataTables.columnFilter.js
+Content/libs/pl-table/datatables-1.9.4/js/jquery.dataTables.min.js
+Content/libs/pl-table/datatables-1.9.4/js/jquery.dataTables.plugins.js
+Content/libs/pl-table/datatables-1.9.4/js/jquery.FixedColumns.plugins.js

@@ -1,0 +1,495 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - BOO UTILITIES 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.btn-demo {
+  	.btn {
+    	  width: 90px;
+    	  margin: 5px 10px;
+  	}	
+}
+.color-scheme {
+    margin-left: 0;
+    list-style: none;
+  	li {
+    	  margin: 5px;
+    	  padding: 5px;
+    	  display: inline-block;
+    	  width: 60px;
+    	  height: 20px;
+    	  text-align: center;
+    	  text-transform: lowercase;
+    		span {
+      			.opacity(0);
+      			.transition(all 0.2s ease-in-out);
+    		}
+    		&:hover {
+      			span {
+      				  .opacity(100);
+      			}
+    		}
+  	}
+}
+
+.btn-icon-demo {
+    margin-left: 0;
+    list-style: none;
+  	li {
+    	  margin-bottom: 10px;
+    	  display: inline-block;
+  	}
+  	.icoclass {
+    	  display: inline-block;
+    	  width: 300px;
+    	  margin-left: 10px;
+    	  font-size: @fontSizeBaseSmall;
+  	}	
+}
+
+#iconSet.icoclass-hidden .icoclass {
+    display: none;
+}
+
+.btn-toolbar-demo .btn,
+.btn-group-demo .btn-group {
+    margin-bottom: 5px;
+}
+
+.the-icons {
+    list-style: none outside none;
+    margin-left: 0;
+  	li {
+    	  font-size: @baseFontSize;
+    	  line-height: 25px;
+    		i {
+      		  vertical-align: middle;
+      		  margin: 0 15px 0 10px;
+    		}
+    		&:hover {
+      		  line-height:45px;
+      		  .border-radius(@baseBorderRadius);
+      		  -webkit-background-clip: padding-box;
+      		  color: #fff;
+      		  #gradient > .vertical(#33393E, #1C1F21);
+      		  border-color: #252525;
+      		  text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+      			i { 
+        			  font-size: @baseFontSize * 1.857;
+        			  line-height:45px;
+        			  margin: 0 25px 0 10px;
+        			  color: #ddd;
+        			  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9) ;
+      			}
+    		}		
+  	}
+}
+
+// TEXT
+// ----------------------------------------------------
+
+// Text size
+.f10 { font-size: 10px; line-height: @baseLineHeight; }
+.f11 { font-size: 11px; line-height: @baseLineHeight; }
+.f12 { font-size: 12px; line-height: @baseLineHeight; }
+.f13 { font-size: 13px; line-height: @baseLineHeight; }
+.f14 { font-size: 14px; line-height: @baseLineHeight; }
+.f16 { font-size: 16px; line-height: @baseLineHeight; }
+.f18 { font-size: 18px; line-height: @baseLineHeight; }
+.f20 { font-size: 20px; line-height: @baseLineHeight; }
+.f22 { font-size: 22px; line-height: 1; }
+.f24 { font-size: 24px; line-height: 1; }
+.f26 { font-size: 26px; line-height: 1; }
+.f28 { font-size: 28px; line-height: 1; }
+.f30 { font-size: 30px; line-height: 1; }
+.f32 { font-size: 32px; line-height: 1; }
+.f34 { font-size: 34px; line-height: 1; }
+.f36 { font-size: 36px; line-height: 1; }
+.f38 { font-size: 38px; line-height: 1; }
+.f40 { font-size: 40px; line-height: 1; }
+.f42 { font-size: 42px; line-height: 1; }
+.f50 { font-size: 50px; line-height: 1; }
+.f58 { font-size: 58px; line-height: 1; }
+.f64 { font-size: 64px; line-height: 1; }
+.f72 { font-size: 75px; line-height: 1; }
+
+strong              { color: #222; }
+.well-black strong  { color: #fff; }
+
+.bold       { font-weight: bold; }
+.normal     { font-weight: normal; }
+
+.upper      { text-transform: uppercase; }
+.em         { font-style: italic; }
+
+.va-top     { vertical-align: top !important }
+.va-middle  { vertical-align: middle !important }
+.clickable  { cursor: pointer; }
+
+// ALIGNMENT
+// ----------------------------------------------------
+
+.text-left      { text-align: left; }
+.text-center    { text-align: center; }
+.text-right     { text-align: right; }
+
+// CLEARINGING ELEMENTS
+// ----------------------------------------------------
+
+.clear-left     { clear: left; }
+.clear-right    { clear: right; }
+.clear-both     { clear: both; }
+
+.ellipsis { 
+    .text-overflow()
+}
+
+// DISPLAY
+// ----------------------------------------------------
+
+.block            { display: block !important; }
+.overflow         { overflow:   visible; }
+.overflow-x       { overflow-x: visible; }
+.overflow-y       { overflow-y: visible; }
+.overflow-hidden  { overflow:   hidden !important; }
+.overflow-xhidden { overflow-x: hidden !important; }
+.overflow-yhidden { overflow-y: hidden !important; }
+
+.inline-block     { 
+    .ie7-inline-block() 
+}
+
+// POSITION
+// ----------------------------------------------------
+
+.relative         { position: relative; }
+.absolute         { position: absolute; }
+
+// SHADOW
+// ----------------------------------------------------
+
+.box-shadow {
+	 .box-shadow-important(0px 1px 3px rgba(0,0,0,.25));
+}
+
+.box-shadow-light {
+	 .box-shadow-important(0px 1px 3px rgba(0,0,0,.1));	
+}
+
+.box-shadow-inset {
+	 .box-shadow(0px 1px 3px rgba(0,0,0,.25), inset 0px 10px 30px 0px rgba(255,255,255,.4));
+}
+
+.no-shadow {
+	.box-shadow-important(none);	
+}
+
+// WRAP
+// ----------------------------------------------------
+
+.image-wrap-out { background: #f3f3f3; border: 1px solid #e3e3e3; }
+.image-wrap-in  { border: 1px solid #fff; }
+
+// RADIUS
+// ----------------------------------------------------
+
+.radius4 {
+    .border-radius(4px);
+    -webkit-background-clip: padding-box;
+}
+
+.radius-top4 {
+    .border-top-radius(4px);
+    -webkit-background-clip: padding-box;
+}
+
+.radius-bototm4 {
+    .border-bottom-radius(4px);
+    -webkit-background-clip: padding-box;
+}
+
+.radius3 {
+    .border-radius(3px);
+    -webkit-background-clip: padding-box;
+}
+
+.radius-top3 {
+    .border-top-radius(3px);
+    -webkit-background-clip: padding-box;
+}
+
+.radius-bototm3 {
+    .border-bottom-radius(3px);
+    -webkit-background-clip: padding-box;
+}
+
+.radius2 {
+    .border-radius(2px);
+    -webkit-background-clip: padding-box;
+}
+
+.radius-top2 {
+    .border-top-radius(2px);
+    -webkit-background-clip: padding-box;
+}
+
+.radius-bototm2 {
+    .border-bottom-radius(2px);
+    -webkit-background-clip: padding-box;
+}
+
+.no-radius {
+	  .border-radius-important(0);
+}
+
+// OPACITY
+// ----------------------------------------------------
+
+.opaci15 { .opacity(15); }
+.opaci25 { .opacity(25); }
+.opaci35 { .opacity(35); }
+.opaci45 { .opacity(45); }
+.opaci55 { .opacity(55); }
+.opaci65 { .opacity(65); }
+.opaci75 { .opacity(75); }
+.opaci85 { .opacity(85); }
+
+// REMOVING
+// ----------------------------------------------------
+
+// Remove Border
+.no-border          { border: none; }
+.no-border-top      { border-top: none !important; }
+.no-border-right    { border-right: none !important; }
+.no-border-bottom   { border-bottom: none !important; }
+.no-border-left     { border-left: none !important; }
+
+// Remove Background
+.no-bg              { background: none !important; }
+
+// No Wrap
+.no-wrap            { white-space: nowrap; }
+
+// CORRECTION GAP and SPACE (2px 4px 8px 16px)
+// ----------------------------------------------------
+
+// Margin
+.margin2  { margin:  2px !important; }
+.margin5  { margin:  5px !important; }
+.margin10 { margin: 10px !important; }
+.margin15 { margin: 15px !important; }
+.margin20 { margin: 20px !important; }
+.margin25 { margin: 25px !important; }
+.margin30 { margin: 30px !important; }
+.margin40 { margin: 40px !important; }
+
+// Margin top
+.margin-top2  { margin-top:  2px !important; }
+.margin-top5  { margin-top:  5px !important; }
+.margin-top10 { margin-top: 10px !important; }
+.margin-top15 { margin-top: 15px !important; }
+.margin-top20 { margin-top: 20px !important; }
+.margin-top25 { margin-top: 25px !important; }
+.margin-top30 { margin-top: 30px !important; }
+.margin-top40 { margin-top: 40px !important; }
+
+// Margin left 
+.margin-left2  { margin-left:  2px !important; }
+.margin-left5  { margin-left:  5px !important; }
+.margin-left10 { margin-left: 10px !important; }
+.margin-left15 { margin-left: 15px !important; }
+.margin-left20 { margin-left: 20px !important; }
+.margin-left25 { margin-left: 25px !important; }
+.margin-left30 { margin-left: 30px !important; }
+.margin-left40 { margin-left: 40px !important; }
+
+// Margin bottom
+.margin-bottom2  { margin-bottom:  2px !important; }
+.margin-bottom5  { margin-bottom:  5px !important; }
+.margin-bottom10 { margin-bottom: 10px !important; }
+.margin-bottom15 { margin-bottom: 15px !important; }
+.margin-bottom20 { margin-bottom: 20px !important; }
+.margin-bottom25 { margin-bottom: 25px !important; }
+.margin-bottom30 { margin-bottom: 30px !important; }
+.margin-bottom40 { margin-bottom: 40px !important; }
+
+// Margin right 
+.margin-right2  { margin-right:  2px !important; }
+.margin-right5  { margin-right:  5px !important; }
+.margin-right10 { margin-right: 10px !important; }
+.margin-right15 { margin-right: 15px !important; }
+.margin-right20 { margin-right: 20px !important; }
+.margin-right25 { margin-right: 25px !important; }
+.margin-right30 { margin-right: 30px !important; }
+.margin-right40 { margin-right: 40px !important; }
+
+// Margin Remove 
+.no-margin        { margin: 0px !important; }
+.no-margin-top    { margin-top: 0px !important; }
+.no-margin-left   { margin-left: 0px !important; }
+.no-margin-bootom { margin-bottom: 0px !important; }
+.no-margin-right  { margin-right: 0px !important; }
+
+// Margin Add to side 
+.margin-side5     { margin-left: 5px; margin-right: 5px; }
+.margin-side10    { margin-left: 10px; margin-right: 10px; }
+.margin-side      { margin-left: 15px; margin-right: 15px; }
+
+.margin-btn .btn  { margin-bottom: 5px; }
+
+// Use an element especially for correcting top and bottom gaps (a combination of size 0 s m x)
+// .margin-0   { margin: 0        !important; }
+// .margin-s   { margin: 5px      !important; }
+// .margin-m   { margin: 10px     !important; }
+// .margin-x   { margin: 20px     !important; }
+
+.margin-00  { margin-top: 0    !important;  margin-bottom: 0    !important; }
+.margin-ss  { margin-top: 5px  !important;  margin-bottom: 5px  !important; }
+.margin-0s  { margin-top: 0    !important;  margin-bottom: 5px  !important; }
+.margin-s0  { margin-top: 5px  !important;  margin-bottom: 0    !important; }
+.margin-mm  { margin-top: 10px !important;  margin-bottom: 10px !important; }
+.margin-0m  { margin-top: 0    !important;  margin-bottom: 10px !important; }
+.margin-m0  { margin-top: 10px !important;  margin-bottom: 0    !important; }
+.margin-0x  { margin-top: 0    !important;  margin-bottom: 20px !important; }
+.margin-x0  { margin-top: 20px !important;  margin-bottom: 0    !important; }
+.margin-ms  { margin-top: 10px !important;  margin-bottom: 5px  !important; }
+.margin-sm  { margin-top: 5px  !important;  margin-bottom: 10px !important; }
+.margin-xm  { margin-top: 20px !important;  margin-bottom: 10px !important; }
+.margin-mx  { margin-top: 10px !important;  margin-bottom: 20px !important; }
+.margin-xs  { margin-top: 20px !important;  margin-bottom: 5px  !important; }
+.margin-sx  { margin-top: 5px  !important;  margin-bottom: 20px !important; }
+.margin-xx  { margin-top: 20px !important;  margin-bottom: 20px !important; }
+.margin-xxx { margin-top: 40px !important;  margin-bottom: 40px !important; }
+
+// Padding
+// 2 4 6 8 - use for progress bar 
+.padding2  { padding:  2px !important; }
+.padding4  { padding:  4px !important; }
+.padding5  { padding:  5px !important; }
+.padding6  { padding:  6px !important; }
+.padding8  { padding:  8px !important; }
+.padding10 { padding: 10px !important; }
+.padding15 { padding: 15px !important; }
+.padding20 { padding: 20px !important; }
+.padding25 { padding: 25px !important; }
+.padding30 { padding: 30px !important; }
+
+// Padding top
+.padding-top2  { padding-top:  2px !important; }
+.padding-top5  { padding-top:  5px !important; }
+.padding-top10 { padding-top: 10px !important; }
+.padding-top15 { padding-top: 15px !important; }
+.padding-top20 { padding-top: 20px !important; }
+.padding-top25 { padding-top: 25px !important; }
+.padding-top30 { padding-top: 30px !important; }
+
+// Padding right
+.padding-right2  { padding-right:  2px !important; }
+.padding-right5  { padding-right:  5px !important; }
+.padding-right10 { padding-right: 10px !important; }
+.padding-right15 { padding-right: 15px !important; }
+.padding-right20 { padding-right: 20px !important; }
+.padding-right25 { padding-right: 25px !important; }
+.padding-right30 { padding-right: 30px !important; }
+
+// Padding bottom 
+.padding-bottom2  { padding-bottom:  2px !important; }
+.padding-bottom5  { padding-bottom:  5px !important; }
+.padding-bottom10 { padding-bottom: 10px !important; }
+.padding-bottom15 { padding-bottom: 15px !important; }
+.padding-bottom20 { padding-bottom: 20px !important; }
+.padding-bottom25 { padding-bottom: 25px !important; }
+.padding-bottom30 { padding-bottom: 30px !important; }
+
+// Padding left
+.padding-left2  { padding-left:  2px !important; }
+.padding-left5  { padding-left:  5px !important; }
+.padding-left10 { padding-left: 10px !important; }
+.padding-left15 { padding-left: 15px !important; }
+.padding-left20 { padding-left: 20px !important; }
+.padding-left25 { padding-left: 25px !important; }
+.padding-left30 { padding-left: 30px !important; }
+
+// Padding Add to side 
+.padding-side5  { padding-left:  5px !important; padding-right:  5px !important; }
+.padding-side10 { padding-left: 10px !important; padding-right: 10px !important; }
+.padding-side   { padding-left: 15px !important; padding-right: 15px !important; }
+
+// Padding Remove
+.no-padding         { padding:        0px !important; }
+.no-padding-top     { padding-top:    0px !important; }
+.no-padding-left    { padding-left:   0px !important; }
+.no-padding-bottom  { padding-bottom: 0px !important; }
+.no-padding-right   { padding-right:  0px !important; }
+
+// Fill element to well
+.fill-well {
+  margin-right:  -19px;
+  margin-bottom: -19px;
+  margin-left:   -19px;
+}
+
+.fill-well-side {
+  margin-right:  -19px;
+  margin-left:   -19px;
+}
+
+// SET WIDTH ELEMENTS
+// ----------------------------------------------------
+// width element step 5px to 100 next 25px
+.width20    { width:  20px; }
+.width25    { width:  25px; }
+.width30    { width:  30px; }
+.width35    { width:  35px; }
+.width40    { width:  40px; }
+.width45    { width:  45px; }
+.width50    { width:  50px; }
+.width55    { width:  55px; }
+.width60    { width:  60px; }
+.width65    { width:  65px; }
+.width70    { width:  70px; }
+.width75    { width:  75px; }
+.width80    { width:  80px; }
+.width85    { width:  85px; }
+.width90    { width:  90px; }
+.width95    { width:  95px; }
+.width100   { width: 100px; }
+.width125   { width: 125px; }
+.width150   { width: 150px; }
+.width175   { width: 175px; }
+.width200   { width: 200px; }
+.width225   { width: 225px; }
+.width250   { width: 250px; }
+.width260   { width: 260px; }
+.width275   { width: 275px; }
+.width300   { width: 300px; }
+
+// width table column - use to <colgroup><col class=""><colgroup>
+.col2   { width:  2%; }
+.col5   { width:  5%; }
+.col10  { width: 10%; }
+.col15  { width: 15%; }
+.col20  { width: 20%; }
+.col25  { width: 25%; }
+.col30  { width: 30%; }
+.col35  { width: 35%; }
+.col40  { width: 40%; }
+.col45  { width: 45%; }
+.col50  { width: 50%; }
+.col55  { width: 55%; }
+.col60  { width: 60%; }
+.col65  { width: 65%; }
+.col70  { width: 70%; }
+.col75  { width: 75%; }
+.col80  { width: 80%; }
+.col85  { width: 85%; }
+.col90  { width: 90%; }
+.col95  { width: 95%; }

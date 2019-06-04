@@ -1,0 +1,192 @@
+ /*! ----------------------------------------------------
+ * ADMIN TEMPLATE | BOO Admin Template
+ * --------------------------------------
+ * Bootstrap Image Gallery CSS 2.5.3
+ * https://github.com/blueimp/Bootstrap-Image-Gallery   
+ * ----------------------------------------------------- 
+ */
+
+.modal-gallery {
+    width: auto;
+    max-height: none;
+    outline: none;
+
+    &.fade.in {
+        top: 50%;
+    } 
+
+    .modal-header {
+        padding: 5px 0;
+        min-height: 30px;
+        border-bottom: none;
+        background: transparent;
+        color: #ccc;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+
+        .close {
+            margin-left: -15px;
+
+            &:hover {
+                text-shadow: 1px 2px 15px rgba(255, 102, 102, 1), 0 0 5px rgba(255, 0, 0, 1) ;
+                .opacity(90);
+            }   
+        }
+    }  
+
+    .modal-body {
+        padding: 0;
+        max-height: none;
+        background-color: #181818;
+    }
+
+    .modal-title {
+        display: inline-block;
+        overflow: hidden;
+        max-height: 54px;
+    }
+
+    .modal-footer {
+        padding: 7px 0px 8px;
+        border-top: none;
+        background: transparent;
+        text-align: fight;
+        .box-shadow(none);        
+    }
+
+    .modal-image {
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+        min-width: 128px;
+        min-height: 128px;
+        cursor: pointer;
+        &:hover:before,
+        &:hover:after {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            z-index: 1;
+            display: none;
+            margin-top: -20px;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #ffffff;
+            background: #222222;
+            color: #ffffff;
+            content: '\2039';
+            text-align: center;
+            font-weight: 100;
+            font-size: 60px;
+            line-height: 30px;
+            .opacity(50);
+            .border-radius(23px);
+        }
+        &:hover:after {
+            right: 15px;
+            left: auto;
+            content: '\203A';
+        }                  
+    }
+    .modal-image * {
+        position: absolute;
+        top: 0;
+        .opacity(0);
+    }
+}
+
+.modal.modal-gallery {
+    padding: 0 10px;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    background-color: #181818; /*ie*/
+    background-color: rgba(0, 0, 0, 0.75);
+    .box-shadow(0 3px 15px rgba(0, 0, 0, 0.85));
+    .border-radius(5px);
+}  
+
+.modal-loading .modal-image {
+    background: url('@{pluginBootstrapImageGalleryPath}/img/loading.gif') center no-repeat;
+}
+
+.modal-gallery.fade {
+    .modal-image {
+        .transition(width 0.15s ease, height 0.15s ease);
+    }
+    .modal-image * {
+        .transition(opacity 0.5s linear);
+    }    
+}
+
+
+.modal-gallery .modal-image *.in {
+    .opacity(100);
+}
+
+.modal-fullscreen {
+    overflow: hidden;
+    border: none;  
+    background: transparent;
+    .border-radius(0);
+
+    .modal-body {
+        padding: 0;
+    }
+
+    .modal-header,
+    .modal-footer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2000;
+        padding-right: 10px;
+        padding-left: 10px;
+        border: 0;
+        background: transparent;
+        .box-shadow(none);
+        .opacity(0); 
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            .opacity(100);
+        }           
+    }
+
+    .modal-header .close {
+        position:absolute;
+        top: 5px; right: 10px;
+        .opacity(80);
+    }  
+
+    .modal-footer {
+        top: auto;
+        bottom: 0;
+    }
+
+    .close,
+    .modal-title {
+        color: #fff;
+        text-shadow: 0 0 2px rgba(33, 33, 33, 0.8);
+    }
+
+
+}
+
+.modal.modal-fullscreen {
+  padding: 0px;
+  border: none;
+}
+
+.modal-fullscreen.modal-loading {
+    border: 0;
+    .box-shadow(none);
+}
+
+@media (max-width: 767px) {
+    .modal-gallery .btn span {
+        display: none;
+    }
+    .modal-fullscreen {
+        right: 0;
+        left: 0;
+    }
+}

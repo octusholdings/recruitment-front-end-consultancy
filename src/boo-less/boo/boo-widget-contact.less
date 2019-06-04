@@ -1,0 +1,243 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - WIDGET - Contact 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+// LISTNAV - Text
+// ------------------------------------
+
+.ln-letters {
+    overflow: hidden;
+    margin-left: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+    }
+    a {
+        display: block;
+        padding: 1px 3px;
+        color: #3399ff;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: 0 1px 0 rgba(255,255,255,.8);
+        font-weight: bold;
+        font-size: @fontSizeSmall;
+        .border-radius(@baseBorderRadius);
+
+        &.ln-last {
+        } 
+        &:hover,
+        &.ln-selected {
+            color: @textColor;
+            background-color: #dbdde2;
+            .box-shadow(inset 0 1px 3px rgba(0,0,0,.2), 0 1px 0 rgba(255,255,255,.8));
+        }
+        &.ln-disabled {
+            color: #c2c2c2;
+        }       
+    }
+    
+}
+
+.ln-letter-count {
+    margin-bottom: 3px;
+    padding: 5px 5px;
+    background-color: #111111;
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: @fontSizeSmall;
+    line-height: 1;
+    .border-radius(@baseBorderRadius);
+
+    &:before {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-top: 0px;
+        margin-left: -4px;
+        border-top: 4px solid #111;
+        border-top: 4px solid rgba(0,0,0,.8);
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        content: "";
+    }
+    &:after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        z-index: 1;
+        margin-top: 0px;
+        margin-left: -4px;
+        border-top: 4px solid #333;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        content: "";
+    }
+}
+
+.ln-no-match {
+    padding: 10px;
+    font-weight: bold;
+    font-size: @fontSizeBaseLarge;
+}
+
+.nav-alphabet {
+    position: relative;
+}
+
+.alphabet-list {
+    .ln-letters {
+        float: left;
+        width: 35px;
+        > li {
+            display: block;
+            padding: 1px 0;
+        }        
+    }
+    + .nav-list-wrap {
+        margin-left: 50px;
+    }
+}
+
+.alphabet-in {
+    position: relative;
+    .nav-alphabet {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+    .ln-letters {
+        width: 26px;
+        a {
+            padding: 0;
+            font-size: @fontSizeSmall;
+        }    
+    }    
+}
+
+.showCounts {
+    .ln-letters {
+        margin-top: 35px;
+    }
+    .ln-letter-count {
+        padding: 8px;
+        font-weight: bold;
+        font-size: @fontSizeBaseLarge;
+    }    
+}
+
+// LISTNAV - buttons
+// ------------------------------------
+
+.alphabet-btn .ln-letters a {
+    display: block;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    padding: 2px 9px;    
+    border: 1px solid @btnBorder;
+    vertical-align: middle;
+    text-align: center;
+    font-size: @fontSizeSmall;
+    line-height: @baseLineHeight;
+    cursor: pointer;
+    *border: 0; // Remove the border to prevent IE7's black border on input:focus
+    border-bottom-color: darken(@btnBorder, 10%);
+    .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 1px rgba(255,255,255,.75));
+    .border-radius(@baseBorderRadius);
+    .box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05));
+    *zoom: 1;
+    &:hover,
+    &:focus {
+        background-position: 0 -15px;
+        color: @grayDark;
+        text-decoration: none;
+        .transition(background-position .1s linear);
+    } 
+    &:focus {
+        .tab-focus();
+    }
+      // Active state
+    &.active,
+    &:active,
+    &.ln-selected {
+        border-top-color: darken(#32aaff, 7%);
+        background-color: #006bb7;        
+        .box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
+        .gradientBar(#32aaff, #006bb7, #fff, 0 -1px 0 rgba(0,0,0,.35));
+        .reset-filter();        
+    }
+
+    // Disabled state
+    &.disabled,
+    &[disabled],
+    &.ln-disabled {
+        background-image: none;
+        color: #c2c2c2;
+        cursor: default;
+        .opacity(65);
+        .box-shadow(none);
+    }
+}
+
+// Use button to list
+.alphabet-list {
+    &.alphabet-btn {
+        .ln-letters {
+            a {
+                padding: 0px;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// Nav list kontact
+.nav-contact {
+    font-size: @fontSizeMini;
+    line-height: @baseLineHeight - 2;
+    .name {
+        font-size: 15.5px;
+        line-height: 1em;
+    }  
+    a {
+        padding-right: 8px;
+        padding-left: 8px;
+        color: @textColor;
+        cursor: pointer;
+    }      
+}
+
+.nav-contact a:hover .name,
+.nav-contact .active .name {
+    color: @linkColor;
+}
+
+.nav-contact > li > a:hover {
+    background-color: #f3f3f6;
+}
+
+.nav-contact > .active > a {
+    background-color: #f6f7fe;
+}
+
+.well {
+    .nav-contact > .active > a {
+        #gradient > .horizontal(#e9f3fd, #f6f7fe);
+    }
+}
+
+.alphabet-left {
+}
+
+.alphabet-right {
+}

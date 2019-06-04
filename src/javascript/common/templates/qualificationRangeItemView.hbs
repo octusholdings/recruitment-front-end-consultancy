@@ -1,0 +1,99 @@
+{{#if group}}
+<div class="rules-group-container">
+	<div class="btn-group btn-group-xs {{uniqueClass}}">
+	    <button type="button" class="btn btn-success add-subrule-btn">
+			<i class="glyphicon glyphicon-plus"></i> {{translate "addRule"}}       
+		</button>
+		<button type="button" class="btn btn-success add-subgroup-btn">
+			<i class="fa fa-plus-circle" aria-hidden="true"></i> {{translate "addGroup"}}       
+		</button>
+	</div>
+	
+	<div class="btn-group btn-group-xs group-conditions {{uniqueClass}}" data-toggle="buttons">
+		<button class="btn btn-danger btn-remove-group" type="button">
+	  		<i class="glyphicon glyphicon-remove"></i> {{!-- Remove Group {{translate "removeGroup"}} --}}
+		</button>
+		<label class="btn btn-info">
+			<input class="radioGrpCond" name="grpCond" type="radio" value="AND"> AND
+		</label>
+		<label class="btn btn-info">
+			<input class="radioGrpCond" name="grpCond" type="radio" value="OR"> OR
+		</label>
+	</div>
+
+	<ul class="rules-list">
+{{else}}
+			<div class="qualification-wrapper">				
+			{{#if_eq rangeType "qualification"}}
+				<table cellspacing="0">
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "courseName"}}
+						</td>
+						<td colspan="3">
+							<select class="select-courseName form-control"></select>
+						</td>
+					</tr>
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "grade"}}
+						</td>
+						<td colspan="3">
+							<select class="select-grade form-control"></select>
+						</td>
+					</tr>
+				</table>
+			{{/if_eq}}
+			{{#if_eq rangeType "education"}}
+				<table cellspacing="0">
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "degreeCourse"}}
+						</td>
+						<td colspan="3">
+							<select class="select-degreeCourse form-control"></select>
+						</td>
+					</tr>
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "institution"}}
+						</td>
+						<td colspan="3">
+							<select class="select-institution form-control"></select>
+						</td>
+					</tr>
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "major"}}
+						</td>
+						<td>
+							<select class="select-major form-control"></select>
+						</td>
+						<td class="input-group-addon text-left">
+							{{translate "minor"}}
+						</td>
+						<td>
+							<select class="select-minor form-control"></select>
+						</td>
+					</tr>
+					<tr>
+						<td class="input-group-addon text-left">
+							{{translate "grade"}}
+						</td>
+						<td colspan="3">
+							<select class="select-grade form-control"></select>
+						</td>
+					</tr>
+				</table>
+			{{/if_eq}}
+			</div>
+			<span class="{{uniqueClass}} education-btn-remove">
+				<button class="btn btn-danger btn-xs btn-remove" type="button">
+			  		<i class="glyphicon glyphicon-remove"></i> {{!-- {{translate "remove"}} --}}
+				</button>
+			</span>
+{{/if}}
+{{#if group}}
+	</ul>
+</div>
+{{/if}}

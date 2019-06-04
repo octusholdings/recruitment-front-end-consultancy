@@ -1,0 +1,71 @@
+../libs/pl-content/bootbox/							3.2.0
+../libs/pl-content/bootstrap-modal/					2.1
+../libs/pl-content/bootstrap-wizard/				1.0
+../libs/pl-content/jpages/							0.7
+../libs/pl-content/jquery.haircut/
+../libs/pl-content/jquery.listnav/					2.1
+../libs/pl-content/jquery.plugin.slide.page/		0.1
+../libs/pl-content/jquery.toolbar/					1.0.4
+../libs/pl-content/list/							0.2.0
+../libs/pl-content/rateit/							1.0.9
+
+
+Content/libs/pl-content/bootbox/js/bootbox.js
+Content/libs/pl-content/bootbox/js/bootbox.min.js
+
+Content/libs/pl-content/bootstrap-modal/css/bootstrap-modal.css
+Content/libs/pl-content/bootstrap-modal/img/ajax-loader.gif
+Content/libs/pl-content/bootstrap-modal/modal_ajax_test.html
+Content/libs/pl-content/bootstrap-modal/js/bootstrap-modal.js
+Content/libs/pl-content/bootstrap-modal/js/bootstrap-modalmanager.js
+Content/libs/pl-content/bootstrap-modal/less/bootstrap-modal.less
+Content/libs/pl-content/bootstrap-modal/sass/_bootstrap-modal.scss
+
+Content/libs/pl-content/bootstrap-wizard/js/jquery.bootstrap.wizard.js
+Content/libs/pl-content/bootstrap-wizard/js/jquery.bootstrap.wizard.min.js
+
+Content/libs/pl-content/jpages/css/animate.css
+Content/libs/pl-content/jpages/css/jpages.css
+Content/libs/pl-content/jpages/img/back.gif
+Content/libs/pl-content/jpages/img/next.gif
+Content/libs/pl-content/jpages/js/jpages.js
+Content/libs/pl-content/jpages/js/jpages.min.js
+Content/libs/pl-content/jpages/js/jquery.lazyload.js
+Content/libs/pl-content/jpages/less/animate.less
+Content/libs/pl-content/jpages/less/jpages.less
+Content/libs/pl-content/jpages/img/preload.png
+Content/libs/pl-content/jpages/sass/_animate.scss
+Content/libs/pl-content/jpages/sass/_jpages.scss
+
+Content/libs/pl-content/jquery.haircut/js/jquery.haircut.js
+
+Content/libs/pl-content/jquery.listnav/css/listnav.css
+Content/libs/pl-content/jquery.listnav/js/jquery.listnav.js
+Content/libs/pl-content/jquery.listnav/js/jquery.listnav.min.js
+Content/libs/pl-content/jquery.listnav/js/jquery.listnav-2.1.js
+
+Content/libs/pl-content/jquery.plugin.slide.page/js/slidePage.jquery.js
+Content/libs/pl-content/jquery.plugin.slide.page/js/slidePage.jquery.min.js
+
+Content/libs/pl-content/jquery.toolbar/css/jquery.toolbars.css
+Content/libs/pl-content/jquery.toolbar/js/jquery.toolbar.js
+Content/libs/pl-content/jquery.toolbar/js/jquery.toolbar.min.js
+Content/libs/pl-content/jquery.toolbar/less/jquery.toolbars.less
+Content/libs/pl-content/jquery.toolbar/sass/_jquery.toolbars.scss
+
+Content/libs/pl-content/list/js/list.js
+Content/libs/pl-content/list/js/list.filter.js
+Content/libs/pl-content/list/js/list.filter.min.js
+Content/libs/pl-content/list/js/list.fuzzySearch.js
+Content/libs/pl-content/list/js/list.fuzzySearch.min.js
+Content/libs/pl-content/list/js/list.min.js
+Content/libs/pl-content/list/js/list.paging.js
+Content/libs/pl-content/list/js/list.paging.min.js
+
+Content/libs/pl-content/rateit/css/rateit.css
+Content/libs/pl-content/rateit/img/delete.gif
+Content/libs/pl-content/rateit/img/star.gif
+Content/libs/pl-content/rateit/js/jquery.rateit.js
+Content/libs/pl-content/rateit/js/jquery.rateit.min.js
+Content/libs/pl-content/rateit/less/rateit.less
+Content/libs/pl-content/rateit/sass/_rateit.scss

@@ -1,0 +1,28 @@
+../libs/pl-system/datejs/							1.0
+../libs/pl-system/jquery.nicescroll/				3.2.0
+../libs/pl-system/jquery-cookie/					1.3.1
+../libs/pl-system/jquery-mousewheel/				3.1.3
+../libs/pl-system/moment/							2.0.0
+../libs/pl-system/selectivizr/						1.0.2
+../libs/pl-system/xbreadcrumbs/
+
+
+
+Content/libs/pl-system/datejs/js/date.js
+
+Content/libs/pl-system/jquery.nicescroll/js/jquery.nicescroll.js
+Content/libs/pl-system/jquery.nicescroll/js/jquery.nicescroll.min.js
+Content/libs/pl-system/jquery.nicescroll/js/zoomico.png
+Content/libs/pl-system/jquery.nicescroll/img/zoomico.png
+
+Content/libs/pl-system/jquery-cookie/js/jquery.cookie.js
+
+Content/libs/pl-system/jquery-mousewheel/js/jquery.mousewheel.js
+
+Content/libs/pl-system/moment/js/moment.js
+Content/libs/pl-system/moment/js/moment.min.js
+
+Content/libs/pl-system/xbreadcrumbs/css/xbreadcrumbs.css
+Content/libs/pl-system/xbreadcrumbs/js/xbreadcrumbs.js
+
+Content/libs/pl-system/pl-system-list.txt

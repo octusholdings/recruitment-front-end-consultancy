@@ -1,0 +1,62 @@
+.o-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+    width: 100%;
+    background-color: #222;
+    padding-left:44px;
+    white-space: nowrap;
+}
+
+    .o-footer-item {
+        display:inline-block;
+        vertical-align: top;
+        text-align: center;
+    }
+
+        .o-footer-item:not(.footerUploadCv) > a, 
+        .o-footer-item:not(.footerUploadCv) .dropup > a {
+            width: 48px;
+            display: block;
+            height: 50px;
+            padding: 16px 0;
+            color: #aaa;
+            transition:color .3s;
+        }
+        .o-footer-item:hover:not(.footerUploadCv) > a, 
+        .o-footer-item:hover:not(.footerUploadCv) .dropup > a {
+            color: #fff;
+        }
+
+    .o-footer-item.footerUploadCv a {
+        display:block;
+    }
+    .o-footer-item .dropdown-menu li {
+        max-width:250px;
+    }
+    .o-footer-item .dropdown-menu li a,
+    .o-footer-item .dropdown-menu li button {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media all and (max-width:775px) {
+    .o-footer {
+        padding-left:0;
+    }
+}
+
+@media all and (max-width:480px) {
+
+    .o-footer-item:not(.footerUploadCv) > a, 
+    .o-footer-item:not(.footerUploadCv) .dropup > a {
+        width: 42px;
+        height: 44px;
+        padding: 14px 0;
+    }
+
+    .o-footer-item .dropdown-menu li {
+        max-width:200px;
+    }
+}

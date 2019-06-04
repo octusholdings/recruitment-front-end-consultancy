@@ -1,0 +1,29 @@
+{{#if (hasPermission 'DEBUG')}}
+<div class="col-md-12">
+    <div class="input-group">
+        <span class="input-group-addon"><strong>Test Kendo</strong></span>
+        <span class="input-group-btn width100">
+            <button class="btn btn-default testFieldFilter" type="button">
+                <i class="fa fa-play" aria-hidden="true"></i> Field Filter
+            </button>
+            <button class="btn btn-default autoTestFieldFilter" type="button" data-toggle="button">
+                <i class="fa fa-magic" aria-hidden="true"></i> Automate?
+            </button>
+            <button class="btn btn-default skipTestFieldFilter" type="button">
+                <i class="fa fa-step-forward" aria-hidden="true"></i> Skip Field
+            </button>
+            <button class="btn btn-default stopTestFieldFilter" type="button">
+                <i class="fa fa-stop" aria-hidden="true"></i> Stop Test
+            </button>
+            <button class="btn btn-default pauseTestFieldFilter" type="button">
+                <i class="fa fa-pause" aria-hidden="true"></i> Pause Test
+            </button>
+            {{!-- <button class="btn btn-default testSearch disabled" disabled="true" type="button">Search</button>
+            <button class="btn btn-default testSpecCV disabled" disabled="true" type="button">Spec CV</button>
+            <button class="btn btn-default testSaveSearch disabled" disabled="true" type="button">Save Search</button>
+            <button class="btn btn-default testLoadSearch disabled" disabled="true" type="button">Load Search</button> --}}
+        </span>
+    </div>
+    <hr>
+</div>
+{{/if}}

@@ -1,0 +1,109 @@
+<div class="group-wrapper job-group editor marginBottom10
+	{{#if jdId}}hidden{{/if}}
+	{{#if this.title}}
+		{{#if this.jdId}}
+			{{#unless this.descriptionList.length}}has-error{{/unless}}
+		{{else}}
+			has-warning
+		{{/if}}
+	{{/if}}">
+    <div class="input-group control-group">
+        <span class="input-group-addon width5">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> {{translate "jobTitle"}}
+        </span>
+        <div class="tt-wrapper">
+	        <i class="tt-spinner fa fa-refresh fa-spin fa-fw"></i>
+        	<input type="text" class="title-input form-control width40" value="{{this.title}}" placeholder="{{translate "jobTitle"}}" autocomplete="off">
+	    </div>
+
+        <span class="input-group-addon">
+	        <i class="fa fa-file-text-o" aria-hidden="true"></i> {{translate "JDs"}}
+	    </span>
+		
+        <span class="input-group-addon bootstrap-select-wrapper">
+			<select class="form-control jd-dropdown" name="jd" data-container="body" data-selected-text-format="count" {{#if descriptionList.length}} multiple="multiple" {{else}} disabled="disabled" {{/if}}>
+				{{#if id}}
+					{{#if loadingDescriptions}}
+						<option value="null">{{translate "loading"}}</option>
+					{{else}}
+						{{#if descriptionList.length}}
+							{{#each descriptionList}}
+								<option value="{{this.language}}-{{this.type}}" {{#if this.selected}}selected="selected"{{/if}}>{{this.language}} - {{this.type}}</option>
+							{{/each}}
+						{{else}}
+			        		<option value="{{translate "noJDsAvailable"}}">{{translate "noJDsAvailable"}}</option>
+						{{/if}}
+					{{/if}}
+				{{else}}
+					<option value="null">{{translate "chooseAJobFirst"}}</option>
+				{{/if}}
+			</select>
+	    </span>
+	    
+        <span class="input-group-addon">
+	        <i class="fa fa-file-text-o" aria-hidden="true"></i> {{translate "documents"}}
+	    </span>
+
+	    <span class="input-group-addon bootstrap-select-wrapper">
+	    	<select class="form-control doc-dropdown" name="dov" data-container="body" data-selected-text-format="count" {{#if documentList.length}} multiple="multiple" {{else}} disabled="disabled" {{/if}}>.
+	    		{{#if id}}
+		    		{{#if loadingDocuments}}
+		    			<option value="null">{{translate "loading"}}</option>
+		    		{{else}}
+			    		{{#if documentList.length}}
+							{{#each documentList}}
+			    				<option value="{{this.id}}" {{#if this.selected}}selected="selected"{{/if}}>
+				                    {{#if this.displayName}}
+				                        {{this.displayName}}
+				                    {{else}}
+				                        {{this.fileName}}
+				                    {{/if}}  							    					
+			    				</option>
+							{{/each}}
+						{{else}}
+			        		<option value="{{translate "noDocumentsAvailable"}}">{{translate "noDocumentsAvailable"}}</option>
+						{{/if}}
+					{{/if}}
+				{{else}}
+					<option value="null">{{translate "chooseAJobFirst"}}</option>
+				{{/if}}
+	    	</select>
+	    </span>
+		
+		<span class="input-group-btn">
+	        <button class="btn btn-xs btn-default btn-refresh-jd" type="button" data-tooltip="{{translate "refresh"}}" data-placement="left" {{#unless id}}disabled="disabled"{{/unless}}>
+	            <i class="fa fa-refresh" aria-hidden="true"></i>
+	        </button>
+	        <a class="btn btn-xs btn-default btn-jd-link" style="display: inline-block;" {{#if id}}href="#/jobDetail/{{id}}/description"{{/if}} target="_blank" data-tooltip="{{translate "edit"}} {{translate "jobDescription"}}" data-placement="left" >
+	            <i class="fa fa-pencil" aria-hidden="true"></i>
+	        </a>
+	        <button class="btn btn-xs btn-danger btn-remove-job" type="button" data-tooltip="{{translate "delete"}}" data-placement="left">
+	            <i class="fa fa-times" aria-hidden="true"></i>
+	        </button>
+	    </span>
+    </div>
+</div>
+
+<div class="group-wrapper job-group display {{#unless jdId}}hidden{{/unless}}
+	{{#if this.title}}
+		{{#if this.jdId}}
+			{{#unless this.descriptionList.length}}has-error{{/unless}}
+		{{else}}
+			has-warning
+		{{/if}}
+	{{/if}}">
+	<div class="input-group control-group">
+        <span class="input-group-addon">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+        </span>
+        <span class="input-group-addon job-label">
+			<span class="display-job" data-id="{{id}}">
+			{{title}} 
+			{{#if jdId}}- [ JDs: {{#each jdId}}{{this}}{{#unless @last}}, {{/unless}}{{/each}} ]{{/if}}
+			{{#if docName}} - [ Docs: {{#each docName}}
+            {{this.fileName}}
+			{{#unless @last}}, {{/unless}}{{/each}} ]{{/if}}
+			</span>
+		</span>
+    </div>
+</div>

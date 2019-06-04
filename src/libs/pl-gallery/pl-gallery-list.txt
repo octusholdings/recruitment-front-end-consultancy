@@ -1,0 +1,53 @@
+../libs/pl-gallery/bootstrap-image-gallery/				2.10
+../libs/pl-gallery/imagesloaded/						2.1.1
+../libs/pl-gallery/jquery.imgpreload/					1.4
+../libs/pl-gallery/load-image/							1.3.2
+../libs/pl-gallery/nailthumb/							1.1.0
+../libs/pl-gallery/showloading/							1.0
+../libs/pl-gallery/wookmark/							1.1.0
+
+
+Content/libs/pl-gallery/bootstrap-image-gallery/css/bootstrap-image-gallery.css
+Content/libs/pl-gallery/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css
+Content/libs/pl-gallery/bootstrap-image-gallery/css/bootstrap-image-gallery-bootheme.css
+Content/libs/pl-gallery/bootstrap-image-gallery/img/loading.gif
+Content/libs/pl-gallery/bootstrap-image-gallery/js/bootstrap-image-gallery.js
+Content/libs/pl-gallery/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js
+Content/libs/pl-gallery/bootstrap-image-gallery/js/bootstrap-image-gallery-main.js
+Content/libs/pl-gallery/bootstrap-image-gallery/js/main.js
+Content/libs/pl-gallery/bootstrap-image-gallery/less/bootstrap-image-gallery-bootheme.less
+Content/libs/pl-gallery/bootstrap-image-gallery/sass/_bootstrap-image-gallery-bootheme.scss
+
+Content/libs/pl-gallery/imagesloaded/js/jquery.imagesloaded.js
+Content/libs/pl-gallery/imagesloaded/js/jquery.imagesloaded.min.js
+Content/libs/pl-gallery/imagesloaded/js/jquery.imagesloaded-wookmark.js
+
+Content/libs/pl-gallery/jquery.imgpreload/js/jquery.imgpreload.js
+Content/libs/pl-gallery/jquery.imgpreload/js/jquery.imgpreload.min.js
+
+Content/libs/pl-gallery/load-image/js/load-image.js
+Content/libs/pl-gallery/load-image/js/load-image.min.js
+
+Content/libs/pl-gallery/nailthumb/css/jquery.nailthumb.css
+Content/libs/pl-gallery/nailthumb/css/jquery.nailthumb.min.css
+Content/libs/pl-gallery/nailthumb/css/jquery.nailthumb-bootheme.css
+Content/libs/pl-gallery/nailthumb/img/loading-bars-nailthumb.gif
+Content/libs/pl-gallery/nailthumb/img/loading-nailthumb.gif
+Content/libs/pl-gallery/nailthumb/js/jquery.nailthumb.js
+Content/libs/pl-gallery/nailthumb/js/jquery.nailthumb.min.js
+Content/libs/pl-gallery/nailthumb/less/jquery.nailthumb.less
+Content/libs/pl-gallery/nailthumb/img/preload-nailthumb.png
+Content/libs/pl-gallery/nailthumb/sass/_jquery.nailthumb.scss
+
+Content/libs/pl-gallery/showloading/css/showLoading.css
+Content/libs/pl-gallery/showloading/images/loading.gif
+Content/libs/pl-gallery/showloading/images/loading-bars.gif
+Content/libs/pl-gallery/showloading/js/jquery.showLoading.js
+Content/libs/pl-gallery/showloading/js/jquery.showLoading.min.js
+
+Content/libs/pl-gallery/wookmark/css/jquery.wookmark-bootheme.css
+Content/libs/pl-gallery/wookmark/img/loader.gif
+Content/libs/pl-gallery/wookmark/js/jquery.wookmark.js
+Content/libs/pl-gallery/wookmark/js/jquery.wookmark.min.js
+Content/libs/pl-gallery/wookmark/less/jquery.wookmark-bootheme.less
+Content/libs/pl-gallery/wookmark/sass/_jquery.wookmark-bootheme.scss

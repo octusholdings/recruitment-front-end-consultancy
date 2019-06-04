@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>{{user.name}} has submitted a job position for review</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- CSS Reset -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],  /* iOS */
+        .x-gmail-data-detectors,    /* Gmail */
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display:none !important;
+        }
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+    </style>
+
+    <!-- Progressive Enhancements -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #1c7cd6 !important;
+            border-color: #1c7cd6 !important;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            /* What it does: Adjust typography on small screens to improve readability */
+            .email-container p {
+                font-size: 16px !important;
+                line-height: 22px !important;
+            }
+
+        }
+
+    </style>
+</head>
+<body width="100%" bgcolor="#e9ecef" style="margin: 0; mso-line-height-rule: exactly;">
+    <center style="width: 100%; background: #e9ecef; text-align: left;">
+
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
+            {{user.name}} has submitted a job position for review.
+        </div>
+        <!-- Visually Hidden Preheader Text : END -->
+
+        <!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+        <div style="max-width: 600px; margin: auto;" class="email-container">
+            <!--[if mso]>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+
+            <!-- Email Header : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+                <tr>
+                    <td style="padding: 20px 0; text-align: center">
+                        <img src="http://octus.com.sg/files/octus-logo.png" width="150" height="50" alt="alt_text" border="0" style="height: auto;">
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Header : END -->
+
+            <!-- Email Body : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px; box-shadow: 0 1px 2px rgba(0,0,0,.3);">
+
+                <!-- 1 Column Text + Button : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 8% 8% 4% 8%; font-family: sans-serif; font-size: 15px; line-height: 1.4; color: #212529; font-weight: normal;">
+                                    <h1 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 24px; line-height: 1.3; color: #212529; font-weight: normal;">{{user.name}} has submitted a job position for review:</h1>
+                                    <!-- <p style="margin: 0; white-space:pre-wrap;">{{message}}</b></p> -->
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Column Text + Button : END -->
+
+                <!-- 1 Column Text : BEGIN -->
+                <tr>
+                    <td bgcolor="#dee2e6">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 8%; font-family: sans-serif; font-size: 15px; line-height: 1.4; color: #343a40; ">
+                                    <table border="1" cellpadding="0" cellspacing="0" role="presentation" style="border: 1px solid #868e96;" width="100%">
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Job title</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">
+                                                <a href="{{baseUrl}}#/jobDetail/{{jobPosting.id}}/dashboard">{{ jobPosting.title }} ({{ jobPosting.referenceId }})</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Job type</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPosting.type }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Candidate</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">
+                                                <a href="{{baseUrl}}#/candidate/{{candidate.id}}/dashboard">{{ candidate.name }} ({{ candidate.referenceId }})</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Company name</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">
+                                                <a href="{{baseUrl}}#/company/{{company.id}}/dashboard">{{ company.name }}</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Contact</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">
+                                                 <a href="{{baseUrl}}#/client/{{hiringManager.id}}/dashboard">{{ hiringManager.name }}</a></td>
+                                        </tr>
+                                    </table>
+                                    <p style="margin-top:32px;"><b>Details</b></p>
+                                    <table border="1" cellpadding="0" cellspacing="0" role="presentation" style="border: 1px solid #868e96;" width="100%">
+                                        <!-- <tr>
+                                            <td colspan="2" style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px; text-align: center;"><b>DETAILS OF ASSIGNMENT</b></td>
+                                        </tr> -->
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Basis of charge</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Purchase order</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.purchaseOrderNumber }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Start date</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.startDate }}</td>
+                                        </tr>
+                                        {{#jobPlacement.endDate}}
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">End date</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.endDate }}</td>
+                                        </tr>
+                                        {{/jobPlacement.endDate}}
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Placement date</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.placementDate }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Invoice date</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.invoiceDate }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Payment due date</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.paymentDueDate }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Probation end date</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.probationEndDate }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Guarantee end date</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.guaranteeEndDate }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Consultant</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ user.name }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Date submitted</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.placementDate }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Currency</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.salary.currency.symbol }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Company status</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ company.status }}</td>
+                                        </tr>
+                                        {{#hiringManager.addressList}}
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Contact address</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ fullAddress }}</td>
+                                        </tr>
+                                        {{/hiringManager.addressList}}
+                                        {{#hiringManager.telephoneList}}
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Contact phone number</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ fullNumber }}</td>
+                                        </tr>
+                                        {{/hiringManager.telephoneList}}                                        
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Notice period</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPosting.noticePeriod }}</td>
+                                        </tr>
+                                    </table>
+                                    <p style="margin-top:32px;"><b>Salary breakdown</b></p>
+                                    <table border="1" cellpadding="0" cellspacing="0" role="presentation" style="border: 1px solid #868e96;" width="100%">
+                                        {{#jobPlacement.salary.salaryItems}}
+                                        <tr>
+                                            <td colspan="2" style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px; text-align: center;">{{name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Type</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{interval}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Frequency</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{frequency}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Client rate</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{amount}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Freelancer rate</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{payAmount}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Commission</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{feeAmount}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Commission percentage</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{feeRate}}</td>
+                                        </tr>
+                                        {{/jobPlacement.salary.salaryItems}}
+                                    </table>
+                                    <p style="margin-top:32px;"><b>Total</b></p>
+                                    <table border="1" cellpadding="0" cellspacing="0" role="presentation" style="border: 1px solid #868e96;" width="100%">
+                                        <!-- <tr>
+                                            <td colspan="2" style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px; text-align: center;">TOTAL</td>
+                                        </tr> -->
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Invoice</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.totalAmount }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Commission</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ jobPlacement.fee }}</td>
+                                        </tr>
+                                        <!-- <tr>
+                                            <td colspan="2" style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px; text-align: center;">Commission distribution</td>
+                                        </tr> -->
+                                    </table>
+                                    {{^jobPlacement.costItems.empty}}
+                                    <p style="margin-top:32px;"><b>Fee deductibles</b></p>
+                                    <table border="1" cellpadding="0" cellspacing="0" role="presentation" style="border: 1px solid #868e96;" width="100%">
+                                        {{#jobPlacement.costItems}}
+                                        <tr>
+                                           <td colspan="2" style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px; text-align: center;">{{ description }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Deductible value</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ amount }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Deductible percent</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ percentage }} %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Deductible remarks</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ remarks }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Deductible entity</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ entity }}</td>
+                                        </tr>
+                                        {{/jobPlacement.costItems}}
+                                    </table>
+                                    {{/jobPlacement.costItems.empty}}
+                                    <p style="margin-top:32px;"><b>Commission distribution</b></p>
+                                    <table border="1" cellpadding="0" cellspacing="0" role="presentation" style="border: 1px solid #868e96;" width="100%">
+                                        {{#jobPlacement.feeDistribution}}
+                                        <tr>
+                                           <td colspan="2" style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px; text-align: center;">{{ consultantName }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Commission value</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ amount }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">Commission percent</td>
+                                            <td style="font-family: sans-serif; font-size: 14px; line-height: 1.4; color: #343a40; padding:4px;">{{ percentage }} %</td>
+                                        </tr>
+                                        {{/jobPlacement.feeDistribution}}
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Column Text : END -->
+                
+                <!-- 1 Column Text + Button : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 4% 8%; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #343a40;">
+                                    <!-- Button : BEGIN -->
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+                                        <tr>
+                                            <td style="border-radius: 3px; background: #1862ab; text-align: center;" class="button-td">
+                                                <a href="{{baseUrl}}#/jobDetail/{{jobPosting.id}}/dashboard" style="background: #1862ab; border: 15px solid #1862ab; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
+                                                    <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;See placement in Octus&nbsp;*&nbsp;&nbsp;&nbsp;</span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- Button : END -->
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Column Text + Button : END -->
+
+            </table>
+            <!-- Email Body : END -->
+
+            <!-- Email Footer : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
+                <tr>
+                    <td style="padding: 8% 2%; width: 100%; font-family: sans-serif; line-height:18px; text-align: center; color: #868e96; font-size:14px; font-family: sans-serif;" class="x-gmail-data-detectors">
+                        <p style="margin: 0 0 15px 0;">* You will need to be logged in into your Octus system to properly open this link</b></p>
+                        This is an automatic email generated by Octus
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Footer : END -->
+
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+
+    </center>
+</body>
+</html>

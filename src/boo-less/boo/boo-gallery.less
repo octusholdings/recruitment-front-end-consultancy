@@ -1,0 +1,341 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - GALLERY STYLE 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.gall-caption {
+  padding: 10px 0 0;
+}
+
+.gall-legend {
+  font-size: @fontSizeSmall;
+}
+
+.data-icon {
+  color: @grayLight;
+  cursor: default;
+}
+
+.menu-icon {
+  float: right;
+}
+
+
+// GALLERY WELL STYLE
+// ----------------------------------------
+.gallery-well {
+    font-size: @fontSizeBaseSmall;
+
+    p {
+        line-height: @baseLineHeight - 4;
+    }
+
+    .thumbnail {
+        border-color: #fff;
+        background-color: @booBgColor;
+        color: @textColor;
+        .box-shadow(0 1px 2px rgba(0, 0, 0, 0.30));
+    }
+
+}
+
+.gallery-small .thumbnail {
+    margin: 5px;
+}
+
+// GALLERY CONDENSED STYLE
+// ----------------------------------------
+.gallery-condensed {
+    .thumbnail {
+        margin: 0;
+        padding: 0;
+        border: none;
+        .border-radius(0);
+        .box-shadow(none);
+    }
+}
+
+.gallery-nailthumb {
+    .thumbnail {
+        > img {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 100%;
+        }
+
+        .caption {
+            padding: 9px;
+            color: @gray;
+        }     
+    } 
+
+    a.thumbnail:hover {
+        border-color: #0088cc;
+        .box-shadow(0 1px 4px rgba(0, 105, 214, 0.25));
+    }     
+}
+
+// NAILTHUMB
+// ----------------------------------------------------------------------------
+.nailthumb-container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    text-align: left; 
+
+    img {
+        max-width: none;
+        text-align: left;
+
+        &.nailthumb-image {
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            max-width: none;
+            text-align: left;
+        }
+    } 
+
+    span{
+        &.nailthumb-title {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            display: block;
+            float: left;
+            overflow: hidden;
+            margin-top: 2px;
+            padding: 0 9px;
+            width: 100%;
+            height: @baseLineHeight + 10;
+            background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+            color: @white;
+            text-align: left;
+            font-size: @baseFontSize * 0.714; // 10
+            line-height: @baseLineHeight + 10;
+
+            .nailthumb-title-scroller {
+                padding-left: 2px;
+            }            
+        }
+    }       
+}
+
+
+.thumbnail-action {
+    font-size: @fontSizeSmall;
+    .clearfix();
+}
+
+.imgshare {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1;
+    visibility: hidden;
+    padding: 6px 5px;
+    height: @baseLineHeight;
+    background-color: @booBgColor;
+    .opacity(0);
+    .transition(opacity 0.1s linear 0s);
+}
+
+
+.thumbnail:hover .imgshare {
+    visibility: visible;
+    .opacity(100);
+}
+
+.imgshare-left {
+    float: left;
+    overflow: hidden;
+}
+.imgshare-right {
+    float: right;
+    overflow: hidden;
+}
+
+.sale {
+    .saleimage {
+        position: relative;
+        cursor: pointer;
+        img {
+            margin: 0 auto;
+            max-width: 160px;
+            max-height: 220px;
+        }        
+    }
+}
+
+.salehovertarget {
+    position: absolute;
+    bottom: 0;
+    left: -10000em;
+    padding: 7px 0 17px;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.72);
+    color: @white;
+    text-align: center;
+    font-size: @baseFontSize * 2.857; // 40;
+    line-height: 1;
+    .opacity(0);
+    .transition(opacity 0.1s linear 0s);
+}
+
+.preview-image {
+  margin-bottom: 15px;
+}
+
+// THUMBNAIL SIZE
+// ----------------------------------------
+.square75 .gall-caption {
+    width: 75px;
+}
+
+.square100 .gall-caption {
+    width: 100px;
+}
+
+.square150 .gall-caption {
+    width: 150px;
+}
+
+.square200 .gall-caption {
+    width: 200px;
+}
+
+.square260 .gall-caption {
+    width: 260px;
+}
+
+.horizontal75 .gall-caption {
+    width: 75px;
+}
+
+.horizontal100 .gall-caption {
+    width: 100px;
+}
+
+.horizontal200 .gall-caption {
+    width: 200px;
+}
+
+.vertical75 .gall-caption {
+    width: 75px;
+}
+
+.vertical100 .gall-caption {
+    width: 100px;
+}
+
+.vertical200 .gall-caption {
+    width: 200px;
+}
+
+.square75 .nailthumb-container {
+    width: 75px;
+    height: 75px;
+}
+
+.square100 .nailthumb-container {
+    width: 100px;
+    height: 100px;
+}
+
+.square150 .nailthumb-container {
+    width: 150px;
+    height: 150px;
+}
+
+.square200 .nailthumb-container {
+    width: 200px;
+    height: 200px;
+}
+
+.square260 .nailthumb-container {
+    width: 260px;
+    height: 260px;
+}
+
+.horizontal75 .nailthumb-container {
+    width: 75px;
+    height: 47px;
+}
+
+.horizontal100 .nailthumb-container {
+    width: 100px;
+    height: 63px;
+}
+
+.horizontal150 .nailthumb-container {
+    width: 150px;
+    height: 94px;
+}
+
+.horizontal200 .thumbnail-size,
+.horizontal200 .nailthumb-container {
+    width: 200px;
+    height: 125px;
+}
+
+.horizontal260 .thumbnail-size,
+.horizontal260 .nailthumb-container {
+    width: 260px;
+    height: 162px;
+}
+
+.vertical75 .nailthumb-container {
+    width: 75px;
+    height: 120px;
+}
+
+.vertical100 .nailthumb-container {
+    width: 100px;
+    height: 160px;
+}
+
+.vertical150 .nailthumb-container {
+    width: 150px;
+    height: 240px;
+}
+
+.vertical200 .nailthumb-container {
+    width: 200px;
+    height: 320px;
+}
+
+.vertical260 .nailthumb-container {
+    width: 260px;
+    height: 416px;
+}
+
+#loader-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: @zindexLoader;
+    display: none;
+    margin: -48px 0 0 -68px;
+    padding: 20px 40px;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);  
+    .border-radius(10px);
+    .box-shadow(0 0 15px rgba(0, 0, 0, 0.7));
+}
+
+#loader-page img {
+    width: 48px;
+}

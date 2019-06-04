@@ -1,0 +1,193 @@
+/* ----------------------------------------------------
+ * ADMIN TEMPLATE | BOO Admin Template
+ * --------------------------------------
+ * version       : 12.05.2013 - 2.0.0
+ * copyright     : (c) 2013 Petr Marasek
+ * contact       : gootoboo@gmail.com
+ * ----------------------------------------------------
+ * CUSTOM STYLE - Your stylesheed 
+ * -----------------------------------------------------------------------------
+ * I gather this file is a starting point for the project.
+ */ 
+
+//@import "bootstrap";
+//@import "bootstrap-responsive";
+
+// Custom style for you code and testing class
+
+// Core variables and mixins
+@import "../libs/bootstrap/less/variables.less";
+@import "../libs/bootstrap/less/mixins.less";
+@import "boo/variables.less"; 
+@import "boo/mixins.less";
+
+
+// MY TEST MAILBOX
+// This code is possible to remove the - after verification is added to the core styles
+
+.nav .nav-panel {}
+.nav-panel {}
+
+.widget-mailbox {
+    .table { 
+        table-layout:fixed;
+        font-size: 13px; 
+        td { 
+            empty-cells: show;
+            vertical-align: middle; 
+        }
+    }
+
+    .msg-preview {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .preview-area { 
+        color: #777; 
+        overflow: hidden;
+        white-space: nowrap;
+        .subject {
+
+        }
+        .message{ color: #222; 
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+
+    }
+
+    .rate-area .rateit-range { 
+        margin-bottom: -5px
+
+    }      
+}
+
+
+.widget-mailbox .preview-area .subject,
+.widget-mailbox .sender-area { color: #222; }
+.widget-mailbox .unread .subject,
+.widget-mailbox .unread .sender-area { font-weight: bold; color: #222; }
+/*.widget-mailbox .preview-area .message { color: #777; }*/
+
+
+/* Invoice table - Purchase Invoice List */
+table#PIL,
+table#SIL {
+    td:nth-child(1) { width: 80px; }
+    td:nth-child(2) { width: 80px; text-align: right; }
+    td:nth-child(3) { width: 80px; text-align: right; }
+    td:nth-child(4) {  }
+    td:nth-child(5) { width: 120px; text-align: right; font-weight: bold }
+    td:nth-child(6) { width: 120px; text-align: right; font-weight: bold }
+    td:nth-child(7) { width: 150px; text-align: right; }
+}
+
+/* Invoice table - New Invice */
+table#invoiceLine {
+
+    width: 100%;
+
+    td:nth-child(1) { width: 25%; }
+    td:nth-child(2) { }
+    td:nth-child(3) { 
+        width: 15%; 
+        input { text-align: right; }
+    }
+    td:nth-child(4) { 
+        width: 15%; 
+        input { text-align: right; }
+    }
+
+    #TotalAmount {
+        text-align: right;
+        font-weight: bold;
+    }
+}
+
+table#invoicePayed {
+
+    td { 
+        width: 20%; 
+        
+    }
+
+    td:nth-child(1) { }
+    td:nth-child(2) { }
+    td:nth-child(3) { }
+    td:nth-child(4) { }
+    td:nth-child(5) { }
+
+}
+
+.calplann {
+    position: relative;
+    height: 120px;
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        /*display: inline-block;
+    .ie7-inline-block();
+    padding-left: 5px;
+    padding-right: 5px;*/
+        display: block;
+        float: left;
+        text-align: center;
+        border-left: 1px solid #999;
+        border-right: 1px solid #999;
+        margin-left: -1px;
+        height: 100%;
+        //background-color: #373b3e;
+        //background-color: #f1f2f3;
+        //background-color: #f6f7fe;
+        > a {
+            display: block;
+            width: 40px;
+            padding: 5px;
+            text-decoration: none;
+            color: @textColor;
+
+            > span {
+                display: block;
+            }
+        }
+
+        .day {
+            font-size: @fontSizeSmall;
+            text-transform: uppercase;
+            background-color: #f6f7fe;
+        }
+
+        .date {
+            display: block;
+            margin-top: 5px;
+            padding: 5px 0;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 30px;
+            border-top: 1px solid #999;
+        }
+
+        .value {
+            display: block;
+            padding: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 30px;          
+
+            .label {
+                display: block;
+                margin-bottom: 3px;
+                height: 5px;
+                .border-radius(2px);
+            }
+
+            .icon {
+            }
+        }
+    }
+}
+                                           

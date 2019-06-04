@@ -1,0 +1,59 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4>{{name}} &nbsp;
+                <span class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle cvSelection" type="button" data-toggle="dropdown">Select CV
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu cvOption">
+                    </ul>
+                </span>
+            </h4>
+        </div>
+        <div class="modal-body">
+            {{!-- <div id="candidate-content" class="cvContent"></div> --}}
+            <fieldset>
+                <ul class="list-unstyled form-list">
+                    <li class="form-group clearfix">
+                        <div class="btn-group pull-right">
+                            <button class="btn btn-default show-text active">
+                                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                <span class="hidden-xs"> Text only</span>
+                            </button>
+                            <button class="btn btn-default show-pdf">
+                                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                <span class="hidden-xs"> PDF</span> 
+                            </button>
+                            <button class="btn btn-default show-image">
+                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                <span class="hidden-xs"> Image</span>
+                            </button>
+                            <button class="btn btn-default show-office">
+                                <i class="fa fa-file-word-o" aria-hidden="true"></i>
+                                <span class="hidden-xs"> Office</span>
+                            </button>
+                        </div>
+                        <span class="help-block">&nbsp;</span>
+                    </li>
+                    <li class="form-group">
+                        <div id="document-text" class="cvContent">
+                        </div>
+                    </li>
+                    <li class="form-group hidden">
+                        <div id="document-pdf">
+                        </div>
+                    </li>
+                    <li class="form-group hidden">
+                        <div id="document-office">
+                        </div>
+                    </li>
+                    <li class="form-group hidden">
+                        <div id="document-image">
+                        </div>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+    </div>
+</div>

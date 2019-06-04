@@ -1,0 +1,67 @@
+<div class="col-md-12 col-lg-6">
+    <div class="form-group search-wrapper">
+        <div class="input-group">
+            <input type="text" class="form-control searchCriteria" id="searchCriteria" name="searchCriteria" placeholder="{{translate "search"}}" />
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="button" id="execute-search">
+                    <i class="fa fa-search"></i>
+                </button>    
+                <div class="btn-group">
+                    <a href="javascript:void(0);" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="past-search">
+                        <i class="fa fa-clock-o"></i>
+                    </a>
+                    <ul id="searchItems" class="dropdown-menu dropdown-search"></ul>
+                </div>
+                <button class="btn btn-default" type="button" id="clear-search">
+                    <i class="fa fa-remove"></i>
+                </button>
+                <a class="btn btn-success wb" id="create-candidate" href="#/candidate/create">
+                    <i class="fa fa-user"></i>
+                    <span class="visible-md-inline visible-lg-inline">
+                        {{translate "newCandidate"}}
+                    </span>
+                </a>
+                <a class="btn btn-success wb" id="create-client" href="#/client/create">
+                    <i class="fa fa-address-card"></i>
+                    <span class="visible-md-inline visible-lg-inline">
+                        {{translate "newClient"}}
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <span class="help-block"></span>
+</div>
+<div class="col-md-12 col-lg-6 searchTitleDetail marginBottom10">
+    {{!-- {{#if (hasPermission 'viewSearchTitleDetail_People')}} --}}
+    <span class="lead">
+        <span class="search-title"></span><small class="search-title-edited"></small>
+        {{#if searchTitle}}
+        
+        <div class="dropdown save-search-dropdown">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                {{translate "details"}} <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-right save-search-detail">
+            </ul>
+        </div>
+
+        <div class="btn-group save-search-dropdown">
+            <button class="btn btn-default save-search-title {{searchTitleSearchText}}" type="button">{{translate searchTitleSearchText}}</button>
+            {{#if editted}}
+            <div class="btn-group save-search-title-edited">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a class="save-as" href="#">{{translate "saveAs"}}</a></li>
+                    <li><a class="discard-changes" href="#">{{translate "discardChanges"}}</a></li>
+                </ul>
+            </div>
+            {{/if}}
+        </div>
+        {{/if}}  
+    </span>
+    {{!-- {{/if}} --}}
+</div>

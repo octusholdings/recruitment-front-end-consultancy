@@ -1,0 +1,67 @@
+<div class="input-group control-group marginBottom10 
+    {{#if this.id}}
+        {{#if loadingDocuments}}
+            has-warning
+        {{else}}
+            {{#if this.cvList.length}}
+            {{else}}
+                has-error
+            {{/if}}
+        {{/if}}
+    {{/if}}">
+    <span class="input-group-addon width5">
+        <i class="fa fa-user" aria-hidden="true"></i> {{translate "candidate"}}
+    </span>
+    <div class="tt-wrapper">
+        <i class="tt-spinner fa fa-refresh fa-spin fa-fw"></i>
+        <input type="text" class="name-input form-control width40" value="{{this.name}}" placeholder="{{translate "candidateName"}}" autocomplete="off" {{#if lockCandidate}}disabled="disabled"{{/if}}>
+    </div>
+    <span class="input-group-addon">
+        <i class="fa fa-file-text-o" aria-hidden="true"></i> {{translate "cv"}}
+    </span>
+        <span class="input-group-addon bootstrap-select-wrapper cv-list">
+            {{#if this.id}}
+                {{#if loadingDocuments}}
+                    <select class="form-control cv-dropdown" name="cv" disabled="disabled">
+                        <option value="null">{{translate "loading"}}</option>
+                    </select>
+                {{else}}
+                    {{#if this.cvList.length}}
+            		<select class="form-control cv-dropdown" name="cv" multiple data-container="body" data-selected-text-format="count">
+            			{{#each this.cvList}}
+            				<option value="{{this.id}}" {{#if this.selected}}selected="selected"{{/if}}>
+                                {{#if this.displayName}}
+                                    {{this.displayName}}
+                                {{else}}
+                                    {{this.fileName}}
+                                {{/if}}
+                            </option>
+            			{{/each}}
+            		</select>
+            	   {{else}}
+                    <select class="form-control cv-dropdown" name="cv" disabled="disabled">
+                    	<option value="null">{{translate "noCVsAvailable"}}</option>
+                    </select>
+                    {{/if}}
+    	       {{/if}}
+           {{else}}
+                <select class="form-control cv-dropdown" name="cv" disabled="disabled">
+                    <option value="null">{{translate "noCVsAvailable"}}</option>
+                </select>
+           {{/if}}
+        </span>
+
+    <span class="input-group-btn">
+        <button class="btn btn-xs btn-default btn-refresh-cv" type="button" data-tooltip="{{translate "refresh"}}" data-placement="left" {{#unless id}}disabled="disabled"{{/unless}}>
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+        </button>
+        <a class="btn btn-xs btn-default btn-upload-cv" style="display: inline-block;" {{#if id}}href="#/candidate/{{id}}/documents"{{/if}} target="_blank" data-tooltip="{{translate "upload"}}" data-placement="left" >
+            <i class="fa fa-upload" aria-hidden="true"></i>
+        </a>
+        {{#unless lockCandidate}}
+        <button class="btn btn-xs btn-danger input-remove-candidate btn-remove-candidate" type="button" data-tooltip="{{translate "delete"}}" data-placement="left">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        {{/unless}}
+    </span>
+</div>

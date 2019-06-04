@@ -1,0 +1,46 @@
+../libs/pl-component/fullcalendar/					1.6.0
+../libs/pl-component/jQRangeSlider/					5.1
+
+
+Content/libs/pl-component/fullcalendar/css/_no-fullcalendar-bootheme.css
+Content/libs/pl-component/fullcalendar/css/fullcalendar.css
+Content/libs/pl-component/fullcalendar/css/fullcalendar.print.css
+Content/libs/pl-component/fullcalendar/css/fullcalendar-bootheme.css
+Content/libs/pl-component/fullcalendar/js/fullcalendar.js
+Content/libs/pl-component/fullcalendar/js/fullcalendar.min.js
+Content/libs/pl-component/fullcalendar/js/gcal.js
+Content/libs/pl-component/fullcalendar/less/fullcalendar.less
+Content/libs/pl-component/fullcalendar/less/fullcalendar.print.less
+Content/libs/pl-component/fullcalendar/less/fullcalendar-bootheme.less
+Content/libs/pl-component/fullcalendar/sass/_fullcalendar.scss
+Content/libs/pl-component/fullcalendar/sass/_fullcalendar.print.scss
+
+Content/libs/pl-component/jQRangeSlider/css/classic.css
+Content/libs/pl-component/jQRangeSlider/css/classic-min.css
+Content/libs/pl-component/jQRangeSlider/css/iThing.css
+Content/libs/pl-component/jQRangeSlider/css/iThing-min.css
+Content/libs/pl-component/jQRangeSlider/css/jQRangeSlider-bootheme.css
+Content/libs/pl-component/jQRangeSlider/js/jQAllRangeSliders-min.js
+Content/libs/pl-component/jQRangeSlider/js/jQAllRangeSliders-withRuler-min.js
+Content/libs/pl-component/jQRangeSlider/js/jQDateRangeSlider-min.js
+Content/libs/pl-component/jQRangeSlider/js/jQDateRangeSlider-withRuler-min.js
+Content/libs/pl-component/jQRangeSlider/js/jQEditRangeSlider-min.js
+Content/libs/pl-component/jQRangeSlider/js/jQEditRangeSlider-withRuler-min.js
+Content/libs/pl-component/jQRangeSlider/js/jQRangeSlider-min.js
+Content/libs/pl-component/jQRangeSlider/js/jQRangeSlider-withRuler-min.js
+Content/libs/pl-component/jQRangeSlider/less/jQRangeSlider-bootheme.less
+Content/libs/pl-component/jQRangeSlider/css/icons-classic/label.png
+Content/libs/pl-component/jQRangeSlider/css/icons-classic/resultset_next.png
+Content/libs/pl-component/jQRangeSlider/css/icons-classic/resultset_previous.png
+Content/libs/pl-component/jQRangeSlider/sass/_jQRangeSlider-bootheme.scss
+
+
+CHANGE 2.0
+----------------------------------------------------------------------------
+Content/libs/pl-component/fullcalendar/js/fullcalendar.js
+
+row	- code
+-----------
+710 - element = $("<div class='fc-header' style='width:100%'/>")
+714 - $("<ul class='fc-navigation'/>")
+731 - var e = $("<li class='fc-header-" + position + "'/>");

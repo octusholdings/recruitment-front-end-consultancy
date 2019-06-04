@@ -1,0 +1,49 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">
+		    	{{translate "stakeholders" }}
+	    	</h4>
+		</div>
+		<div class="modal-body stakeholders-modal">
+			<div class="label-legend">
+			    <ul class="list-inline">
+			        <li><span class="label label-candidate"></span> {{translate "candidate"}}</li>
+			        <li><span class="label label-client"></span> {{translate "clientPerson"}}</li>
+			        <li><span class="label label-company"></span> {{translate "company"}}</li>
+			        <li><span class="label label-job"></span> {{translate "job"}}</li>
+			    </ul>
+			</div>
+		    <h5>{{translate "candidate" }}:</h5>
+		    <div class="tt-wrapper">
+		    	<i class="tt-spinner fa fa-refresh fa-spin fa-fw"></i>
+		    	<input type="text" class="form-control candidate-input" autocomplete="off">
+		    </div>
+		    <h5>{{translate "clientPerson" }}:</h5>
+		    <div class="tt-wrapper">
+		    	<i class="tt-spinner fa fa-refresh fa-spin fa-fw"></i>
+		    	<input type="text" class="form-control client-input" autocomplete="off">
+		    </div>
+		    <h5>{{translate "company" }}:</h5>
+		    <div class="tt-wrapper">
+		    	<i class="tt-spinner fa fa-refresh fa-spin fa-fw"></i>
+		    	<input type="text" class="form-control company-input" autocomplete="off">
+		    </div>
+		    <h5>{{translate "job" }}:</h5>
+		    <div class="tt-wrapper">
+		    	<i class="tt-spinner fa fa-refresh fa-spin fa-fw"></i>
+		    	<input type="text" class="job-input form-control" autocomplete="off">
+		    </div>
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger cancel-range" data-dismiss="modal">
+			    	{{translate "no" }}
+			    </button>
+			    <button type="submit" class="btn btn-success confirm-range">
+			    	{{translate "yes" }}
+			    </button>
+			</div>
+		</div>
+	</div>
+</div>

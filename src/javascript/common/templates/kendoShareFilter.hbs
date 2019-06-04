@@ -1,0 +1,22 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+		    {{translate 'shareSearch'}}
+		</div>
+		<div class="modal-body form-horizontal overflow-y-visible is-tall">
+			<p>Share this search setting with your fellow colleagues</p>
+	    	<div class="col-sm-12">
+	    		<div class="form-group">
+					<input class="form-control consultant-name" type="text" placeholder="Consultant Name">
+					<span class="help-block">Enter your colleague name to share this filter with</span>
+				</div>
+		    </div>
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group">
+		    	<button class="btn btn-danger" data-dismiss="modal">{{translate "cancel" }}</button>
+		    	<button class="btn btn-success share-filter" data-dismiss="modal" disabled="disabled">{{translate "share" }}</button>
+			</div>
+		</div>
+	</div>
+</div>

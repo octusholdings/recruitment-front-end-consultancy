@@ -1,0 +1,181 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - THUMBNAILS 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.thumbnail {
+	padding: 5px;
+	border-color: @booBorderColor;// #d3d6d7;
+	.box-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+
+	.img-desc { 
+		font-size: @fontSizeSmall;
+		line-height: 16px;
+		color: #777777
+	}
+
+	.action {
+		padding: 0 9px;        
+        .clearfix();
+		.btn {
+			margin-bottom: 2px;
+		}
+	}
+
+	.caption {
+        .clearfix();
+		.action {
+			padding: 0;
+		}	
+	} 	
+}
+
+
+.thumbnail-condensed,
+.thumbnails.thumbnail-condensed .thumbnail {
+	padding: 0;
+}
+
+.thumbnail.well-nice {
+	background-color: @wellBackground;
+	border-color: @white;
+	.box-shadow(0 1px 2px rgba(0, 0, 0, 0.30));
+}
+
+.thumbnail.well-black {
+	border-color: lighten(@grayDarker, 5%);
+}
+
+.well-black .thumbnail.well-black {
+	border-color: lighten(@grayDarker, 5%);
+}
+
+.thumbnail.well-impressed {
+	border-color: @booBorderColor;
+	.box-shadow(inset 0 0 8px rgba(0, 0, 0, 0.06), inset 0 0 2px rgba(0, 0, 0, 0.15), inset 1px 1px 1px rgba(0, 0, 0, 0.055), 0 1px 0 rgba(255, 255, 255, 1));
+}
+
+.thumbnail.well-black.well-impressed {
+	border: 1px solid @grayDarker;
+	.box-shadow(inset 0 0 6px rgba(0, 0, 0, 0.7), inset 0 0 2px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, .2));
+}
+
+.well-black .thumbnail.well-impressed {
+	border: 1px solid @wellBlackBorderDarkColor;
+	.box-shadow(inset 0 0 6px rgba(0, 0, 0, 0.7), inset 0 0 2px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, .2));
+}
+
+.well-black .thumbnail.well-black.well-impressed {
+	border: 1px solid @grayDarker;
+	.box-shadow(inset 0 0 6px rgba(0, 0, 0, 0.7), inset 0 0 2px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, .2));
+}
+
+/*
+.thumbnails .well {
+  margin-bottom: 0;
+}
+*/
+
+.well-black .thumbnail {
+	border-color: lighten(@wellBlackBorderLightColor, 10%);
+}
+
+.well-black.thumbnail .caption,
+.well-black .thumbnail .caption,
+.thumbnail .well-black .caption {
+	color: #d1d1d1;
+} 
+
+.well-black.thumbnail .img-desc,
+.well-black .thumbnail .img-desc,
+.thumbnail .well-black .img-desc {
+	color: #b1b1b1;
+} 
+
+// BOO THUMB - IMG SHADOW
+// -------------------------
+// set shadow for img TYPE 1 (fluid)
+// ---------------------------------
+
+.outer {
+  position: relative;
+  z-index: 1
+} 
+
+.in-shadow,
+.vignette {
+	> img {
+		width: 100%;
+		position: relative;
+		z-index: -1; 
+	} 
+}
+
+.in-shadow {
+	.box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.75));
+}	
+.vignette {
+	.box-shadow(inset 0 0 60px rgba(0, 0, 0, 0.85));
+} 
+
+// set shadow for img TYPE 2 (fix)
+// ---------------------------------
+
+.img-shadow {
+	position: relative;
+	float: left;
+	// max-width: 100%;
+	&::before {  
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		content: "";
+		.border-radius(@baseBorderRadius);
+		.box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.75));
+	}
+
+	> img {
+		float: left;
+		.border-radius(@baseBorderRadius);
+	}
+
+	&.pull-right {
+		float: right;
+	}
+}
+
+// set radius for img (+ type1)
+// ---------------------------------
+.img-radius,
+.img-radius > img {
+	.border-radius(@baseBorderRadius);
+}
+
+.img-radius-small,
+.img-radius-small > img {
+	.border-radius(@borderRadiusSmall);
+}
+
+.img-radius-large,
+.img-radius-large > img {
+	.border-radius(@borderRadiusLarge);
+}
+
+.img-radius-top,
+.img-radius-top > img {
+	.border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+}
+.img-radius-bottom,
+.img-radius-bottom > img {
+	.border-radius(0 0 @baseBorderRadius @baseBorderRadius);
+}

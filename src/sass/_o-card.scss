@@ -1,0 +1,13 @@
+// Octus Modern Card
+// ______________________________________________
+.o-card { min-width:30rem; background-color:#fff; box-shadow: 0 1px 2px rgba(0,0,0,.3); padding:2.4rem; }
+	.o-card-header { display:flex; justify-content:space-between; align-items:center; }
+		.o-card-title { margin:0 .8rem 0 0; }
+
+// Octus Modern Table
+// ______________________________________________
+@media all and (max-width:767px) {
+	.o-card { padding:1.6rem; }
+}
+
+.o-panel { background-color:#fff; box-shadow: 0 1px 2px rgba(0,0,0,.3); padding:1.6rem; }

@@ -1,0 +1,36 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - LAYOUTS 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+// Container (centered, fixed-width layouts)
+.container {
+  .container-fixed();
+}
+
+// Fluid layouts (left aligned, with sidebar, min- & max-width content)
+.container-fluid {
+  padding-right: @gridGutterWidth;
+  padding-left: @gridGutterWidth;
+  .clearfix();
+}
+
+// Fluid layouts (full with content)
+.container-full { 
+    padding-right: 0;
+    padding-left: 0;  
+    .page-head,
+    .navbar-page { 
+        margin-right: 0; 
+        margin-left: 0; 
+    }        
+}
+

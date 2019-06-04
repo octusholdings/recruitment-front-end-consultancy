@@ -1,0 +1,313 @@
+/* FULL SCREEN SEARCH
+________________________________________ */
+
+// VARIABLES
+// __________________________________________________________________
+
+$text-normal:#767c83;
+$text-dark:#444C5C;
+
+$gray-light:#f0f2f4;
+$gray-normal:#9ba4b0;
+
+$green:#78A5A3;
+$yellow:#E1B16A;
+$red:#CE5A57;
+$black: $text-dark;
+
+$blue:#1862ab;
+
+
+// Search CONTAINER
+// __________________________________________________________________
+.morphsearch {
+	width: 0;
+	min-height: 0;
+	background: $gray-light;
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	right: 0;
+    opacity: 0;
+	transform-origin: 100% 0;
+	transition-property: min-height, width, top, right, opacity;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.morphsearch.is-open {
+	width: 100%;
+	// min-height: 100%;
+	height: calc(100% - 50px);
+	top: 0;
+	right: 0;
+    opacity: 1;
+}
+
+.morphsearch-content,
+.morphsearch-form-container { max-width:110rem; width:90%; margin:0 auto; min-width:30rem; }
+
+
+// Search FORM
+// __________________________________________________________________
+.morphsearch-form {
+	width: 100%;
+	height: 4rem;
+	margin: 0 auto;
+    padding:0;
+	position: relative;
+	transition-property: width, height, transform;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.morphsearch.is-open .morphsearch-form {
+	height: 9.2rem;
+	transform: translate3d(0,5rem,0);
+}
+
+@keyframes load {
+  0% { transform:rotate(0deg); }
+  100% { transform:rotate(360deg); }
+}
+
+.morphsearch-form.is-loading:after { content:''; width:3.6rem; height:3.6rem; border-radius:50%; display:block; border:.2rem solid $text-normal; border-top-color: transparent; position:absolute; top:calc(50% - 1.8rem); right:3.6rem; animation:load 1s infinite linear; }
+
+.morphsearch-input {
+	width: 100%;
+	height: 100%;
+	padding: 0 10% 0 1rem;
+	font-weight: 600;
+	border: none;
+	background: #fff;
+    border-radius: 3px;
+	font-size: 1.2rem;
+	color: $red;
+	border:.1rem solid transparent;
+	transition: font-size 0.5s cubic-bezier(0.7,0,0.3,1), border-color .25s;
+}
+input.morphsearch-input { box-shadow: none; box-shadow: 0 1px 2px rgba(0,0,0,.3); }
+
+.morphsearch.hideInput .morphsearch-input {
+	color: transparent;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.morphsearch.is-open .morphsearch-input {
+	font-size: 4.8rem;
+	border:.1rem solid transparent;
+}
+
+.morphsearch-input:focus,
+.morphsearch-submit:focus {
+	outline: none;
+	border-color:$gray-normal;
+}
+
+.morphsearch.is-open .morphsearch-input:focus { border-color:$gray-normal; }
+
+.morphsearch-submit {
+	position: absolute;
+	width: 6rem;
+	height: 6rem;
+	overflow: hidden;
+	right: 0;
+	top: 50%;
+	border: none;
+	pointer-events: none;
+	transform-origin: 50% 50%;
+    color: $text-normal;
+    cursor: pointer;
+	opacity: 0;
+    font-size: 2.6rem;
+	transform: translate3d(-3rem,-50%,0) scale3d(0,0,1);
+    background-color:transparent;
+}
+.morphsearch-submit .material-icons { font-size:7rem; }
+
+.morphsearch.is-open .morphsearch-submit {
+	pointer-events: auto;
+	opacity: 1;
+	transform: translate3d(-3rem,-50%,0) scale3d(1,1,1);
+	transition: opacity 0.3s, transform 0.3s;
+	transition-delay: 0.5s;
+}
+.morphsearch-form.is-loading .morphsearch-submit { display:none; }
+
+.morphsearch-close {
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+	right: .8rem;
+	top: .8rem;
+	overflow: hidden;
+	cursor: pointer;
+	pointer-events: none;
+	opacity: 0;
+	transform: scale3d(0,0,1);
+    border: none;
+    padding:0;
+    background-color: transparent;
+    font-size:2.6rem;
+}
+
+.morphsearch-close .material-icons { font-size:3.6rem; }
+
+.morphsearch.is-open .morphsearch-close {
+	opacity: 1;
+	pointer-events: auto;
+	transform: scale3d(1,1,1);
+	transition: opacity 0.3s, transform 0.3s;
+	transition-delay: 0.5s;
+}
+
+// Search RESULTS
+// __________________________________________________________________
+.morphsearch-content {
+	color: $text-dark;
+	margin-top: 7.2rem;
+	padding: 0;
+	height: 0;
+	overflow: hidden;
+	background: transparent;
+	pointer-events: none;
+	opacity: 0;
+	display:flex;
+}
+
+.morphsearch.is-open .morphsearch-content {
+	opacity: 1;
+	height: auto;
+	overflow: visible;
+	pointer-events: auto;
+	transition: opacity 0.3s 0.5s;
+}
+
+.morphsearch-column {
+	width: 30%;
+	opacity: 0;
+    list-style-type: none;
+	transform: translateY(100px);
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.morphsearch.is-open .morphsearch-column:first-child {
+	transition-delay: 0.4s;
+}
+
+.morphsearch.is-open .morphsearch-column:nth-child(2) {
+	transition-delay: 0.45s;
+}
+
+.morphsearch.is-open .morphsearch-column:nth-child(3) {
+	transition-delay: 0.5s;
+}
+
+.morphsearch.is-open .morphsearch-column {
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+.morphsearch-column:nth-child(2) {
+	margin: 0 5%;
+}
+
+.morphsearch-column-headline {
+	font-size: 1.6rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: $text-normal;
+	padding: .8rem 0;
+}
+
+.round {
+	border-radius: 50%;
+}
+.morphsearch-result-list {
+    height: calc(100vh - 30rem);
+	overflow: auto;
+	padding: 0 .1rem;
+}
+
+// .morphsearch-result-list::-webkit-scrollbar-track { border:none; background-color:transparent; }
+// .morphsearch-result-list::-webkit-scrollbar { width:1.2rem; background-color:transparent; }
+// .morphsearch-result-list::-webkit-scrollbar-thumb { background-color:#b5b5b5; border-radius:.3rem; }
+
+.morphsearch-result {
+	padding: .8rem;
+	display: block;
+	margin: 0 0 .8rem 0;
+	cursor: pointer;
+	border-radius: .3rem;
+    font-size: 0;
+	background-color:$white;
+	box-shadow: 0 1px 2px rgba(0,0,0,.3);
+    border:1px solid transparent;
+    transition: border .25s;
+}
+
+.morphsearch-result:hover,
+.morphsearch-result:focus {
+    border-color:$gray-normal;
+}
+
+.morphsearch-result-image {
+	display: inline-block;
+	width: 4rem;
+    height: 4rem;
+    background-color: $white;
+	margin: 0 1rem 0 0;
+	vertical-align: middle;
+	position:relative;
+	font-size:2.2rem;
+}
+.morphsearch-result-image > .fa { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); }
+.morphsearch-result.is-CANDIDATE .morphsearch-result-image { color:$black; }
+.morphsearch-result.is-CLIENT .morphsearch-result-image { color:$red; }
+.morphsearch-result.is-JOB .morphsearch-result-image { color:$yellow; }
+.morphsearch-result.is-COMPANY .morphsearch-result-image { color:$green; }
+
+.morphsearch-result-info { display:block; }
+
+.morphsearch-result-title { font-size: 1.6rem; font-weight: 500; display:inline-block; vertical-align:middle; max-width:calc(100% - 7.4rem); margin:0; color: $text-dark; transition: color .25s; }
+	.morphsearch-result:hover .morphsearch-result-title { color: $blue; }
+
+.morphsearch-result:focus { outline:none; }
+.morphsearch-result-details { max-height: 0; overflow: hidden; transition: max-height .25s; }
+	.morphsearch-result-details-cell { font-size: 1.2rem; line-height: 1.4; padding: .4rem; }
+
+.morphsearch-result-list:empty { position:relative; }
+	.morphsearch-result-list:empty:after { content:attr(data-no-result); font-size:1.5rem; padding:2rem; display:block; background-color:#fafafa; border-radius:.2rem; }
+
+
+
+@media all and (max-width:1023px) {
+	.morphsearch-result { padding:0 .4rem; }
+	.morphsearch-result-list:empty:after { padding:1.6rem; }
+	.morphsearch-result-image { font-size:2rem; }
+	.morphsearch-result-title { font-size: 1.4rem; }
+}
+
+@media all and (max-width: 767px) {
+	.morphsearch.is-open { min-height:auto; height:100%; overflow:auto; }
+		.morphsearch.is-open .morphsearch-form { height:6.4rem; }
+			.morphsearch.is-open .morphsearch-input { font-size: 3.2rem; padding:0 5rem 0 1rem; }
+			.morphsearch.is-open .morphsearch-submit { transform: translate3d(1rem,-50%,0) scale3d(0.7,0.7,1); }
+			.morphsearch-form.is-loading:after { width:2.4rem; height:2.4rem; top:calc(50% - 1.2rem); right:2.4rem; }
+		.morphsearch-content { flex-direction:column; margin-top:5.6rem; padding-bottom:2.4rem; }
+		.morphsearch-result-list { height:auto; }
+			.morphsearch-column { width:100%; padding:0; }
+			.morphsearch-column:nth-child(2) { margin: 0; }
+
+}
+
+// LABEL LEGEND
+// ________________________________________________
+.morphsearch .label-legend { margin-top:.8rem; }
+	.morphsearch .label-legend .label { background-color:transparent; font-size:1.5rem; margin-right:.4rem; }
+	.morphsearch .label-legend .label-candidate { color: #444C5C; }
+	.morphsearch .label-legend .label-client { color: #CE5A57; }
+	.morphsearch .label-legend .label-company { color: #78A5A3; }
+	.morphsearch .label-legend .label-job { color:#E1B16A; }

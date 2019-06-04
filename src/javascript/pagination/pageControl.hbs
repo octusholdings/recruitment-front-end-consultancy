@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12 pull-right">
+        Page <span class="page"></span> of <span class="totalPages"></span> (<span class="totalResults"></span><span> {{translate "totalResults"}}</span>)
+    </div>
+</div>
+
+{{log this}}
+
+<div class="row">
+    <div class="col-md-12 pull-right">
+        <div class="pagination pagination-boo">
+            <ul>
+                {{#if hasPreviousPage}}
+                    <li><a href="#"  class="previousPage">{{translate "previous"}}</a></li>
+                {{else}}
+                    <li class="disabled"><a href="#" class="previousPage">{{translate "previous"}}</a></li>
+                {{/if}}
+                {{#each pageList}}
+                    {{#equal this ../page }}
+                        <li class="active"><a href="javascript:void(0)" class="selectPage">{{{this}}}</a></li>
+                    {{else}}
+                        <li><a href="javascript:void(0)" class="selectPage">{{{this}}}</a></li>
+                    {{/equal}}
+                {{/each}}
+                {{#if hasNextPage}}
+                    <li><a href="#" class="nextPage">{{translate "next"}}</a></li>
+                {{else}}
+                    <li class="disabled"><a href="#"  class="nextPage">{{translate "next"}}</a></li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</div>

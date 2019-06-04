@@ -1,0 +1,223 @@
+#emailDetailSlide {
+    position: fixed;
+    width: 100%;
+    right: -100%;
+    padding: 8px 13px;
+    padding-top: 13px;
+    bottom: 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 9999999;
+    will-change: transform;
+    transition:transform .5s;
+
+    top: 95px;
+    background: #ededed;
+    border-left: 1px solid #aaa;
+
+    // &::-webkit-scrollbar { 
+    //     display:none; 
+    // }
+
+    .well {
+        background-color: #fff;
+
+        .title {
+            font-weight: normal;
+        }
+
+        .date {
+            text-align: right;
+            color: grey;
+        }
+    }
+
+    .address {
+        color: grey;
+    }
+
+    .emailContentRow .well {
+        margin-bottom: 6px;
+        border: none;
+    }
+
+    .attachmentListRow {
+        transition: bottom 200ms;
+
+        .well {
+            margin-bottom: 14px;
+            transition: box-shadow 200ms;
+
+            &.not-bottom {
+                box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
+            }
+        }
+    }
+}
+
+.emailModal,
+#emailDetailSlide {
+    .download-document {
+        padding: 0 0 0 5px;
+        border: none;
+        background: transparent;
+        color: #317bc8;
+    }
+
+    .download-progress {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 0%;
+        max-width: 100%;
+        background: rgba(49, 123, 200, 0.5);
+        transition: width 200ms;
+    }
+
+    .toolbar a {
+        color: #aaa;
+
+        &:hover {
+            color: #333;   
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #emailDetailSlide {
+        width: 75vw;
+        right: -75vw;
+    }   
+}
+
+@media (min-width: 1024px) {
+    #emailDetailSlide {
+        width: 50vw;
+        right: -50vw;
+    }   
+}
+
+#emailDetail {
+    background: #fff;
+    border-top: none;
+    padding: 0px;
+    border-radius: 4px;
+
+    .email-content {
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
+    }
+
+    .content {
+        margin-top: 15px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .email-body-snippet {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .uncompressed-detail {
+        padding-bottom: 15px;
+    }
+
+    .compressed-detail {
+        background: #ededed;
+        margin: -15px -15px 0px;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    hr {
+        &.hidden-email {
+            margin: 0px -15px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            background: #ededed;
+            cursor: pointer;
+            border-bottom: none;
+
+            &.first-hidden-email {
+                border-top: 0px;
+            }
+
+            &.last-hidden-email {
+                border-bottom: 1px solid #d0d3d7;
+            }
+        }
+
+        &.end-of-email {
+            margin: 0px -15px;
+            border-bottom: none;
+        }
+
+        &.start-of-email {
+            margin: 0px -15px;
+            padding-bottom: 15px;
+            border: none;
+            cursor: pointer;
+
+            &.fully-visible {
+                cursor: auto;
+            }
+        }
+    }
+
+    .older-messages {
+        text-align: center;
+        position: absolute;
+        bottom: 4px;
+        left: 0px;
+        width: 100%;
+        cursor: pointer;
+
+        mark {
+            background: #ededed;
+            padding: 6px 6px 5px;
+        }
+    }
+}
+
+#emailDetailSlide.is-active { 
+    transform:translateX(-100%); 
+    box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+}
+
+.emailModal {
+    #emailDetail {
+        border: 1px solid #ccc;
+        border-bottom: none;
+
+        h4 {
+            padding: 9px 15px;
+            margin: 0px;
+        }
+
+        .address {
+            color: grey;
+        }
+    }
+}
+
+#emailStatus {
+    .has-offline {
+        .input-group-addon {
+            color: #7c6f6f;
+            background-color: #e9e7e7;
+            border-color: #7c6f6f;
+        }
+
+        .form-control {
+            border-color: #7c6f6f;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        }
+    }
+}

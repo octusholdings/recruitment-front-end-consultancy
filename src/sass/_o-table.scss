@@ -1,0 +1,38 @@
+// Octus Modern Table
+// ______________________________________________
+.o-table { width:100%; border-collapse:collapse; border:.1rem solid #e9ecef; }
+		.o-table th { font-size:1.4rem; padding:.8rem; vertical-align:top; height:4rem; cursor:pointer; border-bottom:.2rem solid #dee2e6; font-weight:500; }
+		.o-table td { font-size:1.4rem; padding:.8rem; vertical-align:top; height:4rem; }
+		.o-table tr:nth-child(2n+1) td { background-color:#f1f3f5; }
+		.o-table .align-right { text-align:right; }
+		.o-table .align-right * { text-align:initial; }
+	.o-table tbody:not(:empty) + tfoot { display:none; }
+		.o-table tfoot td { text-align:center; height:6.4rem; }
+
+
+// Modifiers
+// ______________________________________________
+.o-table.is-clickable td { cursor:pointer; }
+	.o-table.is-clickable tr:hover td { background-color:#fff9db; }
+	
+.o-table tr.success td { background-color:#C8E6C9; }
+
+.o-table.is-condensed td,
+.o-table.is-condensed th { font-size:1.2rem; padding:.6rem; height:3.6rem; }
+
+.o-table .btn-group .btn-xs { font-size:1.2rem; }
+// Responsive
+// ______________________________________________
+.o-table.is-condensed td,
+.o-table.is-condensed th { font-size:1.2rem; padding:.6rem; height:3.6rem; }
+
+.o-table .btn-group .btn-xs { font-size:1.2rem; }
+
+.o-table.is-fixed { table-layout:fixed; }
+.word-break { word-break: break-word; }
+
+.o-table .line-through td > * { text-decoration:line-through; }
+
+@media all and (max-width:768px) {
+	.o-table.is-fixed { table-layout:initial; }
+}

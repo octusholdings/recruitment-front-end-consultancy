@@ -1,0 +1,389 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - COLORING 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.border-white { border-color: white; }
+
+// BACKGROUND COLOR
+// ---------------------------------------------------- 
+.bg-white       		{ background-color: #ffffff !important; }
+.bg-white25				{ background-color: rgba(255,255,255, .25); }
+.bg-white50				{ background-color: rgba(255,255,255,  .5); }
+.bg-white75				{ background-color: rgba(255,255,255, .75); }
+	
+.bg-gray-light 			{ background-color: @bgGraylight !important; }
+.bg-gray-medium 		{ background-color: darken(@bgGraylight, 3%) !important; }
+.bg-gray-strong 		{ background-color: darken(@bgGraylight, 6%) !important; }
+	
+.bg-yellow-light 		{ background-color: @bgYellowlight !important; }
+.bg-yellow-medium 		{ background-color: darken(@bgYellowlight, 3%) !important; }
+.bg-yellow-strong 		{ background-color: darken(@bgYellowlight, 6%) !important; }
+	
+.bg-blue-light 			{ background-color: @bgBluelight !important; }
+.bg-blue-medium 		{ background-color: darken(@bgBluelight, 3%) !important; }//#D4E6F9
+.bg-blue-strong 		{ background-color: darken(@bgBluelight, 6%)  !important; }//#BFD9F4
+	
+.bg-green-light 		{ background-color: @bgGreenlight !important; }
+.bg-green-medium 		{ background-color: darken(@bgGreenlight, 3%) !important; }//#D1EED0
+.bg-green-strong 		{ background-color: darken(@bgGreenlight, 6%) !important; }//#BCE5BB
+
+.bg-red-light 		    { background-color: #f2e3e3 !important; }
+.bg-red-medium 		    { background-color: darken(#f2e3e3, 3%) !important; }
+.bg-red-strong 		    { background-color: darken(#f2e3e3, 6%) !important; }
+
+// HR coloring
+.bg-gray-light > hr 	{ border-top-color: darken(@bgGraylight,    9%); border-bottom-color: #ffffff; }
+.bg-gray-medium > hr 	{ border-top-color: darken(@bgGraylight,   12%); border-bottom-color: #ffffff; }
+.bg-gray-strong > hr 	{ border-top-color: darken(@bgGraylight,   15%); border-bottom-color: #ffffff; }
+.bg-yellow-light > hr  	{ border-top-color: darken(@bgYellowlight,  3%); border-bottom-color: #ffffff; }
+.bg-yellow-medium > hr 	{ border-top-color: darken(@bgYellowlight, 12%); border-bottom-color: #ffffff; }
+.bg-yellow-strong > hr 	{ border-top-color: darken(@bgYellowlight, 15%); border-bottom-color: #ffffff; }
+.bg-blue-light > hr 	{ border-top-color: darken(@bgBluelight,    9%); border-bottom-color: #ffffff; }
+.bg-blue-medium > hr 	{ border-top-color: darken(@bgBluelight,   12%); border-bottom-color: #ffffff; }
+.bg-blue-strong > hr 	{ border-top-color: darken(@bgBluelight,   15%); border-bottom-color: #ffffff; }
+.bg-green-light > hr	{ border-top-color: darken(@bgGreenlight,   9%); border-bottom-color: #ffffff; }
+.bg-green-medium > hr	{ border-top-color: darken(@bgGreenlight,  12%); border-bottom-color: #ffffff; }
+.bg-green-strong > hr	{ border-top-color: darken(@bgGreenlight,  15%); border-bottom-color: #ffffff; }
+
+// BACKGROUND GRADIENT
+// ---------------------------------------------------- 
+.bgr-blue {
+	#gradient > .vertical-url(#2b8ce2, #1b6db5, url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJiOGNlMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYjZkYjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+));
+}
+.bgr-black {
+	#gradient > .vertical-url(#3d3d3d, #202020, url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNkM2QzZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMDIwMjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+));	
+}
+.bgr-green {
+	#gradient > .vertical-url(#3c9c29, #1d7813, url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNjOWMyOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZDc4MTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+));	
+}
+.bgr-orange {
+	#gradient > .vertical-url(#f49a39, #d47301, url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0OWEzOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNDczMDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+));	
+}
+.bgr-red {
+	#gradient > .vertical-url(#e93d3d, #b51c23, url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5M2QzZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiNTFjMjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+));	
+}
+.bgr-yellow {
+	#gradient > .vertical-url(#fddf55, #d7b302, url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZGY1NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkN2IzMDIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+));	
+}
+
+// MY BUTTON
+// ---------------------------------------------------- 
+.btn-boo {
+	.buttonBackground(#ffffff, #cbd0da, #333, 0 1px 0 rgba(255, 255, 255, 0.45));			
+
+	&:hover {
+	  background-position: 0 -15px;
+		.transition(background-position 0.1s linear)
+	}
+}
+.btn-blue {
+	.buttonBackground(#32aaff, #006bb7, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-turgu {
+	.buttonBackground(#40c4ec, #1080a2, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-green {
+	.buttonBackground(#7BCA79, #3b9b28, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-yellow {
+	.buttonBackground(#ffea84, #d6b200, #333333, 0 1px 0 rgba(255, 255, 255, 0.6));
+}
+.btn-red {
+	.buttonBackground(#eb5656, #981e1e, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-black {
+	.buttonBackground(#797979, #141414, #fff, 0 -1px 0 rgba(0, 0, 0, 0.45));
+}
+.btn-navi {
+	.buttonBackground(#84898d, #353839, #fff, 0 -1px 0 rgba(0, 0, 0, 0.45));		
+}
+.btn-sky {
+	.buttonBackground(#99D1FC, #3594E9, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-orange {
+	.buttonBackground(#ffad51, #d07107, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-slategray {
+	.buttonBackground(#6a96ad, #3b5b6c, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-redlight {
+	.buttonBackground(#eb5656, #a80005, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-behance {
+	.buttonBackground(#0581ff, #053eff, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-dribbble {
+	.buttonBackground(#ff6eaf, #ea4c89, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-envato {
+	.buttonBackground(#7bac5c, #528036, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-facebook {
+	.buttonBackground(#6c8ccf, #3b5998, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));		
+}
+.btn-flickr {
+	.buttonBackground(#3b92fd, #0063dc, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-github {
+	.buttonBackground(#6ba7e3, #4183c4, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-googlea {
+	.buttonBackground(#ef7e73, #db4a39, #fff, 0 -1px 0 rgba(0, 0, 0, 0.45));			
+}
+.btn-html {
+	.buttonBackground(#f48660, #e05828, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));			
+}
+.btn-lastfm {
+	.buttonBackground(#f13d49, #c3000d, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));		
+}
+.btn-linkedin {
+	.buttonBackground(#4faad5, #0e76a8, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));	
+}
+.btn-paypal {
+	.buttonBackground(#6892b5, #1e477a, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));
+}
+.btn-skype {
+	.buttonBackground(#70d1f5, #00aff0, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));
+}
+.btn-wordpress {
+	.buttonBackground(#58a6c9, #21759b, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));
+}
+.btn-youtube {
+	.buttonBackground(#ce332d, #942420, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));
+}
+.btn-twitter {
+	.buttonBackground(#33BCEF, #019AD2, #fff, 0 -1px 0 rgba(0, 0, 0, 0.35));
+}
+
+.btn-group .btn-blue .caret,
+.btn-group .btn-turgu .caret,
+.btn-group .btn-green .caret,
+.btn-orange .caret,
+.btn-red .caret,
+.btn-black .caret,
+.btn-sky .caret,
+.btn-slategray .caret,
+.btn-redlight .caret,
+.btn-navi .caret,
+.btn-behance .caret,
+.btn-dribbble .caret,
+.btn-envato .caret,
+.btn-facebook .caret,
+.btn-flickr .caret,
+.btn-github .caret,
+.btn-googlea .caret,
+.btn-html .caret,
+.btn-lastfm .caret,
+.btn-linkedin .caret,
+.btn-paypal .caret,
+.btn-skype .caret,
+.btn-wordpress .caret,
+.btn-youtube .caret {
+	border-top-color: @white;
+}
+
+// BASE COLOR
+// ---------------------------------------------------- 
+.text-color 				{ color:#333333 !important}
+
+.text-aliceblue 			{ color:#f0f8ff !important}
+.text-antiquewhite 			{ color:#faebd7 !important}
+.text-aqua 					{ color:#00ffff !important}
+.text-aquamarine 			{ color:#7fffd4 !important}
+.text-azure 				{ color:#f0ffff !important}
+.text-beige 				{ color:#f5f5dc !important}
+.text-bisque 				{ color:#ffe4c4 !important}
+.text-black 				{ color:#000000 !important}
+.text-blanchedalmond 		{ color:#ffebcd !important}
+.text-blue 					{ color:#0000ff !important}
+.text-blueviolet 			{ color:#8a2be2 !important}
+.text-brown 				{ color:#a52a2a !important}
+.text-burlywood 			{ color:#deb887 !important}
+.text-cadetblue 			{ color:#5f9ea0 !important}
+.text-chartreuse 			{ color:#7fff00 !important}
+.text-chocolate 			{ color:#d2691e !important}
+.text-coral 				{ color:#ff7f50 !important}
+.text-cornflowerblue 		{ color:#6495ed !important}
+.text-cornsilk 				{ color:#fff8dc !important}
+.text-crimson 				{ color:#dc143c !important}
+.text-cyan 					{ color:#00ffff !important}
+.text-darkblue 				{ color:#00008b !important}
+.text-darkcyan 				{ color:#008b8b !important}
+.text-darkgoldenrod 		{ color:#b8860b !important}
+.text-darkgray 				{ color:#a9a9a9 !important}
+.text-darkgreen 			{ color:#006400 !important}
+.text-darkgrey 				{ color:#a9a9a9 !important}
+.text-darkkhaki 			{ color:#bdb76b !important}
+.text-darkmagenta 			{ color:#8b008b !important}
+.text-darkolivegreen 		{ color:#556b2f !important}
+.text-darkorange 			{ color:#ff8c00 !important}
+.text-darkorchid 			{ color:#9932cc !important}
+.text-darkred 				{ color:#8b0000 !important}
+.text-darksalmon 			{ color:#e9967a !important}
+.text-darkseagreen 			{ color:#8fbc8f !important}
+.text-darkslateblue 		{ color:#483d8b !important}
+.text-darkslategray 		{ color:#2f4f4f !important}
+.text-darkslategrey 		{ color:#2f4f4f !important}
+.text-darkturquoise 		{ color:#00ced1 !important}
+.text-darkviolet 			{ color:#9400d3 !important}
+.text-deeppink 				{ color:#ff1493 !important}
+.text-deepskyblue 			{ color:#00bfff !important}
+.text-dimgray 				{ color:#696969 !important}
+.text-dodgerblue 			{ color:#1e90ff !important}
+.text-firebrick 			{ color:#b22222 !important}
+.text-floralwhite 			{ color:#fffaf0 !important}
+.text-forestgreen 			{ color:#228b22 !important}
+.text-fuchsia 				{ color:#ff00ff !important}
+.text-gainsboro 			{ color:#dcdcdc !important}
+.text-ghostwhite 			{ color:#f8f8ff !important}
+.text-gold 					{ color:#ffd700 !important}
+.text-goldenrod 			{ color:#daa520 !important}
+.text-gray 					{ color:#808080 !important}
+.text-green 				{ color:#008000 !important}
+.text-greenyellow 			{ color:#adff2f !important}
+.text-grey 					{ color:#808080 !important}
+.text-honeydew 				{ color:#f0fff0 !important}
+.text-hotpink 				{ color:#ff69b4 !important}
+.text-indianred 			{ color:#cd5c5c !important}
+.text-indigo 				{ color:#4b0082 !important}
+.text-ivory 				{ color:#fffff0 !important}
+.text-khaki 				{ color:#f0e68c !important}
+.text-lavender 				{ color:#e6e6fa !important}
+.text-lavenderblush 		{ color:#fff0f5 !important}
+.text-lawngreen 			{ color:#7cfc00 !important}
+.text-lemonchiffon 			{ color:#fffacd !important}
+.text-lightblue 			{ color:#add8e6 !important}
+.text-lightcoral 			{ color:#f08080 !important}
+.text-lightcyan 			{ color:#e0ffff !important}
+.text-lightgoldenrodyellow 	{ color:#fafad2 !important}
+.text-lightgray 			{ color:#d3d3d3 !important}
+.text-lightgreen 			{ color:#90ee90 !important}
+.text-lightgrey 			{ color:#d3d3d3 !important}
+.text-lightpink 			{ color:#ffb6c1 !important}
+.text-lightsalmon 			{ color:#ffa07a !important}
+.text-lightseagreen 		{ color:#20b2aa !important}
+.text-lightskyblue 			{ color:#87cefa !important}
+.text-lightslategray 		{ color:#778899 !important}
+.text-lightsteelblue 		{ color:#b0c4de !important}
+.text-lightyellow 			{ color:#ffffe0 !important}
+.text-lime 					{ color:#00ff00 !important}
+.text-limegreen 			{ color:#32cd32 !important}
+.text-linen 				{ color:#faf0e6 !important}
+.text-magenta 				{ color:#ff00ff !important}
+.text-maroon 				{ color:#800000 !important}
+.text-mediumaquamarine 		{ color:#66cdaa !important}
+.text-mediumblue 			{ color:#0000cd !important}
+.text-mediumorchid 			{ color:#ba55d3 !important}
+.text-mediumpurple 			{ color:#9370d8 !important}
+.text-mediumseagreen 		{ color:#3cb371 !important}
+.text-mediumslateblue 		{ color:#7b68ee !important}
+.text-mediumspringgreen 	{ color:#00fa9a !important}
+.text-mediumturquoise 		{ color:#48d1cc !important}
+.text-mediumvioletred 		{ color:#c71585 !important}
+.text-midnightblue 			{ color:#191970 !important}
+.text-mintcream 			{ color:#f5fffa !important}
+.text-mistyrose 			{ color:#ffe4e1 !important}
+.text-moccasin 				{ color:#ffe4b5 !important}
+.text-navajowhite 			{ color:#ffdead !important}
+.text-navy 					{ color:#000080 !important}
+.text-oldlace 				{ color:#fdf5e6 !important}
+.text-olive 				{ color:#808000 !important}
+.text-olivedrab 			{ color:#6b8e23 !important}
+.text-orange 				{ color:#ffa500 !important}
+.text-orangered 			{ color:#ff4500 !important}
+.text-orchid 				{ color:#da70d6 !important}
+.text-palegoldenrod 		{ color:#eee8aa !important}
+.text-palegreen 			{ color:#98fb98 !important}
+.text-paleturquoise 		{ color:#afeeee !important}
+.text-palevioletred 		{ color:#d87093 !important}
+.text-papayawhip 			{ color:#ffefd5 !important}
+.text-peachpuff 			{ color:#ffdab9 !important}
+.text-peru 					{ color:#cd853f !important}
+.text-pink 					{ color:#ffc0cb !important}
+.text-plum 					{ color:#dda0dd !important}
+.text-powderblue 			{ color:#b0e0e6 !important}
+.text-purple 				{ color:#800080 !important}
+.text-red 					{ color:#ff0000 !important}
+.text-rosybrown 			{ color:#bc8f8f !important}
+.text-royalblue 			{ color:#4169e1 !important}
+.text-saddlebrown 			{ color:#8b4513 !important}
+.text-salmon 				{ color:#fa8072 !important}
+.text-sandybrown 			{ color:#f4a460 !important}
+.text-seagreen 				{ color:#2e8b57 !important}
+.text-seashell 				{ color:#fff5ee !important}
+.text-sienna 				{ color:#a0522d !important}
+.text-silver 				{ color:#c0c0c0 !important}
+.text-skyblue 				{ color:#87ceeb !important}
+.text-slateblue 			{ color:#6a5acd !important}
+.text-slategray 			{ color:#708090 !important}
+.text-slategrey 			{ color:#708090 !important}
+.text-snow 					{ color:#fffafa !important}
+.text-springgreen 			{ color:#00ff7f !important}
+.text-steelblue 			{ color:#4682b4 !important}
+.text-tan 					{ color:#d2b48c !important}
+.text-teal 					{ color:#008080 !important}
+.text-thistle 				{ color:#d8bfd8 !important}
+.text-tomato 				{ color:#ff6347 !important}
+.text-turquoise 			{ color:#40e0d0 !important}
+.text-violet 				{ color:#ee82ee !important}
+.text-wheat 				{ color:#f5deb3 !important}
+.text-white 				{ color:#ffffff !important}
+.text-whitesmoke 			{ color:#f5f5f5 !important}
+.text-yellow 				{ color:#ffff00 !important}
+.text-yellowgreen 			{ color:#9acd32 !important}
+
+.text-forest-green 			{ color:#228B22 !important}
+.text-boo-green				{ color:#77A170 !important}
+
+.text-warning 				{ color:#F89406;}
+.text-important 			{ color:#B94A48;}
+
+
+// Style for Test color - This code is possible to remove the 
+.testcolor {
+    > li {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        &.border {
+            width: 20px;
+            margin: 0 5px;
+            border-width: 1px;
+            border-style: solid;
+        }
+    }
+}
+
+.basecolor          	{ background-color: @booColor; }
+.basehighlightcolor 	{ background-color: @booColorHighlight; }
+
+.basedarkercolor    	{ background-color: @booDarkerColor; }
+.basedarkcolor      	{ background-color: @booDarkColor; }
+.baselightcolor     	{ background-color: @booLightColor; }
+.baselightencolor   	{ background-color: @booLighterColor; }
+
+.boosecundarycolor      { background-color: @booSecundaryColor; }
+.boosecundarydarkcolor  { background-color: @booSecundaryDarkColor; }
+.boosecundarylightcolor { background-color: @booSecundaryLightColor; }
+
+.bootriadcolor         	{ background-color: @booTriadColor; }
+.bootriaddarkcolor     	{ background-color: @booTriadDarkColor; }
+.bootriadlightcolor    	{ background-color: @booTriadLightColor; }
+
+
+.boobordercolor         { border-color: @booBorderColor; }
+.booborderdarkcolor     { border-color: @booBorderDarkColor; }
+.booborderlightcolor    { border-color: @booBorderLightColor; }
+
+.boobgcolor         	{ background-color: @booBgColor; }
+.boobgdarkcolor     	{ background-color: @booBgDarkColor; }

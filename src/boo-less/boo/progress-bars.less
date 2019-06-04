@@ -1,0 +1,207 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOOTHEME - PROGRESS BARS 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.progress {
+    #gradient > .vertical(#d6d8dd, #e2e4e8);
+    //background: #d6d8dd;
+    .box-shadow(inset 0 1px 2px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.7));
+    .bar {
+        height: 20px;
+        font-weight: bold;
+        &.two-sec-ease-in-out {
+            .transition(width 2s ease-in-out);
+        }
+        &.four-sec-ease-in-out {
+            .transition(width 4s ease-in-out);
+        }
+        &.six-sec-ease-in-out {
+            .transition(width 6s ease-in-out);
+        }		
+    }
+}
+
+.well-black {
+    .progress {
+        #gradient > .vertical(#2d3032, #393b3f);
+        //background: #2d3032;
+        .box-shadow(inset 0 1px 2px rgba(0,0,0,.5), inset 0 -1px 0 rgba(255,255,255,.15));
+    }	
+}
+
+// progress - size
+// --------------------------------------------------
+
+.progress-medium,
+.progress-small,
+.progress-mini {
+    .border-radius(10px);		
+    .bar {
+        .border-radius(10px);		
+    }
+}
+
+.progress-medium {
+    height: 10px;
+    .bar {
+        height: 10px;
+    }
+}
+
+.progress-small {
+    height: 6px;
+    .bar {
+        height: 6px;
+    }
+}
+
+.progress-mini {
+    height: 4px;
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.2), 0 1px 0 rgba(255,255,255,.6));
+    .bar {
+        height: 4px;
+    }
+}
+
+.progress.vertical {
+    #gradient > .vertical(#d6d8dd, #e2e4e8);
+    .box-shadow(inset 0 1px 2px rgba(0,0,0,.3), inset 1px 0 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255, 1));
+}
+
+.well-black .progress.vertical {
+    #gradient > .vertical(#2d3032, #393b3f);
+    .box-shadow(inset 0 1px 2px rgba(0,0,0,.5), inset 0 -1px 0 rgba(255,255,255,.15));
+}
+
+.progress.vertical.progress-xxlarge,
+.progress.vertical.progress-xxlarge .bar {
+    width: 60px;
+}
+.progress.vertical.progress-xlarge,
+.progress.vertical.progress-xlarge .bar {
+    width: 45px;
+}
+.progress.vertical.progress-large,
+.progress.vertical.progress-large .bar {
+    width: 30px;
+}
+.progress.vertical.progress-medium,
+.progress.vertical.progress-medium .bar {
+    width: 10px;
+}
+.progress.vertical.progress-small,
+.progress.vertical.progress-small .bar {
+    width: 6px;
+}
+.progress.vertical.progress-mini {
+    width: 4px;
+    .box-shadow(inset 0 1px 2px rgba(0,0,0,.3), inset 1px 0 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255, 1));
+}
+
+.progress.vertical.progress-mini .bar {
+    width: 4px;
+}
+
+.progress.vertical {
+    .bar {
+        &.two-sec-ease-in-out {
+            .transition(height 2s ease-in-out);
+        }
+        &.four-sec-ease-in-out {
+            .transition(height 4s ease-in-out);
+        }
+        &.six-sec-ease-in-out {
+            .transition(height 6s ease-in-out);
+        }
+    }
+}
+
+.progress.filled5,
+.progress.filled6 {
+  height: 30px;
+}
+
+.progress.filled2 .filler { margin: 2px; }
+.progress.filled3 .filler { margin: 3px; }
+.progress.filled4 .filler { margin: 4px; }
+.progress.filled5 .filler { margin: 5px; }
+.progress.filled6 .filler { margin: 6px; }
+
+.progress.filled2 .filler .bar { height: 16px; }
+.progress.filled3 .filler .bar { height: 14px; }
+.progress.filled4 .filler .bar { height: 12px; }
+.progress.filled5 .filler .bar { height: 20px; }
+.progress.filled6 .filler .bar { height: 18px; }
+
+// medium
+.progress.progress-medium.filled2 { height: 14px; }
+.progress.progress-medium.filled3 { height: 16px; }
+.progress.progress-medium.filled4 { height: 18px; }
+.progress.progress-medium.filled5 { height: 20px; }
+
+.progress.progress-medium.filled2 .filler .bar,
+.progress.progress-medium.filled3 .filler .bar,
+.progress.progress-medium.filled4 .filler .bar,
+.progress.progress-medium.filled5 .filler .bar { 
+    height: 10px; 
+}
+
+// small
+.progress.progress-small.filled2 { height: 10px; }
+.progress.progress-small.filled3 { height: 12px; }
+.progress.progress-small.filled4 { height: 14px; }
+.progress.progress-small.filled5 { height: 16px; }
+
+.progress.progress-small.filled2 .filler .bar,
+.progress.progress-small.filled3 .filler .bar,
+.progress.progress-small.filled4 .filler .bar,
+.progress.progress-small.filled5 .filler .bar {
+    height: 6px;
+}
+
+// mini
+.progress.progress-mini.filled2 { height: 8px; }
+.progress.progress-mini.filled3 { height: 10px; }
+.progress.progress-mini.filled4 { height: 12px; }
+.progress.progress-mini.filled5 { height: 14px; }
+
+.progress.progress-mini.filled2 .filler .bar,
+.progress.progress-mini.filled3 .filler .bar,
+.progress.progress-mini.filled4 .filler .bar,
+.progress.progress-mini.filled5 .filler .bar {
+    height: 4px;
+}
+
+.progress .filler {
+    position: relative;
+}
+
+.progress-group {
+    margin-bottom: @baseLineHeight;;
+}
+
+.progress-group .progress {
+    margin-bottom: 5px;
+}
+
+.vertical-progressbar-group {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.vertical-progressbar-group .label-field.left {
+    margin-right: 5px
+}
+
+.vertical-progressbar-group .progress + .label-field.left {
+    margin-left: -15px
+}

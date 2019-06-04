@@ -1,0 +1,329 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - STATISTIC BOX 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.statistic-box {
+  	padding: 0;
+	.section-title {
+	  	padding: 0 10px;
+	  	border-bottom: 1px solid @wellBorder;
+	  	text-align: left;
+        .clearfix();
+	}
+	.section-content {
+	  	padding: 9px 10px;
+	  	border-top: 1px solid @white;
+        .clearfix();
+            &.item {
+  	            border-bottom: 1px solid @wellBorder;
+            }
+	}
+	.section-right,
+	.section-left {
+	  	float: left;
+	  	padding: 9px 10px;
+	}
+	.section-wrapper-left {
+	  	float: left;
+	  	border-right: 1px solid @white;
+		.section-left {
+		  	border-right: 1px solid @wellBorder;
+		}
+	}
+	.section-wrapper-right {
+	  	float: left;
+	  	border-left: 1px solid @wellBorder;
+		.section-right {
+		  	border-left: 1px solid @white;
+		}
+	}	
+	.section-icon {
+		.item-icon {
+		  	position: relative;
+		  	display: block;
+		  	padding: 9px 0 9px 7px;
+		  	width: 25px;
+		  	height: 25px;
+		  	text-align: center;
+		  	font-size: 1.26em;
+		}	
+	}	
+}
+
+.well-black .section-title,
+.statistic-box.well-black .section-title {
+  	border-bottom-color: @wellBlackBorderDarkColor;
+}
+
+.well-black .section-content,
+.well-black.statistic-box .section-content {
+  	border-top-color: @wellBlackBorderLightColor;
+}
+
+.well-black .section-content.item,
+.well-black.statistic-box .section-content.item {
+  	border-bottom-color: @wellBlackBorderDarkColor;
+}
+
+.statistic-box.well-black {
+    .section-wrapper-right {
+  	    border-left-color: @wellBlackBorderDarkColor;
+        .section-right {
+		    border-left-color: @wellBlackBorderLightColor;
+		}
+    }
+}
+
+.statistic-box.well-black {
+    .section-wrapper-left {
+	    float: left;
+	    border-right-color: @wellBlackBorderLightColor;
+	    .section-left {
+		    border-right-color: @wellBlackBorderDarkColor;
+	    }
+    }
+}
+
+
+// STATISTIC VALUES
+// -------------------------------------------
+
+.statistic-values {
+  	position: relative;
+  	margin: 0;
+	.indicator[class*="icon-"]:before,
+	.indicator[class*="fontello-icon-"]:before,
+	.indicator[class*="aweso-icon-"]:before,
+	.indicator[class*="fugue-icon-"]:before {
+	  	margin-right: 0.1em;
+	  	width: 0.6em;
+	  	font-size: 1.226em;
+	}
+	sup {
+	  	top: -0.6em;
+	  	font-size: 55%;
+	}
+	sub {
+	  	bottom: 0;
+	  	font-size: 55%;
+	}  
+}
+
+.nav {
+	.statistic-values {
+	  	display: inline-block;
+	}	
+}
+
+.statistic-group {
+  	position: relative;
+	.clearfix();
+	h1.statistic-values,
+	h2.statistic-values,
+	h3.statistic-values,
+	h4.statistic-values,
+	h5.statistic-values,
+	h6.statistic-values {
+	  	line-height: 1.4;
+
+        &.secundary {
+            line-height: 1;
+        }
+
+        > small {
+            color: inherit;
+        }
+	}
+	.progress {
+	  	margin-bottom: 9px;
+	}
+	.bar-info {
+	  	float: right;
+	  	font-size: @fontSizeSmall;
+	}
+
+    p {
+        margin: 0;
+    }
+	
+}
+
+.positive,
+.statistic-values.positive {
+  	color: @booColor;
+      
+}
+
+.negative,
+.statistic-values.negative {
+  	color: spin(@booColor, 160);
+}
+
+.positive-fix,
+.statistic-values.positive-fix {
+    color: #57A957;
+}
+
+.negative-fix,
+.statistic-values.negative-fix {
+    color:#db6464;
+}
+
+// STATISTIC
+// -------------------------------------------
+
+.stat-infobox {
+	.thumbnails {
+  		margin-bottom: 0;
+  		> li {
+		  	margin-bottom: 0
+		}
+  	}
+}
+
+// CIRCLE OBJECT
+// -------------------------------------------
+
+.circle-box {
+ 	margin-bottom: 10px;
+ 	.clearfix();
+}
+
+.circle-header {
+  padding: 8px 0;
+  line-height: 20px;
+}
+
+.circle-content {
+    margin: 0 0 10px;
+
+	display: -webkit-box;   
+    -webkit-box-orient: vertical;/* Safari, Opera, and Chrome */
+	display: -moz-box;      
+    -moz-box-orient: vertical;/* Firefox */
+	display: box;           
+    box-orient: vertical;/* W3C */
+  	
+	-webkit-box-align: center;
+	   -moz-box-align: center;
+		    box-align: center;
+
+	-webkit-box-pack: center;
+	// -moz-box-pack: center;
+	// box-pack: center;
+	&.circle-content:last-child {
+	  	margin: 0 ;
+	}
+}
+
+.circle {
+  	position: relative;
+  	border-radius: 50em;
+  	text-shadow: 0 1px 1px rgba(255,255,255,.8) 
+}
+
+.circle-shadow {
+	.box-shadow(0 0 1px rgba(0,0,0,.2),  0 0px 6px rgba(0,0,0,.2));
+  	text-shadow: 0 1px 1px rgba(255,255,255,.8);
+	&.in {
+  		padding: 5px;
+		.box-shadow(inset 0 1px 2px rgba(0,0,0,.35),inset 0 1px 1px rgba(0,0,0,.1));
+	} 
+}
+
+.circle160 { width:160px; height:160px; }
+.circle150 { width:150px; height:150px; }
+.circle140 { width:140px; height:140px; }
+.circle130 { width:130px; height:130px; }
+.circle120 { width:120px; height:120px; }
+.circle110 { width:110px; height:110px; }
+.circle100 { width:100px; height:100px; }
+.circle90  { width: 90px; height: 90px; }
+.circle80  { width: 80px; height: 80px; }
+.circle70  { width: 70px; height: 70px; }
+.circle60  { width: 60px; height: 60px; }
+
+.circle-content.inpressed {
+  	padding: 4px;
+  	.box-shadow(inset 0 1px 2px rgba(0,0,0,.35),inset 0 1px 1px rgba(0,0,0,.1));
+}
+
+.circle-footer {
+  	line-height: @baseLineHeight;
+  	padding: 8px 0;
+}
+
+.circle input[disabled],
+.circle input[readonly] {
+  	.box-shadow(none);
+  	text-shadow: 0 1px 0 rgba(255,255,255, 1)
+}
+
+.well-black .circle input[disabled],
+.well-black .circle input[readonly] {
+  	color: #f1f1f1 !important;
+  	text-shadow: 0 -1px 0 rgba(0,0,0,.8)
+}
+
+.circle input[disabled].circle-input,
+.circle input[readonly].circle-input  {
+  	.box-shadow(inset 0 1px 1px rgba(0,0,0,.35));
+}
+
+// PIE CHART
+// -------------------------------------------
+
+.easyPieChart {
+  	position: relative;
+  	text-align: center;
+	canvas {
+	  	position: absolute;
+	  	top: 0;
+	  	left: 0;
+	}
+}
+
+// SPARKLINE TOOLTIP
+// -------------------------------------------
+
+// default
+.jqstooltip {
+	.border-radius(@borderRadiusLarger);
+}
+
+// define
+.sparktip {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	visibility: hidden;
+  	padding: 5px 7px;
+  	background: rgb(0,0,0);
+  	background-color: rgba(0,0,0,.9);
+  	color: @white;
+  	text-align: left;
+  	white-space: nowrap;
+  	font-weight: bold;
+  	font-size: @fontSizeSmall;
+  	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99000000', endColorstr='#99000000');
+  	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	.border-radius(@borderRadiusLarger);
+  	border: none;
+  	z-index: @zindexTooltip;
+	.jqsfield {
+	  	color: @white;
+	  	font-family: @sansFontFamily;
+	  	font-size: @fontSizeSmall;
+	  	font-weight: bold;
+	  	text-align: left;
+	}
+}

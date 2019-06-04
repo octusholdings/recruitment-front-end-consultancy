@@ -1,0 +1,124 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - FOOTER 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+// Footer-Fix 
+// -------------------------------------------
+
+#footer-fix {
+  	position: fixed;
+  	bottom: 0;
+  	z-index: @zindexFooterFix;
+  	width: 100%;
+  	height: @baseLineHeight * 2;
+  	background: url("@{imagesPath}/background/transparent-foo-fix.png") repeat scroll 0 0;
+  	background: rgba(43,45,48,.95);
+	.btn-toolbar,
+	.navbar {
+	  	margin-top: 0;
+	  	margin-bottom: 0;
+	}
+	.navbar {
+	  	font-size: @fontSizeBaseLarge;
+		.divider-vertical {
+		  	margin: 0;
+		  	border-right-color: #1b1c1d;
+		  	border-right-color: rgba(255,255,255,.1);
+		  	border-left-color: #4a4c4f;
+		  	border-left-color: rgba(0,0,0,.5);
+		}
+	}
+	.navbar-inverse {
+		.navbar-inner {
+		  	padding-right: 18px;
+		  	padding-left: 18px;
+		  	border: none;
+		  	background: none;
+		  	.border-radius(0);
+		}		
+		.nav {
+			> li {
+				> a {
+				  	color: #aaa;
+				  	text-shadow: 0 1px 1px rgba(0,0,0,.9);
+					.transition(all 0.3s ease-in-out);
+					&:hover {
+					  	color: #fff;
+					}
+				}					
+				.active {
+				  	color: #D6B200;
+				}
+			}
+		}
+	}
+}
+
+// Footer-Fix sidebar 
+// -------------------------------------------
+
+.footer-sidebar {
+  	position: absolute;
+  	bottom: 0;
+  	min-height: @baseLineHeight * 2;
+  	width: @sidebarWidth;
+  	background: #16171a;
+  	background: rgba(22,23,26, 1);
+	.btn-toolbar {
+	  	padding-right: 15px;
+	  	padding-left: 15px;
+	  	text-align: center;
+		.btn-glyph {
+		  	color: #aaa;
+		  	text-shadow: 0 1px 0 rgba(0,0,0, 1);
+		  	font-size: @fontSizeBaseLarge;
+		}
+		
+	}
+}
+
+.sidebar-left {
+	.footer-sidebar {
+	  	left: 0;
+	}	
+}
+
+.sidebar-right {
+	.footer-sidebar {
+	  	right: 0;
+	}	
+}
+
+// Footer-Fix content 
+// -------------------------------------------
+
+.sidebar-left {
+	.footer-content {
+	  	margin-left: @sidebarWidth;
+	  	border-left: 1px solid rgba(255,255,255,.2);
+	}	
+}
+
+.sidebar-right {
+	.footer-content {
+	  	margin-right: @sidebarWidth;
+	  	border-right: 1px solid rgba(255,255,255,.2);
+	}	
+}
+
+.sidebar-hidden {
+	.footer-content {
+	  	margin-right: 0;
+	  	margin-left: 0;
+	}	
+}
+

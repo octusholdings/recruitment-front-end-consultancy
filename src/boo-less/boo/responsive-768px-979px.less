@@ -1,0 +1,158 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - RESPONSIVE - Tablet to desktop 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+		
+	.container-fluid {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.base-layout #header-container {
+	    height: 57px;
+	}
+
+	.page-head {
+		margin: 0 -10px;
+		padding: 0 10px;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+	}
+
+	.sidebar {
+		position: fixed;
+		top: 0px;
+		bottom: 0;
+		z-index: @zindexSidebar;
+	}
+
+	.base-layout .sidebar {
+		top: 57px
+	}
+
+	.sidebar-left {
+		.sidebar {
+			left: 0;
+			width: @sidebarTabletWidth;
+		}
+		.main-content {
+			margin-left: @sidebarTabletWidth;
+		}
+		#footer-sidebar {
+			left: 0;
+		}	
+		.footer-content {
+			margin-left: @sidebarTabletWidth;
+		}		
+	}
+
+	.sidebar-right {
+		.sidebar {
+			right: 0;
+			width: @sidebarTabletWidth;
+		}
+		.main-content {
+			margin-right: @sidebarTabletWidth;
+		}	
+		#footer-sidebar {
+			right: 0;
+		}	
+		.footer-content {
+			margin-right: @sidebarTabletWidth;
+		}			
+	}
+
+	.sidebar-hidden {
+		&.sidebar-left {
+			.main-content {
+				margin-left: 0px;
+			}
+			.footer-content {
+				margin-left: 0px;
+			}			
+		}
+		&.sidebar-right {
+			.main-content {
+				margin-right: 0px;
+			}	
+			.footer-content {
+				margin-right: 0px;
+			}			
+		}
+	}	
+
+	.sidebar .profile .data {
+		display: none;
+	}
+
+	#footer-sidebar {
+		position: fixed;
+		bottom: 0;
+		width: @sidebarTabletWidth;
+	}
+
+	#header-container {
+		height: 86px;
+	}
+
+	#header .header-drawer {
+		margin-top: 0;
+		position: relative;
+		top: 0;
+	}
+
+	.navbar-page {
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+
+	// Form
+	.form-horizontal {
+		.control-label {
+			width: 110px;
+		}
+		.controls {
+			margin-left: 130px;
+		} 		
+	}
+
+ 	
+}
+
+// DESTOP MAX 978
+// -----------------------------------------------------------------------------
+/* RESPONSIVE - Destop max 979 */
+
+@media (max-width: 979px) {
+
+// -----------------------------------------------------------------------------
+// BOO STYLE
+// -----------------------------------------------------------------------------
+
+	.grider[class*="span"],
+	.row-fluid .grider[class*="span"] {
+		display: block;
+		float: none;
+		width: 100%;
+		margin-left: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.thumbnails-inline > li {
+		float: left;
+		margin-right: 5px;
+	}
+
+}
+

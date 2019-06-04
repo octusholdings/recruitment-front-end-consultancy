@@ -1,0 +1,130 @@
+/* 
+ * _settings.scss
+ * ------------------
+ * Settings should only contain declaration for very common
+ * occuring properties and classes. Such as font declaration,
+ * colors, and re-occuring image classes.
+ */
+
+// colors
+// Shades of White
+$white: #fff;
+$color_celeste_approx: #ccc;
+$color_willow_brook_approx: #dff0d8;
+$color_alabaster_approx: #fcfcfc;
+$color_pale_slate_approx: #c4c0c0;
+$color_silver_chalice_approx: #aaa;
+$color_karry_approx: #faebd7;
+$mercury: #e5e5e5;
+$color_mountain_mist_approx: #8e9496;
+$color_raven_approx: #75788b;
+$color_dove_gray_approx: #696969;
+$whisper: #ededed;
+$silver: #c5c5c5;
+$silver185: #b9b9b9;
+$color_smoke: #e6e6e6;
+$color_light_smoke: #eee;
+
+// Shades of Gray
+$color_grayFs: #a8abba;
+$color_shadow_gray: #888;
+$color_gray: grey; 
+$color_boulder: #797979;
+$color_suva_gray: #939393;
+$color_light_gray: #d3d3d3;
+$color_light_gray5: #aaa;
+$color_gray20: #333;
+$color_gray38: #616161;
+$color_gray40: #666;
+$color_gray69: #b0b0b0;
+$color_gray72: #b8b8b8;
+$color_gray83: #d4d4d4;
+$color_gray87: #dedede;
+$color_gray93: #ededed;
+$color_gray95: #f2f2f2;
+$color_gray98: #fafafa;
+
+// Shades of Blue
+$steel_blue: #4682b4;
+$color_eastern_blue_approx: #1b86bc;
+$color_linkedin_blue_approx: #0077b5;
+$color_dodger_blue_approx: #39f;
+$color_science_blue_approx: #0a71cc;
+$color_coral_red_approx: #f93a43;
+$color_pattens: #d9edf7;
+$color_nepal: #94b2c1;
+$color_boston: #3a87ad;
+$color_french_pass: #a9CFE2;
+$color_blue_charcoal: #272b2e;
+$color_periwinkle: #eff0f5;
+$color_blue_gray: #b7b9c1;
+$color_light_blue_gray: #c5c7d2;
+$color_solitude: #ecedef;
+
+// Shades of Red
+$color_persian_red_approx: #c83025;
+$color_persian_red: #c8313e;
+$color_brick_red: #8b222b;
+$color_dark_red: #4d1318;
+$color_dark_red4: #8b0000;
+$red: #f00;
+$brown: #a52a2a;
+$color_old_brick_approx: #9b1d1d;
+$black: #000;
+$color_crimson: #a94442;
+$color_maroon: #af2b37;
+$color_pinkish_white: #f9f2f4;
+
+// Shades of Green
+$color_olivine: #8ab578;
+$color_peppermint: #d4e4cd;
+$color_bilbao: #377d18;
+$color_green: #2baf6d;
+$color_light_green: #31c87c;
+$color_sea_green: #228b56;
+$color_deep_spring_green: #134d30;
+$color_hunter_green: #abab9d;
+
+//Yellow
+$yellow-8: #f08c00;
+
+// Shades of Yellow
+$color_light_yellow: #ffc;
+
+// fonts
+$font_hurtmold: hurtmold;
+
+body {
+	font-size: 13px;
+}
+
+// image files
+.img-file {
+    background-image: url(../img/upload/jpg.png)
+}
+
+.doc-file {
+    background-image: url(../img/upload/doc.png)
+}
+
+.pdf-file {
+    background-image: url(../img/upload/pdf.png)
+}
+
+.xls-file {
+    background-image: url(../img/upload/xls.png)
+}
+
+.zip-file {
+    background-image: url(../img/upload/zip.png)
+}
+
+.default-file {
+    background-image: url(../img/upload/default.png)
+}
+
+a, button, .btn,
+a:active, button:active, .btn:active,
+a:focus, button:focus, .btn:focus, {
+	outline: 0 !important;
+}

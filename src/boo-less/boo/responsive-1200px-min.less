@@ -1,0 +1,129 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - RESPONSIVE - Large desktop and up 
+ * ----------------------------------------------------------------------------- 
+ */
+
+/* RESPONSIVE - Large desktop and up */
+
+@media (min-width: 1200px) {
+
+	// sidebar
+	// ------------------------------------------
+
+	.sidebar {
+	  	top: 0;
+	}
+
+	.base-layout {	
+		.sidebar {
+		  	top: 0;
+		}
+	}
+	.sidebar-left .sidebar,
+	.sidebar-right .sidebar {
+	  	width: @sidebarWidth;
+	}
+
+	// content
+	// ------------------------------------------
+
+	.sidebar-left .main-content {
+	  	margin-left: @sidebarWidth;
+	}
+
+	.sidebar-right .main-content {
+	  	margin-right: @sidebarWidth;
+	}
+
+	.sidebar-hidden.sidebar-left .main-content {
+	  	margin-left: 0px;
+	}
+
+	.sidebar-hidden.sidebar-right .main-content {
+	  	margin-right: 0px;
+	}
+
+	// footer-fix sidebar
+	// ------------------------------------------
+
+	.sidebar-left .footer-sidebar {
+	  	left: 0;
+	  	width: @sidebarWidth;
+	}
+
+	.sidebar-right .footer-sidebar {
+	  	right: 0;
+	  	width: @sidebarWidth;
+	}
+
+	.sidebar-left .footer-content {
+	  	margin-left: @sidebarWidth;
+	}
+
+	.sidebar-right .footer-content {
+	  	margin-right: @sidebarWidth;
+	}
+
+	.sidebar-hidden.sidebar-left .footer-content {
+	  	margin-left: 0px;
+	}
+
+	.sidebar-right.sidebar-hidden .footer-content {
+	  	margin-right: 0px;
+	}
+
+	// control-row
+	// ------------------------------------------
+
+	.row-fluid .controls-row [class*="span"] + [class*="span"], 
+	.row-fluid .controls-row [class*="span"] + .bootstrap-select, 
+	.row-fluid .controls-row .bootstrap-select + [class*="span"] {
+		margin-left: 2.55391%; /*30 2.55391%*/
+	}
+	.row-fluid .controls-row [class*="span"] + .bootstrap-select, 
+	.row-fluid .controls-row .bootstrap-select + [class*="span"] {
+		margin-left: 2.564102564102564%;
+	}
+
+	.controls-row [class*="span"] + [class*="span"].block,
+	.controls-row .btn-group.bootstrap-select + [class*="span"].block {
+	  	margin-left: 0;
+	}
+
+	.hidden-small-desktop {
+	  	display: none;  
+	}
+}
+
+// DESTOP MAX 1200
+// -----------------------------------------------------------------------------
+/* RESPONSIVE - Destop max 1200 */
+
+@media (max-width: 1200px) {
+
+	.grider-item[class*="span"],
+	.row-fluid .grider-item[class*="span"] {
+		display: block;
+		float: none;
+		width: 100%;
+		margin-left: 0;
+		.box-sizing(border-box);
+	}
+
+	h1.text-size,
+	h2.text-size,
+	h3.text-size {
+	  	font-size: 170%;
+	}
+
+	.visible-small-desktop {
+	  	display: none;  
+	}
+}

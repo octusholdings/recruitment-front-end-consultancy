@@ -1,0 +1,139 @@
+../libs/pl-form/bootstrap-addresspicker/				1.4.4
+../libs/pl-form/bootstrap-colorpicker/
+../libs/pl-form/bootstrap-datepicker/
+../libs/pl-form/bootstrap-daterangepicker/				1.1
+../libs/pl-form/bootstrap-datetimepicker/
+../libs/pl-form/bootstrap-multiselect/					1.0.0
+../libs/pl-form/bootstrap-select/
+../libs/pl-form/bootstrap-switch/						1.3
+../libs/pl-form/bootstrap-timepicker/
+../libs/pl-form/jquery.counter/							2.4
+../libs/pl-form/jquery.dualListbox/						1.3
+../libs/pl-form/jquery.elastic/							1.6.11
+../libs/pl-form/jquery.inputmask/						2.0
+../libs/pl-form/jquery.validation/						1.12
+../libs/pl-form/multi-select/							0.9.5
+../libs/pl-form/select2/								3.3.2
+../libs/pl-form/tagmanager/								2.3
+../libs/pl-form/uniform/								2.1.1
+../libs/pl-form/zeroclipboard/							1.1.7
+
+
+Content/libs/pl-form/bootstrap-addresspicker/js/jquery.addressPicker.js
+
+Content/libs/pl-form/bootstrap-colorpicker/css/bootstrap-colorpicker.css
+Content/libs/pl-form/bootstrap-colorpicker/js/bootstrap-colorpicker.js
+Content/libs/pl-form/bootstrap-colorpicker/less/bootstrap-colorpicker.less
+Content/libs/pl-form/bootstrap-colorpicker/img/alpha.png
+Content/libs/pl-form/bootstrap-colorpicker/img/hue.png
+Content/libs/pl-form/bootstrap-colorpicker/img/saturation.png
+Content/libs/pl-form/bootstrap-colorpicker/sass/_bootstrap-colorpicker.scss
+
+Content/libs/pl-form/bootstrap-datepicker/css/bootstrap-datepicker.css
+Content/libs/pl-form/bootstrap-datepicker/js/bootstrap-datepicker.js
+Content/libs/pl-form/bootstrap-datepicker/less/bootstrap-datepicker.less
+Content/libs/pl-form/bootstrap-datepicker/sass/_bootstrap-datepicker.scss
+
+Content/libs/pl-form/bootstrap-daterangepicker/css/bootstrap-daterangepicker.css
+Content/libs/pl-form/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js
+Content/libs/pl-form/bootstrap-daterangepicker/js/date.js
+Content/libs/pl-form/bootstrap-daterangepicker/less/bootstrap-daterangepicker.less
+Content/libs/pl-form/bootstrap-daterangepicker/sass/_bootstrap-daterangepicker.scss
+
+Content/libs/pl-form/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css
+Content/libs/pl-form/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js
+Content/libs/pl-form/bootstrap-datetimepicker/js/locales/...
+Content/libs/pl-form/bootstrap-datetimepicker/less/bootstrap-datetimepicker.less
+Content/libs/pl-form/bootstrap-datetimepicker/sass/_bootstrap-datetimepicker.scss
+
+Content/libs/pl-form/bootstrap-multiselect/js/bootstrap.min.js
+Content/libs/pl-form/bootstrap-multiselect/js/bootstrap-multiselect.js
+
+Content/libs/pl-form/bootstrap-select/css/bootstrap-select.css
+Content/libs/pl-form/bootstrap-select/css/bootstrap-select.min.css
+Content/libs/pl-form/bootstrap-select/js/bootstrap-select.js
+Content/libs/pl-form/bootstrap-select/js/bootstrap-select.min.js
+Content/libs/pl-form/bootstrap-select/less/bootstrap-select.less
+Content/libs/pl-form/bootstrap-select/sass/_bootstrap-select.scss
+
+Content/libs/pl-form/bootstrap-switch/css/bootstrapSwitch.css
+Content/libs/pl-form/bootstrap-switch/js/bootstrapSwitch.js
+Content/libs/pl-form/bootstrap-switch/less/bootstrapSwitch.less
+Content/libs/pl-form/bootstrap-switch/less/deps/mixins.less
+Content/libs/pl-form/bootstrap-switch/less/deps/variables.less
+Content/libs/pl-form/bootstrap-switch/sass/_bootstrapSwitch.scss
+Content/libs/pl-form/bootstrap-switch/sass/deps/mixins.scss
+Content/libs/pl-form/bootstrap-switch/sass/deps/variables.scss
+
+Content/libs/pl-form/bootstrap-timepicker/css/bootstrap-timepicker.css
+Content/libs/pl-form/bootstrap-timepicker/css/bootstrap-timepicker.min.css
+Content/libs/pl-form/bootstrap-timepicker/js/bootstrap-timepicker.js
+Content/libs/pl-form/bootstrap-timepicker/js/bootstrap-timepicker.min.js
+Content/libs/pl-form/bootstrap-timepicker/less/bootstrap-timepicker.less
+Content/libs/pl-form/bootstrap-timepicker/sass/_bootstrap-timepicker.scss
+
+Content/libs/pl-form/jquery.counter/js/jquery.counter.js
+Content/libs/pl-form/jquery.counter/js/jquery.counter.min.js
+
+Content/libs/pl-form/jquery.dualListbox/css/jquery.dualListBox.css
+Content/libs/pl-form/jquery.dualListbox/js/jquery.dualListBox.js
+Content/libs/pl-form/jquery.dualListbox/js/jquery.dualListBox.min.js
+Content/libs/pl-form/jquery.dualListbox/less/jquery.dualListBox.less
+Content/libs/pl-form/jquery.dualListbox/sass/_jquery.dualListBox.scss
+
+Content/libs/pl-form/jquery.elastic/js/jquery.elastic.js
+
+Content/libs/pl-form/jquery.inputmask/js/jquery.inputmask.bundle.js
+Content/libs/pl-form/jquery.inputmask/js/jquery.inputmask.bundle.min.js
+Content/libs/pl-form/jquery.inputmask/js/jquery.inputmask.custom.extensions.js
+
+Content/libs/pl-form/jquery.validation/js/jquery.validate.js
+Content/libs/pl-form/jquery.validation/js/localization/...
+
+Content/libs/pl-form/multi-select/css/multi-select.css
+Content/libs/pl-form/multi-select/css/multi-select-bootheme.css
+Content/libs/pl-form/multi-select/js/jquery.multi-select.js
+Content/libs/pl-form/multi-select/js/jquery.quicksearch.js
+Content/libs/pl-form/multi-select/less/multi-select-bootheme.less
+Content/libs/pl-form/multi-select/img/_switch.png
+Content/libs/pl-form/multi-select/img/switch.png
+Content/libs/pl-form/multi-select/sass/_multi-select-bootheme.scss
+
+Content/libs/pl-form/select2/css/select2.css
+Content/libs/pl-form/select2/img/spinner.gif
+Content/libs/pl-form/select2/js/select2.js
+Content/libs/pl-form/select2/less/select2.less
+Content/libs/pl-form/select2/img/select2.png
+Content/libs/pl-form/select2/img/select2-white.png
+Content/libs/pl-form/select2/img/select2x2.png
+Content/libs/pl-form/select2/sass/select2.scss
+
+Content/libs/pl-form/tagmanager/css/bootstrap-tagmanager.css
+Content/libs/pl-form/tagmanager/js/bootstrap-tagmanager.js
+Content/libs/pl-form/tagmanager/less/bootstrap-tagmanager.less
+Content/libs/pl-form/tagmanager/sass/_bootstrap-tagmanager.scss
+
+Content/libs/pl-form/uniform/css/uniform._base.css
+Content/libs/pl-form/uniform/css/uniform._base.min.css
+Content/libs/pl-form/uniform/css/uniform.default.css
+Content/libs/pl-form/uniform/css/uniform.default.min.css
+Content/libs/pl-form/uniform/css/uniform-bootheme.css
+Content/libs/pl-form/uniform/js/jquery.uniform.js
+Content/libs/pl-form/uniform/js/jquery.uniform.min.js
+Content/libs/pl-form/uniform/less/uniform._base.less
+Content/libs/pl-form/uniform/less/uniform.default.less
+Content/libs/pl-form/uniform/less/uniform-bootheme.less
+Content/libs/pl-form/uniform/img/_no/bg-input.png
+Content/libs/pl-form/uniform/img/bg-input.png
+Content/libs/pl-form/uniform/img/_no/bg-input-focus.png
+Content/libs/pl-form/uniform/img/bg-input-focus.png
+Content/libs/pl-form/uniform/img/_no/sprite.png
+Content/libs/pl-form/uniform/img/sprite.png
+Content/libs/pl-form/uniform/img/sprite-bootheme-uniform.png
+Content/libs/pl-form/uniform/sass/_uniform.base.scss
+Content/libs/pl-form/uniform/sass/_uniform.default.scss
+Content/libs/pl-form/uniform/sass/_uniform-bootheme.scss
+
+Content/libs/pl-form/zeroclipboard/js/ZeroClipboard.js
+Content/libs/pl-form/zeroclipboard/js/ZeroClipboard.min.js
+Content/libs/pl-form/zeroclipboard/js/ZeroClipboard.swf

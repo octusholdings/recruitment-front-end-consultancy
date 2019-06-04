@@ -1,0 +1,44 @@
+<ul class="nav">
+    <li>
+        <button type="button" class="user-bar-button full-screen-search"><i class="user-bar-icon fa fa-search fa-lg"></i></button>
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0);" class="dropdown-toggle old-user-bar-button" data-toggle="dropdown">
+            &nbsp;
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" style="z-index:9999; min-width:250px; max-width:100%;">
+            <li>
+                <a class="overflow-ellipsis" href="{{uiRoot}}/#/user/profile"><b>{{sessionFullName}} ({{sessionUserName}})</b></a>
+            </li>
+
+            <li>
+                <a href="{{uiRoot}}/#/user/profile"><i class="bar-icon fa fa-user"></i>{{translate 'profile'}}: {{sessionMainRole}}  <span class="menuAction pull-right">{{translate 'manage'}}</span> </a>
+            </li>
+            <li>
+                <a href="{{uiRoot}}/#/user/email/status"><i class="bar-icon fa fa-envelope-o"></i>{{translate 'email'}} <span class="menuAction pull-right">{{translate 'manage'}}</span></a>
+            </li>
+
+            <li data-oc-permission="viewUserProfileSettings_Menu">
+                <a href="{{uiRoot}}/#/user/settings"><i class="bar-icon fa fa-flag"></i>{{translate 'settings'}} <span class="menuAction pull-right">{{translate 'manage'}}</span></a>
+            </li>
+
+            {{#if (hasPermissionsForView 'userSettings' 'language')}}
+            <li>
+                <a href="{{uiRoot}}/#/user/locale"><i class="bar-icon fa fa-globe language"></i>{{translate 'language'}} <span class="menuAction pull-right">{{translate 'change'}}</span></a>
+            </li>
+            {{/if}}            
+
+            <li>
+                <a href="{{uiRoot}}/#/user/password"><i class="bar-icon fa fa-key"></i>{{translate 'password'}} <span class="menuAction pull-right">{{translate 'change'}}</span></a>
+            </li>
+                   
+            <li>
+                <a class="about-octus" href="javascript:void(0)"><i class="bar-icon fa fa-info-circle" aria-hidden="true"></i> {{translate "aboutTopNavi"}} <span class="menuAction pull-right">{{translate 'view'}}</span></a>
+            </li>
+            
+            <li>
+                <a href="{{uiRoot}}/#/logout"><i class="bar-icon fa fa-sign-out" aria-hidden="true"></i> {{translate 'signOut'}} <span class="menuAction pull-right">{{translate 'signOut'}}</span></a>
+            </li>
+        </ul>
+    </li>
+</ul>

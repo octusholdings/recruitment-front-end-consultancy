@@ -1,0 +1,271 @@
+//
+// Mixins
+// --------------------------------------------------
+
+
+// UTILITY MIXINS
+// --------------------------------------------------
+
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+
+// Webkit-style focus
+// ------------------
+
+// Center-align a block level element
+// ----------------------------------
+
+// IE7 inline-block
+// ----------------
+
+// Sizing shortcuts
+// -------------------------
+
+// Placeholder text
+// -------------------------
+
+// Text overflow
+// -------------------------
+// Requires inline-block or block for proper styling
+
+// CSS image replacement
+// -------------------------
+
+// FONTS
+// --------------------------------------------------
+
+// FORMS
+// --------------------------------------------------
+
+// Block level inputs
+
+// Mixin for form field states
+
+
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// Border Radius
+// Single Corner Border Radius
+
+// Single Side Border Radius
+
+// Drop shadows
+
+// Transitions
+
+// Transformations
+
+// Backface visibility
+// Prevent browsers from flickering when using CSS 3D transforms.
+// Default value is `visible`, but can be changed to `hidden
+// See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
+
+// Background clipping
+// Heads up: FF 3.6 and under need "padding" instead of "padding-box"
+
+// Background sizing
+
+// Box sizing
+
+// User select
+// For selecting text on the page
+
+// Resize anything
+
+// CSS3 Content Columns
+
+// Optional hyphenation
+
+// Opacity
+
+
+// BACKGROUNDS
+// --------------------------------------------------
+
+// Add an alphatransparency value to any background or border color (via Elyse Holladay)
+
+// Gradient Bar Colors for buttons and alerts
+
+// Gradients
+#gradient {
+	.vertical-url(@startColor: #555, @endColor: #333, @url: none) {
+		background-image: @url;
+		background-color: mix(@startColor, @endColor, 60%);
+		background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+		background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+		background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+		background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+		background-repeat: repeat-x;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str(@startColor)}', endColorstr='#{ie-hex-str(@endColor)}',GradientType=0 );
+	}
+	.vertical-three-colors-setting(@startColor: #ffffff, @colorStop: 0%, @midColor: #ebedf2, @colorMidStop: 2%, @endColor: #c3325f, @colorEndStop: 85%) {
+		background-color: mix(@startColor, @midColor, @endColor, 80%);
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(@colorStop, @startColor), color-stop(@colorMidStop, @midColor), color-stop(@colorEndStop, @endColor));
+		background-image: -webkit-linear-gradient(@startColor @colorStop, @midColor @colorMidStop, @endColor @colorEndStop);
+		background-image:    -moz-linear-gradient(@startColor @colorStop, @midColor @colorMidStop, @endColor @colorEndStop);
+		background-image:      -o-linear-gradient(top, @startColor @colorStop, @midColor @colorMidStop, @endColor @colorEndStop);
+		background-image:         linear-gradient(@startColor @colorStop, @midColor @colorMidStop, @endColor @colorEndStop);
+		background-repeat: no-repeat;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str(@startColor)}', endColorstr='#{ie-hex-str(@endColor)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
+	}
+}
+
+
+// UTILITY MIXINS
+// --------------------------------------------------
+
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+.box-shadow(@shadow1, @shadow2) { 
+  -webkit-box-shadow: @shadow1, @shadow2;
+     -moz-box-shadow: @shadow1, @shadow2;
+          box-shadow: @shadow1, @shadow2;
+}
+
+.box-shadow(@shadow1, @shadow2, @shadow3) { 
+  -webkit-box-shadow: @shadow1, @shadow2, @shadow3;
+     -moz-box-shadow: @shadow1, @shadow2, @shadow3;
+          box-shadow: @shadow1, @shadow2, @shadow3;
+}
+
+.box-shadow(@shadow1, @shadow2, @shadow3, @shadow4) { 
+  -webkit-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
+     -moz-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
+          box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
+}
+
+.box-shadow(@shadow1, @shadow2, @shadow3, @shadow4, @shadow5) { 
+  -webkit-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
+     -moz-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
+          box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
+}
+
+.box-shadow-important(@shadow) { 
+  -webkit-box-shadow: @shadow !important;
+     -moz-box-shadow: @shadow !important;
+          box-shadow: @shadow !important;
+}
+
+.border-radius-important(@radius) { 
+  -webkit-border-radius: @radius !important;
+     -moz-border-radius: @radius !important;
+          border-radius: @radius !important;
+}
+
+
+// Transitions
+.transition(@transition, @transition) {
+  -webkit-transition: @transition, @transition;
+     -moz-transition: @transition, @transition;
+       -o-transition: @transition, @transition;
+          transition: @transition, @transition;
+}
+
+// Reset filters for IE
+
+// COMPONENT MIXINS
+// --------------------------------------------------
+
+// Horizontal dividers
+// -------------------------
+// Dividers (basically an hr) within dropdowns and nav lists
+
+// Button backgrounds
+// ------------------
+
+// Navbar vertical align
+// -------------------------
+// Vertically center elements in the navbar.
+// Example: an element has a height of 30px, so write out `.navbarVerticalAlign(30px);` to calculate the appropriate top margin.
+
+
+// Grid System
+// -----------
+
+// Centered container element
+
+// Table columns
+
+// Make a Grid
+// Use .makeRow and .makeColumn to assign semantic layouts grid system behavior
+
+
+// The Grid
+
+//
+// Simple Grid system
+// --------------------------------------------------
+
+// Grid
+.make-row() {
+  // Negative margin the row out to align the content of columns
+  margin-left: -@simple-grid-column-padding;
+  margin-right: -@simple-grid-column-padding;
+  // Then clear the floated columns
+  .clearfix();
+}
+.make-column(@columns) {
+  @media (min-width: @simple-grid-float-breakpoint) {
+    float: left;
+    // Calculate width based on number of columns available
+    width: percentage(@columns / @simple-grid-columns);
+  }
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Set inner padding as gutters instead of margin
+  padding-left: @simple-grid-column-padding;
+  padding-right: @simple-grid-column-padding;
+  // Proper box-model (padding doesn't add to width)
+  .box-sizing(border-box);
+}
+.make-column-offset(@columns) {
+  @media (min-width: @simple-grid-float-breakpoint) {
+    margin-left: percentage(@columns / @simple-grid-columns);
+  }
+}
+.make-column-push(@columns) {
+  @media (min-width: @simple-grid-float-breakpoint) {
+    left: percentage(@columns / @simple-grid-columns);
+  }
+}
+.make-column-pull(@columns) {
+  @media (min-width: @simple-grid-float-breakpoint) {
+    right: percentage(@columns / @simple-grid-columns);
+  }
+}
+
+// Text overflow
+//
+// Requires inline-block or block for proper styling
+.text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Retina images
+//
+// Retina background-image support with non-retina fall back
+.retina-image(@file-1x, @file-2x, @width-1x, @height-1x) {
+  background-image: url("@{file-1x}");
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url("@{file-2x}");
+    background-size: @width-1x @height-1x;
+  }
+}
+
+// ----------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------

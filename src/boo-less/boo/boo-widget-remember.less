@@ -1,0 +1,98 @@
+// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * BOO - WIDGET - Remember 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.widget-remember {	
+	.quick-menu-icon {
+	  	float: right;
+	  	margin-bottom: 0;
+	}
+	.widget-list {		
+		.tags { 
+			.label {
+		  		margin: 3px 0 0 5px;
+		  		background-color: #d7e3fb;
+		  		color: @linkColor;
+		  		text-shadow: 0 1px 0 rgba(255,255,255,.6);
+		  		font-weight: normal;
+				+ .label {
+			  		margin-left: 3px;
+				}
+			}
+		}
+		.category {
+		  	color: @grayLight;
+		  	font-weight: bold;
+		  	font-size: @fontSizeSmall;
+		}
+		.date {
+		  	float: right;
+		  	margin-left: 10px;
+		  	color: #3399ff;
+		  	font-weight: normal;
+		  	font-size: @fontSizeSmall;
+		}
+		.today {
+			.date {
+			  	color: @linkColor;
+			  	font-weight: bold;
+			}	
+		}
+		.completed { 
+			a,
+			span,
+			.title,			
+			.tags .label {
+		  		color: @grayLight !important;
+		  	}
+		  	.tags .label {
+		  		background-color: #ededed !important;
+		  	}
+			.priority-label .label {
+			  	background: #d4d4d4;
+			  	.box-shadow(none);
+			} 
+			.quick-menu .edit {
+			  	display: none;
+			}	 	
+		}				
+	}
+}
+
+.priority-label {
+  	float: left;
+	.label {
+		display: block;
+		margin: 4px 10px 0 0;
+		padding: 0;
+		width: 18px;
+		height: 18px;
+		background-color: #bbb;
+		.box-shadow(inset 0px 1px 1px rgba(0,0,0,.55), inset 0px 2px 5px -3px rgba(0,0,0,.15), inset 0px 1px 0 rgba(255,255,255,.75));
+	}
+}
+
+.today .priority-label .label {
+	#gradient > .vertical(#a4db8c, #61c419);
+}
+
+.routime .priority-label .label {
+	#gradient > .vertical(#7db9e8, #4f85dd);
+}
+
+.urgent .priority-label .label {
+	#gradient > .vertical(#fc942d, #ff572d);
+}
+
+.high .priority-label .label {
+	#gradient > .vertical(#ff5b5b, #c93838);
+}

@@ -1,0 +1,45 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">
+                {{translate "addNote"}}
+            </h4>
+        </div>
+        <div class="modal-body">
+            <ul class="list-unstyled form-list form-horizontal list-bordered dotted">
+                <li class="form-group">
+                    <label class="control-label col-sm-3">{{translate "type"}} <span class="requiredInput">*</span></label>
+                    <div class="col-sm-9">
+                        <select id="type" class="type form-control" name="type"></select>
+                        <span class="help-block"></span>
+                    </div>
+                </li>
+
+                <li class="form-group">
+                    <div class="candidate-list"></div>
+                    <div class="company-list"></div>
+                    <div class="client-list"></div>
+                    <div class="job-list"></div>
+                </li>
+
+                <li class="form-group">
+                    <label class="control-label col-sm-3">{{translate "content"}} <span class="requiredInput">*</span></label>
+                    <div class="col-sm-9">
+                            <textarea id="note-editor"
+                                    class="input-block-level content form-control"
+                                    placeholder="{{translate "content"}}"
+                                    name="content"
+                                    rows="8"></textarea>
+                        <span class="help-block"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger btn-close" data-dismiss="modal">{{translate "close"}}</button>
+                <button type="submit" class="btn btn-success addNote" disabled="disabled">{{translate "addNote"}}</button>
+            </div>
+        </div>
+    </div>
+</div>

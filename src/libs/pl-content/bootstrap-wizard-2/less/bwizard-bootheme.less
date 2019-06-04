@@ -1,0 +1,284 @@
+﻿// ----------------------------------------------------
+// ADMIN TEMPLATE | BOO Admin Template
+// --------------------------------------
+// version       : 12.05.2013 - 2.0.0
+// copyright     : (c) 2013 Petr Marasek
+// contact       : gootoboo@gmail.com
+/* 
+ * -----------------------------------------------------------------------------
+ * WIZARD - BWIZARD 
+ * ----------------------------------------------------------------------------- 
+ */
+
+
+.bwizard .section-content,
+.well-black.bwizard .section-content {
+  padding: 9px 10px;
+  border-top: none;
+  border-bottom: none;
+}
+
+.bwizard {
+    position: relative;
+    .well {
+        margin: 3px 0
+    }
+    .bwizard-steps {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        font-weight: bold; 
+        font-size: @fontSizeSmall;
+        background: #fff;
+        .border-radius(@borderRadiusLarge);
+
+        li {
+            display: inline-block;
+            position: relative;
+            margin-right: 5px;
+            line-height: @baseLineHeight - 2;
+            list-style: none;
+            padding: 12px 17px 10px 30px;
+            background: #dddee4;/*efefef*/
+            zoom: 1;
+            *display: inline;
+            *padding-left: 17px;
+
+            &:first-child {
+                .border-radius(@borderRadiusLarge 0 0 @borderRadiusLarge);
+                padding-left: 12px;
+                &:before {
+                    border: none;
+                }
+            }
+
+            &:last-child {
+                .border-radius(0 @borderRadiusLarge @borderRadiusLarge 0);
+                margin-right: 0;
+                &:after {
+                    border: none;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 0;
+                width: 0;
+                border-bottom: 20px inset transparent;
+                border-left: 20px solid #fff;
+                border-top: 20px inset transparent;
+                content: "";
+            }
+
+            &:after {
+                position: absolute;
+                right: -20px;
+                top: 0;
+                height: 0;
+                width: 0;
+                border-bottom: 20px inset transparent;
+                border-left: 20px solid #dddee4;/*efefef*/
+                border-top: 20px inset transparent;
+                content: "";
+                z-index: 2;
+            }
+        }
+
+        .label {
+            margin: 0 5px 0 0;
+            padding: 1px 5px 2px;
+            position: relative;
+            top: -1px;
+        }
+
+        .current {
+          color: #fff;
+          background: #007ACC;
+            &:after {
+                border-left-color: #007ACC;
+            }
+        }        
+    }
+
+    .pager {
+        &.bwizard-buttons {
+            margin: 10px 0;
+            li > a, 
+            li > span {
+                font-weight: bold;
+                font-size: @fontSizeSmall;
+                background-color: #F0F1F8;
+                border: 1px solid #DDDDDD;
+                border-radius: 3px;
+                display: inline-block;
+                padding: 4px 14px;
+            }
+        }
+    }
+
+    &.bwizard-bordered {
+        .bwizard-body {
+            margin-top: 10px;
+            border-top: 1px solid #D1D2D5;
+        }
+
+        .section-content {
+            border-top: 1px solid #FFFFFF;
+            &.item {
+                border-bottom: 1px solid #D1D2D5;
+            }
+        }
+
+        
+    }
+}
+
+.well {
+    .pager.bwizard-buttons {
+        margin: 10px 0 5px;
+    }
+}
+
+.well-nice {
+    .bwizard-steps {
+      background:@wellBackground;      
+
+        li {
+           //background: #464b4e;/*efefef*/
+            &:before {
+                border-left-color: @wellBackground;
+            }
+            &:after {
+                //border-left-color: #464b4e;/*efefef*/
+            }
+        }        
+    }    
+}
+
+.well-black {
+    &.bwizard {
+        .pager {
+            &.bwizard-buttons {
+                li > a, 
+                li > span {
+                    color: #3399FF;
+                    background-color: #323538;
+                    border-color: #2E3134;
+                    &:hover{
+                        color: #99ccff;
+                        background-color: #2f3235;
+                    }
+                }
+                
+            }
+        }
+
+        &.bwizard-bordered {
+            .bwizard-body {
+                border-top-color: @wellBlackBorderDarkColor;
+            }
+
+            .section-content {
+                border-top-color: @wellBlackBorderLightColor; // #515356;
+            }
+
+            .section-content.item {
+                border-bottom-color: @wellBlackBorderDarkColor;
+            }
+        }
+    }
+
+    .bwizard-steps {
+        background: @wellBlackBackground;
+        li {
+           background: lighten(@wellBlackBackground, 5%); //#464b4e;
+            &:before {
+                border-left-color: @wellBlackBackground;
+            }
+            &:after {
+                border-left-color: lighten(@wellBlackBackground, 5%);// #464b4e;
+            }
+        } 
+    }
+
+}
+
+.bwizard-green {
+    .bwizard-steps {
+        .current {
+            background: #78C876;
+            &:after {
+                border-left-color: #78C876;
+            }
+        }        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+/*badges only on small screens*/
+  .bwizard-steps li,
+  .bwizard-steps li.current,
+  .bwizard-steps li:first-child,
+  .bwizard-steps li:last-child,
+  .well-black .bwizard-steps li,
+  .well-black .bwizard-steps li.current,
+  .well-black .bwizard-steps li:first-child,
+  .well-black .bwizard-steps li:last-child {
+    background-color: transparent;
+  }
+  
+  .bwizard-steps li,
+  .bwizard-steps li.current,
+  .bwizard-steps li:first-child,
+  .bwizard-steps li:last-child {
+    padding: 2px 2px 5px 7px;
+    margin-right: 0;
+  }
+
+  .bwizard-steps li.current {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+  
+  .bwizard-steps li:after,
+  .bwizard-steps li:before {
+    border: none;
+  }
+
+  .bwizard-steps .label {
+    padding: 6px 10px 7px;
+    font-size: 12px;
+    color: #333;
+    background-color: #dddee4;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+  
+  .bwizard-steps .current .label.badge-inverse {
+    background-color: #007ACC;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  .bwizard-green .bwizard-steps .current .label.badge-inverse {
+    background-color: #78C876;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  .bwizard-body {
+    margin-top: 5px;
+  }
+}

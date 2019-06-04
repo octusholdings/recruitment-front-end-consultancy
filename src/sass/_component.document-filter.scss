@@ -1,0 +1,62 @@
+.modal-dialog.document-filter {
+	.modal-header {
+		border-bottom: none;
+
+		.searchQuery,
+		.results {
+			color: yellow;
+		}
+	}
+	.modal-body {
+		padding-top: 0px;
+		padding-bottom: 0px;
+
+		.documents-list {
+			height: 100%;
+			position: absolute;
+			padding: 0px;
+			border-right: 1px solid #b9b9b9;
+
+			.document-item {
+				display: inline-block;
+				width: 100%;
+				padding: 10px 15px;
+				text-align: center;
+				border-radius: 0px;
+				white-space: normal;
+				text-overflow: ellipsis;
+				overflow: hidden;
+
+				.results {
+					white-space: nowrap;
+				}
+			}
+	
+			.search-form {
+				.form-control {
+					border-radius: 0px;
+				}
+
+				.btn {
+					border-radius: 0px;
+					margin-left: auto;
+					border-left: 0px;
+					border-right: 0px;
+				}
+			}
+		}
+
+		.document-content-wrapper {
+			position: relative;
+			left: 25%;
+			padding-top: 10px;
+			height: 85vh;
+			overflow-y: scroll;
+			overflow-x: auto;
+
+			.document-content mark {
+			    background-color: #ff0;
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">
+		    	{{translate rangeType }}
+	    	</h4>
+		</div>
+		<div class="modal-body statusQueryBuilder queryBuilder">
+			<div class="btn-group btn-group-xs {{uniqueClass}}">
+			    <button type="button" class="btn btn-success addrule-btn">
+					<i class="glyphicon glyphicon-plus"></i> {{translate "addRule"}}       
+				</button>
+				{{!-- <button type="button" class="btn btn-success addgroup-btn">
+					<i class="fa fa-plus-circle" aria-hidden="true"></i> {{translate "addGroup"}}       
+				</button> --}}
+			</div>
+
+			<div class="rules-wrapper">
+				<div class="clearfix">
+					<div class="btn-group btn-group-xs group-conditions" data-toggle="buttons">
+						<label class="btn btn-info active">
+							<input class="radioGrpCond" name="grpCond" type="radio" value="AND" checked=""> AND
+						</label>
+						<label class="btn btn-info">
+							<input class="radioGrpCond" name="grpCond" type="radio" value="OR"> OR
+						</label>
+					</div>
+				</div>
+
+				<ul class="rules-list">
+					
+				</ul>
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			{{#if (hasPermission 'DEBUG')}}
+			<button class="btn btn-default get-rules">
+		    	Get Rules
+		    </button>
+			{{/if}}
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger cancel-range" data-dismiss="modal">
+			    	{{translate "no" }}
+			    </button>
+			    <button type="submit" class="btn btn-success confirm-range">
+			    	{{translate "yes" }}
+			    </button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,194 @@
+@import '../settings';
+
+// ============================
+// JAC colour scheme
+// ============================
+
+// Shades of Blue
+$octus-deep-sky-blue: #00abeb;
+$octus-jelly-bean: #314f5a;
+$octus-cerulean: #087aa5;
+$octus-lucky-point: #232450;
+$octus-iris-blue: #00aade;
+$octus-vivid-cyan: #0088ce;
+
+// Shades of Gray
+$octus-rhino: #444c5c;
+
+// Shades of Green
+$octus-pigment-green: #009b48;
+
+// Shades of Orange
+$octus-vivid-orange: #e17000;
+
+
+#octus-page {
+	.navbar-inner {
+		border-color: $color_gray83;
+		background-color: $color_gray98;
+	    background-image: -moz-linear-gradient(top, $white, $color_gray95);
+	    background-image: -webkit-gradient(linear,0 0,0 100%,from($white), to($color_gray95));
+	    background-image: -webkit-linear-gradient(top, $white, $color_gray95);
+	    background-image: -o-linear-gradient(top, $white, $color_gray95);
+	    background-image: linear-gradient(to bottom, $white, $color_gray95);
+	    background-repeat: repeat-x;
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
+	}
+
+	#header-container  {
+		.navbar {
+			height: auto;
+			padding: 4px 0px;
+		}
+
+		#header { 
+			.navbar-brand {
+				width: 89px;
+				height: 30px;
+				background-image: url('../img/jac-logo.png');
+				margin: 5px 2px 0 20px;
+				padding: 0px;
+			}
+
+			.header-drawer {
+				background: $octus-iris-blue;
+				top: 47px;
+			}
+		}
+	}
+
+	.search-global .search, .search-global input[type=search] {
+		border-color: $octus-deep-sky-blue;
+	}
+
+	#leftMenuItems .arrow-icon,
+	#leftMenuItems .item-icon {
+		color: $octus-iris-blue;
+	}
+
+	#leftMenuItems .active .arrow-icon,
+	#leftMenuItems .active .item-icon {
+		color: $octus-jelly-bean !important;
+	}
+	
+	.welcome-jac {
+		display: block;
+		
+		.client-name {
+			&:after {
+				color: $octus-iris-blue;
+				content: 'JAC';
+			}
+		}
+		.brand-name {
+			font-weight: 200;
+
+			small {
+				color: $color_gray20;
+				text-transform: capitalize;
+				font-weight: 200;
+			}
+		}
+	}
+
+	.welcome {
+		display: none;
+	}
+
+	.welcome {
+		display: none;
+	}
+
+	.label-candidate {
+		background-color: $octus-rhino;
+	}
+
+	.label-client {
+		background-color: $octus-pigment-green;
+	}
+
+	.label-company {
+		background-color: $octus-vivid-cyan;
+	}
+
+	.label-job {
+		background-color: $octus-vivid-orange;
+	}
+
+	.label-deleted {
+		background-color: $color_gray69;
+	}
+
+	.label-user {
+		background-color: $color_dark_red4;
+	}
+
+	.quick-add.dropup {
+	    .dropdown-menu {
+	        a { 
+	            &:hover {
+	                color: $octus-iris-blue !important;
+	            }
+	        }
+	    }
+	}
+
+	// Show only for JAC the "Go to last page" button
+	.KENDO-GRID .k-pager-wrap .k-link.k-pager-nav.k-pager-last {
+		display: initial;
+	}
+}
+
+.jac-hidden { display: none !important; }
+
+@media print {
+    .print-friendly { 
+        .octus-logo { display: none; }
+        .jac-logo { display: inline-block; }
+    }
+}
+
+// ========================
+// MOBILE PHONE SCREENS
+// ========================
+@media (max-width: 600px) {
+	#octus-page #header-container {
+		.navbar {
+			height: 50px;
+		}
+
+		#header .header-drawer {
+			top: 47px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	#octus-page #header-container #header .header-drawer {
+		top: 50px;
+	}
+
+	.search-global {
+		margin: 4px 65px;
+	}
+}
+
+// ========================
+// TABLET SCREENS
+// ========================
+@media (min-width: 768px) {}
+
+@media (min-width: 980px) {
+    .container {
+        width: 750px;
+    }
+}
+
+// ========================
+// DESKTOP SCREENS
+// ========================
+@media (min-width: 1200px) {
+    .container {
+        width: 750px;
+    }
+}
