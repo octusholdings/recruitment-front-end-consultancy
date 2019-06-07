@@ -1,3 +1,6 @@
+
+Node version 6.4.0
+
 Running the front end
 
 
@@ -14,7 +17,16 @@ npm update
 ```
 
 
-to run it as a developer
+to run it:
 ```
-gulp clean && gulp clean env-setup build-all-lib dev-run --dev
+./runFe.sh
 ```
+
+App will be available at:
+```
+http://localhost:4567/
+```
+
+
+any questions, please write to support@octus.io
+
