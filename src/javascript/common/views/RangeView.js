@@ -1,4 +1,7 @@
-var Marionette                  = require('backbone.marionette'),
+var 
+    _ = require('underscore'),  
+    Backbone                    = require('backbone'),
+    Marionette                  = require('backbone.marionette'),
     faker                       = require('faker'),
     Bloodhound                  = require('bloodhound'),
     RefdataHierarchyPopupView   = require('../../refdataHierarchy/views/RefdataHierarchyPopupView');

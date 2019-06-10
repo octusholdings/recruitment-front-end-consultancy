@@ -478,6 +478,7 @@ module.exports = ClientGridView = BaseGridView.extend({
                     // Deprecated 2.14 moving kendo to checkbox select
                     // locked: true,
                     filterable: false,
+                    sortable: false,
                     template: `
                         <a class="kendo-icon edit-cli wb" href="\\#/${self.TYPE}/#=id#/edit" title="${RecruiterApp.polyglot.t('edit')}">
                             <i class="kendo-icon fa fa-pencil fa-lg text-success"></i>
@@ -728,6 +729,7 @@ module.exports = ClientGridView = BaseGridView.extend({
                     headerAttributes: {'class': 'wb OverviewNumberList'},
                     hidden: false,
                     encoded: false,
+                    sortable: false,
                     width: '130px',
                     filterable: false
                 },{

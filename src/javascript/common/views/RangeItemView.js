@@ -1,4 +1,6 @@
-var BaseCompositeView           = require('../../common/views/BaseCompositeView'),
+var 
+    _ = require('underscore'),
+    BaseCompositeView           = require('../../common/views/BaseCompositeView'),
     faker                       = require('faker'),
     Bloodhound                  = require('bloodhound'),
     RefdataHierarchyPopupView   = require('../../refdataHierarchy/views/RefdataHierarchyPopupView');;

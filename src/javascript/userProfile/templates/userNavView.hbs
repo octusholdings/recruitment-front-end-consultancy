@@ -1,0 +1,21 @@
+<li class="userTab">
+    <a href="#Tab1" data-toggle="tab" id="nav-profile">{{translate "profile"}}</a>
+</li>
+
+<li class="userTab">
+    <a href="#Tab3" data-toggle="tab" id="nav-email">{{translate "email"}}</a>
+</li>
+
+<li class="userTab" data-oc-permission="viewUserProfileSettings_Menu">
+    <a href="#Tab2" data-toggle="tab" id="nav-settings">{{translate "settings"}}</a>
+</li>
+
+{{#if (hasPermissionsForView 'userSettings' 'language')}}
+<li class="userTab">
+    <a href="#Tab4" data-toggle="tab" id="nav-locale">{{translate "language"}}</a>
+</li>
+{{/if}}
+
+<li class="userTab">
+    <a href="#Tab5" data-toggle="tab" id="nav-password-change">{{translate "password"}}</a>
+</li>

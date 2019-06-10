@@ -1,0 +1,157 @@
+{{#if token}}
+    <div class="row">
+        <label class="control-label col-sm-3">{{translate "oAuthResponseCode"}}</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control token" value="{{token}}" readonly placeholder="{{translate "oAuthResponseCode"}}" name="token">
+            <span class="help-block"></span>
+        </div>
+    </div>
+    <div class="row">
+        <label class="control-label col-sm-3 marginTop10">{{translate "emailSyncStatus"}}</label>
+        <div class="col-sm-9">
+            <div class="form-group">
+                <div class="input-group
+                    {{#if_eq syncState "running"}} has-success {{/if_eq}}
+                    {{#if_eq syncState "invalid-credentials"}} has-error {{/if_eq}}
+                    {{#if_eq syncState "invalid"}} has-error {{/if_eq}}
+                    {{#if_eq syncState "error"}} has-error {{/if_eq}}
+                    {{#if_eq syncState "stopped"}} has-warning {{/if_eq}}
+                    {{#if_eq syncState "exception"}} has-error {{/if_eq}}
+                ">
+                    <span class="input-group-addon">
+                        {{#if_eq syncState "running"}} <i class="fa fa-check fa-fw"></i> {{/if_eq}}
+                        {{#if_eq syncState "invalid-credentials"}} <i class="fa fa-times fa-fw"></i> {{/if_eq}}
+                        {{#if_eq syncState "invalid"}} <i class="fa fa-times fa-fw"></i> {{/if_eq}}
+                        {{#if_eq syncState "error"}} <i class="fa fa-times fa-fw"></i> {{/if_eq}}
+                        {{#if_eq syncState "stopped"}} <i class="fa fa-exclamation-triangle fa-fw"></i> {{/if_eq}}
+                        {{#if_eq syncState "exception"}} <i class="fa fa-times fa-fw"></i> {{/if_eq}}
+                        {{translate "nylasStatus"}}
+                    </span>
+                    <input type="text"
+                       class="form-control syncState"
+                       readonly
+                       value="{{translate syncState}}"
+                       name="syncState">
+                </div>
+            </div>
+        </div>
+
+        <label class="control-label col-sm-3 marginTop10">Calendar Sync Status</label>
+        <div class="col-sm-9">
+            <div class="form-group calendar-status">
+                {{!-- This is set in the view --}}
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3">
+            <button class="reset-email btn btn-sm btn-success">{{translate "resetEmail"}}</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <label class="control-label col-sm-3 marginTop10">{{translate "emailQueueStatus"}}</label>
+        <div class="col-sm-9 emailQueueStatusWrapper">
+            <div class="form-group">
+                <div class="input-group
+                    {{#if online}}
+                        {{#if_gt emailQueueProcessed 0}} has-success {{/if_gt}}
+                    {{else}}
+                        has-offline
+                    {{/if}}
+                ">
+                    <span class="input-group-addon">
+                        {{#if online}}
+                            {{#if_gt emailQueueProcessed 0}} <i class="fa fa-check fa-fw"></i> {{/if_gt}}
+                            {{#if_eq emailQueueProcessed 0}} <i class="fa fa-exclamation-circle fa-fw"></i> {{/if_eq}}
+                        {{else}}
+                            <i class="fa fa-plug"></i>
+                        {{/if}}
+                        {{translate "emailQueueProcessed"}}
+                    </span>
+                    <input type="text" class="form-control emailQueueProcessed" readonly name="syncState"
+                        {{#if online}}
+                            value="{{emailQueueProcessed}}"
+                        {{else}}
+                            value="{{translate "emailQueueOffline"}}"
+                        {{/if}}
+                    >
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-group
+                    {{#if online}}
+                        {{#if_gt emailQueueFailed 0}} has-error {{/if_gt}}
+                        {{#if_eq emailQueueFailed 0}} has-success {{/if_eq}}
+                    {{else}}
+                        has-offline
+                    {{/if}}
+                ">
+                    <span class="input-group-addon">
+                        {{#if online}}
+                            {{#if_eq emailQueueFailed 0}} <i class="fa fa-check fa-fw"></i> {{/if_eq}}
+                            {{#if_gt emailQueueFailed 0}} <i class="fa fa-exclamation-triangle fa-fw"></i> {{/if_gt}}
+                        {{else}}
+                            <i class="fa fa-plug"></i>
+                        {{/if}}
+                        {{translate "emailQueueFailed"}}
+                    </span>
+                    <input type="text" class="form-control emailQueueFailed" readonly name="syncState"
+                        {{#if online}}
+                            value="{{emailQueueFailed}}"
+                        {{else}}
+                            value="{{translate "emailQueueOffline"}}"
+                        {{/if}}
+                    >
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-group
+                    {{#if online}}
+                        {{#if_gt emailQueuePending 0}} has-warning {{/if_gt}}
+                        {{#if_eq emailQueuePending 0}} has-success {{/if_eq}}
+                    {{else}}
+                        has-offline
+                    {{/if}}
+                ">
+                    <span class="input-group-addon">
+                        {{#if online}}
+                            {{#if_eq emailQueuePending 0}} <i class="fa fa-check fa-fw"></i> {{/if_eq}}
+                            {{#if_gt emailQueuePending 0}} <i class="fa fa-exclamation-triangle fa-fw"></i> {{/if_gt}}
+                        {{else}}
+                            <i class="fa fa-plug"></i>
+                        {{/if}}
+                        {{translate "emailQueuePending"}}
+                    </span>
+                    <input type="text" class="form-control emailQueuePending" readonly name="syncState"
+                        {{#if online}}
+                            value="{{emailQueuePending}}"
+                        {{else}}
+                            value="{{translate "emailQueueOffline"}}"
+                        {{/if}}
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3">
+            <div class="btn-group">
+                <button class="reprocess-email btn btn-sm btn-success" type="button">
+                    {{translate "reprocessEmailQueue"}}
+                </button>
+                <button class="refresh-email btn btn-sm btn-default" type="button">
+                    <i class="fa fa-refresh fa-fw"></i> {{translate "refreshQueueStatus"}}
+                </button>
+            </div>
+        </div>
+    </div>
+{{/if}}
+{{#unless token}}
+    <div class="row">
+        <label class="control-label col-sm-3">{{translate "setupEmail"}}</label>
+        <div class="col-sm-9">
+            <button class="setup-email btn btn-sm btn-success">{{translate "setupEmail"}}</button>
+        </div>
+    </div>
+{{/unless}}

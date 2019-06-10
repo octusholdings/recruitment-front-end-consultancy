@@ -587,6 +587,14 @@ module.exports = CandidateGridView = BaseGridView.extend({
                         if (sd.field == 'currentSalary')        sd.field = 'currentSalary.base';
                         if (sd.field == 'minimumSalary')        sd.field = 'minimumSalary.base';
                         if (sd.field == 'consultantList')       sd.field = 'consultantList.allNames';
+                        if (sd.field == 'religion')             sd.field = 'religion.value';
+
+                        if (sd.field == 'consentStatus')        sd.field = "consentStatus.value";
+                        if (sd.field == 'visa')                 sd.field = "visa.value";
+                        if (sd.field == 'candidateCode')        sd.field = 'candidateCode.value'
+                        if (sd.field == 'ownVehicle')           sd.field = 'ownVehicle.value'
+                        if (sd.field == 'employmentHistoryList')sd.field = 'jobHistoryList.companyName'
+
                         if (sd.field == 'status')             { sd.field = 'status.value'; }
 
                         if (sd.field == 'dob') {
@@ -718,6 +726,7 @@ module.exports = CandidateGridView = BaseGridView.extend({
                     // Deprecated 2.14 moving kendo to checkbox select
                     // locked: true,
                     filterable: false,
+                    sortable: false,
                     template: `
                         <a class="kendo-icon edit-ccd ${self.actionConfig.edit == false ? 'hidden' : 'wb'}" href="\\#/${self.TYPE}/#=id#/edit" title="${RecruiterApp.polyglot.t('edit')}">
                             <i class="kendo-icon fa fa-pencil fa-lg text-success"></i>
@@ -1071,7 +1080,8 @@ module.exports = CandidateGridView = BaseGridView.extend({
                     hidden: false,
                     encoded: false,
                     width: '200px',
-                    filterable: false    
+                    filterable: false,
+                    sortable: false
                 },
                 {
                     field: "educationList",
@@ -1106,6 +1116,7 @@ module.exports = CandidateGridView = BaseGridView.extend({
                     hidden: true,
                     width: '320px',
                     encoded: false,
+                    sortable: false,
                     filterable: {
                         cell: {
                             template: self.DEFINE_TEMPLATE,

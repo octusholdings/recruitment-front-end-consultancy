@@ -56,6 +56,8 @@ var $ = require('jquery'),
     CurrentUser = require('./common/models/CurrentUser'),
     SessionController = require('./session/SessionController'),
     SessionRouter = require('./session/SessionRouter'),
+    UserProfileController = require('./userProfile/UserProfileController'),
+    UserProfileRouter = require('./userProfile/UserProfileRouter'),
     HomeController = require('./home/HomeController'),
     HomeRouter = require('./home/HomeRouter'),
     PeopleDashboardController = require('./peopleDashboard/PeopleDashboardController'),
@@ -63,6 +65,7 @@ var $ = require('jquery'),
     ReferenceDataList = require('./common/models/ReferenceDataList'),
     Configuration = require('./admin/configuration/models/Configuration'),
     TeamListForm = require('./common/models/TeamListForm'),
+    growl = require('bootstrap-notify'),
     UserPreferenceList = require('./admin/user/models/UserPreferenceList');
 
 
@@ -919,6 +922,11 @@ RecruiterApp.prototype.start = function() {
             RecruiterApp.peopleDashboardController = new PeopleDashboardController();
             RecruiterApp.peopleDashboardRouter = new PeopleDashboardRouter({ controller: RecruiterApp.peopleDashboardController});
             _.extend(RecruiterApp.appRouteList, RecruiterApp.peopleDashboardRouter.appRoutes);
+
+
+            RecruiterApp.userProfileController = new UserProfileController();
+            RecruiterApp.userProfileRouter = new UserProfileRouter({ controller: RecruiterApp.userProfileController});
+            _.extend(RecruiterApp.appRouteList, RecruiterApp.userProfileRouter.appRoutes);
 
             RecruiterApp.core.vent.trigger("app:warn", ["App","Backbone.history starting"]);
 
